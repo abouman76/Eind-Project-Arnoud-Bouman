@@ -1,6 +1,6 @@
-import '../App.css';
-import Header from "./Header/Header";
-import TextBubble from "./TextBubble/TextBubble";
+import './App.css';
+import Header from "../Header/Header";
+import TextBubble from "../TextBubble/TextBubble";
 
 
 function App() {
