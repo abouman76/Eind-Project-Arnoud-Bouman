@@ -6,13 +6,9 @@ import TextBubble from "../TextBubble/TextBubble";
 function App() {
   return (
     <>
-        <div>
-            Dit is mijn eind project "Sociaal Oosterhout"
-        </div>
-
         <Header />
 
-        <TextBubble />
+        {/*<TextBubble />*/}
     </>
   );
 }
