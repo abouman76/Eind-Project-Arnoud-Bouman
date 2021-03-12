@@ -6,11 +6,12 @@ import TextBubble from "../TextBubble/TextBubble";
 function App() {
   return (
     <>
-        <Header />
+            <Header />
 
-        {/*<TextBubble />*/}
+            <TextBubble />
+
     </>
   );
-}
+};
 
 export default App;

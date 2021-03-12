@@ -1,3 +1,62 @@
-.styleText {
-    color: red;
+/** {*/
+/*    border: 1px solid red;*/
+/*}*/
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.main-container {
+    background-color: #A7C957;
+    color: #5F5F5F;
+    width: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    flex-wrap: wrap;
+
+}
+
+.text-bubble {
+    width: 300px;
+    height: 200px;
+    background-color: white;
+    border: 1px solid #A7C957;
+    position: relative;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 3px;
+}
+
+.text-bubble::before {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -30px;
+    left: 20px;
+    width: 0;
+    height: 0;
+    border-top: 30px solid white;
+    border-right: 20px solid transparent;
+    border-left: 20px solid transparent;
+}
+
+.header-review {
+    color: #5F5F5F;
+    margin-bottom: 5px;
+
+}
+
+.review-text {
+    color: #5F5F5F;
+    display: flex;
+}
+
+.name-reviewer {
+    font-weight: bold;
+    font-size: 18px;
+    padding: 0 0 5px 30px;
 }
