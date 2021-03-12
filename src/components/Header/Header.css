@@ -1,6 +1,6 @@
-* {
-    border: 1px solid red;
-}
+/** {*/
+/*    border: 1px solid red;*/
+/*}*/
 
 .main-header {
     display: flex;
@@ -41,7 +41,7 @@
 .search {
     background-color: #6A994E;
     width: 100vw;
-    height: 30px;
+    height: 35px;
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -53,7 +53,21 @@
 }
 
 .searchIcon {
-    width: 25px;
-    height: 25px;
-    margin-right: 40px;
+    width: 20px;
+    height: 20px;
+    /*margin-right: 10px;*/
+}
+
+.input-search {
+    margin: 0 25px 0 10px;
+    width: 150px;
+    padding: 2px 2px 2px 10px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    color: #5F5F5F;
+}
+
+::placeholder {
+    color: #5F5F5F;
 }

@@ -18,6 +18,7 @@ const Header = () => {
 
             <div className="search">
                 <img className="searchIcon" src={searchIcon} alt="Zoek icon" />
+                <input className="input-search" type="text" placeholder="zoek" />
             </div>
         </header>
         </>
