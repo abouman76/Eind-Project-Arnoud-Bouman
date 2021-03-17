@@ -1,13 +1,16 @@
 import './App.css';
-import Header from "../Header/Header";
+import Header from "../HeaderGeneral/Header";
 import TextBubble from "../TextBubble/TextBubble";
 import Button_cta_home from "../Buttons/Button_cta_home";
+import HeaderPersonal from "../HeaderPersonal/HeaderPersonal";
 
 
 function App() {
   return (
     <>
-            <Header />
+            {/*<Header />*/}
+
+            <HeaderPersonal />
 
             {/*<TextBubble />*/}
 
