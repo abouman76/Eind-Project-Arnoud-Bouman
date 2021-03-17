@@ -7,11 +7,11 @@ import Button_cta_home from "../Buttons/Button_cta_home";
 function App() {
   return (
     <>
-            {/*<Header />*/}
+            <Header />
 
             {/*<TextBubble />*/}
 
-            <Button_cta_home />
+            {/*<Button_cta_home />*/}
 
     </>
   );
