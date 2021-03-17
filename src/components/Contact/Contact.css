@@ -1,0 +1,26 @@
+/** {*/
+/*    border: 1px solid red;*/
+/*}*/
+
+.contact-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*height: 100px;*/
+    background-color: #A7C957;
+    width: 100vw;
+}
+
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    /*background-color: #A7C957;*/
+}
+
+.name-phone input,
+.address-email input {
+    margin: 20px;
+}

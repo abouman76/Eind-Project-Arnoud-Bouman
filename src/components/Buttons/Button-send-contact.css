@@ -1,8 +1,8 @@
-.main-button-cta {
+.send-button-cta {
     margin: 50px;
 }
 
-.main-cta {
+.send-cta {
     background-color: #5F5F5F;
     color: white;
     padding: 15px;
@@ -10,4 +10,5 @@
     text-align: center;
     display: inline-block;
     outline: none;
+    /*width:*/
 }
