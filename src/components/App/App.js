@@ -1,10 +1,10 @@
 import './App.css';
-import Header from "../HeaderGeneral/Header";
-import TextBubble from "../TextBubble/TextBubble";
-import Button_cta_home from "../Buttons/Button_cta_home";
-import HeaderPersonal from "../HeaderPersonal/HeaderPersonal";
+// import Header from "../HeaderGeneral/Header";
+// import TextBubble from "../TextBubble/TextBubble";
+// import BtnCtaHome from "../Buttons/BtnCtaHome";
+// import HeaderPersonal from "../HeaderPersonal/HeaderPersonal";
 import Contact from "../Contact/Contact"
-import Button_send_contact from "../Buttons/Button_send_contact";
+// import BtnSendContact from "../Buttons/BtnSendContact";
 
 
 function App() {
@@ -18,9 +18,9 @@ function App() {
 
             {/*<TextBubble />*/}
 
-            {/*<Button_cta_home />*/}
+            {/*<BtnCtaHome />*/}
 
-            {/*<Button_send_contact />*/}
+            {/*<BtnSendContact />*/}
 
     </>
   );

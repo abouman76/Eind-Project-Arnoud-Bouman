@@ -1,5 +1,5 @@
 .send-button-cta {
-    margin: 50px;
+
 }
 
 .send-cta {
@@ -9,6 +9,7 @@
     border: none;
     text-align: center;
     display: inline-block;
+    width: 150px;
     outline: none;
     /*width:*/
 }

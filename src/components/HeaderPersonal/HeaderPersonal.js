@@ -8,10 +8,10 @@ const HeaderPersonal = () => {
             <header className="main-header">
                 <nav className="header-nav">
                     <ul className="header-list">
-                        <li><a href="#">Home</a></li>
-                        <li className="current-page"><a href="#">Advertentie</a></li>
-                        <li><a href="#">Registratie</a></li>
-                        <li><a href="#">Profiel</a></li>
+                        <li><a href="/">Home</a></li>
+                        <li className="current-page"><a href="/">Advertentie</a></li>
+                        <li><a href="/">Registratie</a></li>
+                        <li><a href="/">Profiel</a></li>
                     </ul>
                 </nav>
 

@@ -1,7 +1,7 @@
 import React from "react";
-import "./Button_cta_home.css"
+import "./BtnCtaHome.css"
 
-const Button_cta_home = () => {
+const BtnCtaHome = () => {
     return (
         <div className="main-button-cta">
             <button className="main-cta" type="button" onClick={() => alert("You clicked me!")}>check het aanbod snel</button>
@@ -9,4 +9,4 @@ const Button_cta_home = () => {
     )
 }
 
-export default Button_cta_home
+export default BtnCtaHome

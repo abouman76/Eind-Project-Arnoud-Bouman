@@ -2,25 +2,76 @@
 /*    border: 1px solid red;*/
 /*}*/
 
-.contact-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /*height: 100px;*/
-    background-color: #A7C957;
-    width: 100vw;
-}
-
 .form-container {
+    background-color: #A7C957;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    height: 100vh;
-    /*background-color: #A7C957;*/
+    max-width: 750px;
+    /*!*width: 100vw;*! mobiele versie*/
+
+}
+
+.input-with-error {
+    display: inline-block;
+}
+.input-with-error p {
+    color: red;
+    font-size: 10px;
+    margin-left: 5px;
 }
 
 .name-phone input,
-.address-email input {
-    margin: 20px;
+.address-email input,
+textarea {
+    padding: 5px;
+    outline: none;
 }
+
+.name-phone input {
+    margin: 10px 5px 15px 5px;
+    /*padding: 5px;*/
+    width: 300px
+    /*width: 45vw; mobiele versie*/
+}
+.address-email input {
+    margin: 15px 5px 10px 5px;
+    /*padding: 5px;*/
+    width: 300px
+    /*width: 45vw; mobiele versie*/
+}
+
+textarea {
+    margin: 20px 15px 10px 15px;
+    /*padding: 5px;*/
+    width: 610px;
+    /*width: 90vw; mobiele versie*/
+}
+
+
+.btn-send-contactform {
+
+}
+
+
+/*@media screen and (*/
+/*    min-width: 576px*/
+/*) {*/
+/*    .form-container {*/
+/*        max-width: 600px;*/
+/*    }*/
+
+/*    .name-phone input {*/
+/*        max-width: 250px;*/
+/*    }*/
+/*    .address-email input {*/
+
+/*        max-width: 250px;*/
+/*    }*/
+
+/*    textarea {*/
+/*        max-width: 500px;*/
+/*    }*/
+/*}*/
+
