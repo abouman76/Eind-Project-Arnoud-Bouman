@@ -1,11 +1,13 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./BtnCtaHome.css"
 
 const BtnCtaHome = () => {
+
     return (
-        <div className="main-button-cta">
-            <button className="main-cta" type="button" onClick={() => alert("You clicked me!")}>check het aanbod snel</button>
-        </div>
+            <Link to="/aanbod">
+                <button className="main-cta" type="button">check het aanbod snel!</button>
+            </Link>
     )
 }
 

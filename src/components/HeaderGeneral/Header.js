@@ -1,6 +1,7 @@
 import React from "react";
 import "./Header.css";
 import searchIcon from "../../assets/searchIcon.svg";
+import {NavLink} from "react-router-dom";
 
 const Header = () => {
     return (
@@ -8,11 +9,21 @@ const Header = () => {
         <header className="main-header">
             <nav className="header-nav">
                 <ul className="header-list">
-                    <li className="current-page"><a href="/">home</a></li>
-                    <li><a href="/">aanbod</a></li>
-                    <li><a href="/">vraag</a></li>
-                    <li><a href="/">contact</a></li>
-                    <li><a href="/">inloggen</a></li>
+                    <li>
+                        <NavLink to="/" exact activeClassName="current-page">home</NavLink>
+                    </li>
+                    <li>
+                        <NavLink to="/aanbod" activeClassName="current-page">aanbod</NavLink>
+                    </li>
+                    <li>
+                        <NavLink to="/vraag" activeClassName="current-page">vraag</NavLink>
+                    </li>
+                    <li>
+                        <NavLink to="/contact" activeClassName="current-page">contact</NavLink>
+                    </li>
+                    <li>
+                        <NavLink to="/inloggen" activeClassName="current-page">inloggen</NavLink>
+                    </li>
                 </ul>
             </nav>
 

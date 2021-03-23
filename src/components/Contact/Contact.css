@@ -8,7 +8,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    max-width: 750px;
+    max-width: 900px;
     /*!*width: 100vw;*! mobiele versie*/
 
 }
@@ -30,28 +30,28 @@ textarea {
 }
 
 .name-phone input {
-    margin: 10px 5px 15px 5px;
+    margin: 30px 5px 15px 5px;
     /*padding: 5px;*/
-    width: 300px
+    width: 370px
     /*width: 45vw; mobiele versie*/
 }
 .address-email input {
     margin: 15px 5px 10px 5px;
     /*padding: 5px;*/
-    width: 300px
+    width: 370px
     /*width: 45vw; mobiele versie*/
 }
 
 textarea {
     margin: 20px 15px 10px 15px;
     /*padding: 5px;*/
-    width: 610px;
+    width: 750px;
     /*width: 90vw; mobiele versie*/
 }
 
 
 .btn-send-contactform {
-
+    margin: 15px 0 30px 0;
 }
 
 

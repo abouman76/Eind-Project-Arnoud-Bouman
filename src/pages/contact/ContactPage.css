@@ -1,0 +1,12 @@
+.main-contactPage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /*flex-wrap: nowrap;*/
+    margin-bottom: 30px;
+}
+
+.main-contactPage p {
+    margin-top: 10px;
+}
