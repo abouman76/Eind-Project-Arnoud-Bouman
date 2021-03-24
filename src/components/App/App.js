@@ -10,6 +10,7 @@ import VraagPage from "../../pages/vraag/VraagPage";
 import ContactPage from "../../pages/contact/ContactPage";
 import LoginPage from "../../pages/login/LoginPage";
 import Header from "../HeaderGeneral/Header";
+import Footer from "../Footer/Footer";
 import './App.css';
 
 function App() {
@@ -35,6 +36,7 @@ function App() {
                     </Route>
                 </Switch>
             </main>
+        <Footer />
     </Router>
   );
 };

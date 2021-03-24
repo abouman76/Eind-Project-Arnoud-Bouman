@@ -1,0 +1,29 @@
+/**{*/
+/*    border: 1px solid red;*/
+/*}*/
+
+.footer-container {
+    /*position: fixed;*/
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #386641;
+    color: white;
+    text-align: center;
+}
+
+.footer-links a {
+    color: white;
+    display: flex;
+    justify-content: flex-start;
+    padding: 10px 0 0 10px;
+}
+
+.footer-text p,
+.footer-text h4 {
+    color: white;
+}
+
+.footer-text {
+    padding-bottom: 10px;
+}
