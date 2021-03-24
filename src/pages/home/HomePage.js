@@ -3,10 +3,12 @@ import React from "react";
 import TextBubble from "../../components/TextBubble/TextBubble";
 import BtnCtaHome from "../../components/Buttons/BtnCtaHome";
 import "./HomePage.css";
-
+import PictureHeader from "../../components/PictureHeader/PictureHeader";
 
 const HomePage = () => {
     return (
+        <>
+        <PictureHeader />
         <div className="home-wrapper">
             <section className="text-project">
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci beatae deleniti earum, iste labore neque quidem saepe ut. A aperiam aspernatur consequatur deleniti deserunt dicta dolor ea ex, exercitationem facilis fuga harum hic impedit, iste itaque magnam maiores nihil nobis non numquam omnis optio possimus quasi quia quisquam rem repellendus sequi sit sunt temporibus totam unde voluptatem voluptatum? Animi, assumenda cum distinctio dolorum eaque eligendi esse, eveniet fugit, impedit incidunt inventore iure laudantium natus nobis nostrum omnis quam quidem sit sunt tenetur ut veritatis voluptates. Autem dignissimos eos exercitationem id laboriosam recusandae sit? Assumenda molestias officia ut voluptates? Deleniti harum illum in nisi odit quae quidem soluta vel. A autem dolore doloremque hic molestias nihil odit quam quod tempore. Ab accusantium aliquid consequatur cupiditate dignissimos ea earum, esse et, eum explicabo facilis harum illum ipsam laborum natus nemo obcaecati praesentium quaerat quia recusandae reiciendis rem sapiente sequi sunt, tempore temporibus.</p>
@@ -22,6 +24,7 @@ const HomePage = () => {
 
             </aside>
         </div>
+        </>
     )
 }
 

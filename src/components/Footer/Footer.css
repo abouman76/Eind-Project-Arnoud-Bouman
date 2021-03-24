@@ -7,7 +7,7 @@
     left: 0;
     bottom: 0;
     width: 100%;
-    background-color: #386641;
+    background-color: #6A994E;
     color: white;
     text-align: center;
 }
@@ -26,4 +26,8 @@
 
 .footer-text {
     padding-bottom: 10px;
+}
+
+.footer-text p {
+    font-size: 12px;
 }

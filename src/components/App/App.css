@@ -1,8 +1,11 @@
+/** {*/
+/*    border: 1px solid red;*/
+/*}*/
+
 .main-content {
     margin-top: 112.5px;
     display: flex;
     justify-content: center;
     align-content: center;
     flex-wrap: wrap;
-    padding-top: 50px;
 }

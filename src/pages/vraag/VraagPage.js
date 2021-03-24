@@ -1,9 +1,12 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import PictureHeader from "../../components/PictureHeader/PictureHeader";
 
 const VraagPage = () => {
     return (
-        <div> </div>
+        <>
+            <PictureHeader />
+        </>
     )
 }
 export default VraagPage;

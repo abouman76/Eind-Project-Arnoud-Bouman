@@ -4,9 +4,13 @@
     align-items: center;
     flex-direction: column;
     /*flex-wrap: nowrap;*/
-    margin-bottom: 30px;
+    margin: 30px 0 30px 0;
 }
 
 .main-contactPage p {
     margin-top: 10px;
+}
+
+.contact-page {
+    margin-bottom: 50px;
 }

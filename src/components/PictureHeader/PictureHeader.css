@@ -1,0 +1,14 @@
+/** {*/
+/*    border: 1px solid red;*/
+/*}*/
+
+.top-image {
+    width: 100%;
+    /*height: 15vh;*/
+}
+
+.top-image img {
+    width: 100%;
+    height: 20vh;
+    object-fit: cover;
+}
