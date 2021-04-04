@@ -1,0 +1,30 @@
+/** {*/
+/*    border: 1px solid red;*/
+/*}*/
+
+.form-login {
+    background-color: #A7C957;
+    width: 750px;
+    height: 400px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    margin:25px;
+}
+
+.form-group label {
+    display: block;
+    margin: 50px 10px 10px 10px;
+    font-weight: bolder;
+}
+
+.form-group input {
+    width: 700px;
+    padding: 10px 5px 10px 10px;
+    margin: 0 10px 0 10px ;
+}
+
+.btn-login {
+    margin-top: 50px;
+}

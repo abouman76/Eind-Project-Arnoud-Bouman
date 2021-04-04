@@ -1,0 +1,11 @@
+.send-cta {
+    background-color: #5F5F5F;
+    color: white;
+    padding: 15px;
+    border: none;
+    text-align: center;
+    display: inline-block;
+    width: 150px;
+    outline: none;
+    /*width:*/
+}
