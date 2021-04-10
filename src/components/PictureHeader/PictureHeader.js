@@ -1,5 +1,5 @@
 import React from "react";
-import brug from "../../assets/brug.png";
+// import brug from "../../assets/brug.png";
 import waalbrug from "../../assets/waalbrug.jpeg"
 
 import "./PictureHeader.css";

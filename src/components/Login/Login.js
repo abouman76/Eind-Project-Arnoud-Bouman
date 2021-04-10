@@ -4,6 +4,7 @@ import BtnLogin from "../Buttons/BtnLogin";
 
 const Login = ({loginPerson, error}) => {
     const [details, setDetails] = useState({userName: "", password: ""});
+    // console.log("Wat is loginPerson", loginPerson);
 
     const loginHandler = (e) => {
         e.preventDefault();
@@ -13,7 +14,7 @@ const Login = ({loginPerson, error}) => {
     return (
         <div className="main-login">
             <form onSubmit={loginHandler} className="form-login">
-                {(error != "") ? (<span>{error}</span>) : ""}
+                {(error !== "") ? (<span>{error}</span>) : ""}
                 <div className="form-group">
                     <label htmlFor="input-name" className="input-fields">uw gebruikersnaam</label>
                         <input type="text"
@@ -35,7 +36,7 @@ const Login = ({loginPerson, error}) => {
                     />
                 </div>
                 <div className="btn-login">
-                    <BtnLogin />
+                    <BtnLogin loginHandler={loginHandler} />
                 </div>
             </form>
 

@@ -12,6 +12,7 @@ const HeaderPersonal = () => {
                         <li className="current-page"><a href="/">Mijn advertentie</a></li>
                         <li><a href="/">Registratie</a></li>
                         <li><a href="/">Profiel</a></li>
+                        <li><a href="/">Uitloggen</a></li>
                     </ul>
                 </nav>
 
