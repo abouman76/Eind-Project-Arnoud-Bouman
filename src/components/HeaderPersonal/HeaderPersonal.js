@@ -9,8 +9,11 @@ const HeaderPersonal = () => {
                 <nav className="header-nav">
                     <ul className="header-list">
                         <li><a href="/">Home</a></li>
+                        <li><a href="/">Aanbod</a></li>
+                        <li><a href="/">Vraag</a></li>
+                        <li><a href="/">contact</a></li>
                         <li className="current-page"><a href="/">Mijn advertentie</a></li>
-                        <li><a href="/">Registratie</a></li>
+                        {/*<li><a href="/">Registratie</a></li>*/}
                         <li><a href="/">Profiel</a></li>
                         <li><a href="/">Uitloggen</a></li>
                     </ul>
