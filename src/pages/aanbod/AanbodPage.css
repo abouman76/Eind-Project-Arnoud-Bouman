@@ -1,0 +1,19 @@
+/** {*/
+/*    border: 1px solid red;*/
+/*}*/
+
+.offer-wrapper {
+    margin: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    flex-direction: row;
+}
+
+.offer-component {
+    /*display: flex;*/
+    /*justify-content: space-between;*/
+    /*align-content: center;*/
+    /*flex-direction: row;*/
+    padding: 10px;
+}
