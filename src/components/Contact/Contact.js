@@ -63,15 +63,14 @@ const Contact = () => {
                                 {
                                     required: {
                                         value: true,
-                                        message: "Voer uw telefoonnummer in zonder - verbindingsteken."
+                                        message: "Verplicht veld."
                                     },
-                                    maxLength: {
-                                        value: 10,
-                                        message: "dient uit 10 cijfers te bestaan"
-                                    }
+                                    pattern: {
+                                        value: /^((\+|00(\s|\s?\-\s?)?)31(\s|\s?\-\s?)?(\(0\)[\-\s]?)?|0)[1-9]((\s|\s?\-\s?)?[0-9])((\s|\s?-\s?)?[0-9])((\s|\s?-\s?)?[0-9])\s?[0-9]\s?[0-9]\s?[0-9]\s?[0-9]\s?[0-9]$/,
+                                        message: "Voer een geldig telefoonnummer in.",
+                                    },
                                 }
-                            )
-                            }
+                            )}
                         />
                         {errors.phone && <p>{errors.phone.message}</p>}
                     </div>

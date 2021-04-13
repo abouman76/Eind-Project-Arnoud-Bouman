@@ -3,7 +3,7 @@ import "./BtnSendContact.css"
 
 const BtnSendContact = () => {
     const handleOnKeyPress = (event) => {
-        console.log("PRESSED Enter", event);
+        //console.log("PRESSED Enter", event);
         if(event.onKeyPress === "enter") {
 
         }

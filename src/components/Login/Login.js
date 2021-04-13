@@ -1,10 +1,11 @@
-import React, { useState} from "react";
+import React, { useState, useForm } from "react";
 import "./Login.css"
 import BtnLogin from "../Buttons/BtnLogin";
 
 const Login = ({loginPerson, error}) => {
     const [details, setDetails] = useState({userName: "", password: ""});
     // console.log("Wat is loginPerson", loginPerson);
+    // const { register, handleSubmit, errors } = useForm();
 
     const loginHandler = (e) => {
         e.preventDefault();

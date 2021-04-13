@@ -45,11 +45,15 @@
     width: 150px;
     outline: none;
     margin-top: 20px;
+    cursor: pointer;
 }
 
-/*label {*/
-/*    display: flex;*/
-/*    justify-content: center;*/
-/*    align-items: flex-start;*/
-/*    flex-direction: column;*/
-/*}*/
+.display-error {
+    display: inline-block;
+}
+
+.display-error p {
+    color: red;
+    font-size: 10px;
+    margin-left: 15px;
+}
