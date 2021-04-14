@@ -4,7 +4,7 @@ import "./Register.css";
 
 const Register = () => {
 
-    const { register, handleSubmit, errors, watch } = useForm();
+    const { register, handleSubmit, formState: {errors}, watch } = useForm();
 
     const passWords = watch(["password", "checkPassword"]);
     console.log("Wachtwoord", passWords.password === passWords.checkPassword);
@@ -54,8 +54,8 @@ const Register = () => {
                             name="firstName"
                             id="first-name"
                             placeholder="uw voornaam"
-                            ref={register(
-                                {
+                            {...register(
+                                "firstName",{
                                     required: {
                                         value: true,
                                         message: "Verplicht veld."
@@ -72,8 +72,8 @@ const Register = () => {
                             name="lastName"
                             id="last-name"
                             placeholder="uw achternaam"
-                            ref={register(
-                                {
+                            {...register(
+                                "lastName",{
                                     required: {
                                         value: true,
                                         message: "Verplicht veld."
@@ -91,8 +91,8 @@ const Register = () => {
                             name="street"
                             id="street-details"
                             placeholder="uw straat + huisnummer"
-                            ref={register(
-                                {
+                            {...register(
+                                "street",{
                                     required: {
                                         value: true,
                                         message: "Verplicht veld."
@@ -108,8 +108,8 @@ const Register = () => {
                             name="city"
                             id="city-details"
                             placeholder="uw postcode + woonplaats"
-                            ref={register(
-                                {
+                            {...register(
+                                "city", {
                                     required: "Voer uw postcode en woonplaats in.",
                                     validate: validateZipCode,
                                 }
@@ -126,8 +126,8 @@ const Register = () => {
                             name="age"
                             id="age-details"
                             placeholder="uw leeftijd"
-                            ref={register(
-                                {
+                            {...register(
+                                "age",{
                                     required: {
                                         value: true,
                                         message: "Verplicht veld.",
@@ -147,8 +147,8 @@ const Register = () => {
                             name="phone"
                             id="phone-details"
                             placeholder="uw telefoonnummer"
-                            ref={register(
-                                {
+                            {...register(
+                                "phone",{
                                     required: {
                                         value: true,
                                         message: "Verplicht veld."
@@ -170,8 +170,8 @@ const Register = () => {
                             name="email"
                             id="email-details"
                             placeholder="uw e-mailadres"
-                            ref={register(
-                                {
+                            {...register(
+                                "email",{
                                     required: "Voer uw e-mailadres in.",
                                     validate: validateEmail,
                                 }
@@ -185,8 +185,8 @@ const Register = () => {
                             name="username"
                             id="user-details"
                             placeholder="uw gebruikersnaam"
-                            ref={register(
-                                {
+                            {...register(
+                                "username", {
                                     required: {
                                         value: true,
                                         message: "Verplicht veld."
@@ -210,8 +210,8 @@ const Register = () => {
                             name="password"
                             id="psw-details"
                             placeholder="uw wachtwoord"
-                            ref={register(
-                                {
+                            {...register(
+                                "password",{
                                     required: {
                                         value: true,
                                         message: "Verplicht veld"
@@ -236,8 +236,8 @@ const Register = () => {
                             name="checkPassword"
                             id="check-psw-details"
                             placeholder="herhaal wachtwoord"
-                            ref={register(
-                                {
+                            {...register(
+                                "checkPassword",{
                                     required: "Herhaal wachtwoord",
                                     validate: validatePassWordMatch
                                 }

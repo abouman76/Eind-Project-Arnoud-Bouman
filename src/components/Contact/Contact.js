@@ -4,7 +4,7 @@ import "./Contact.css";
 import BtnSendContact from "../Buttons/BtnSendContact";
 
 const Contact = () => {
-    const {handleSubmit, register, errors} = useForm();
+    const {handleSubmit, register, formState: {errors}} = useForm();
 
     const onFormSubmit = (data) => {
         console.log(data);
@@ -40,8 +40,9 @@ const Contact = () => {
                             name="name"
                             id="name-details"
                             placeholder="Uw voor- en achternaam"
-                            ref={register(
-                                {
+
+                            {...register(
+                                "name", {
                                     required: {
                                         value: true,
                                         message: "Vul uw voor- en achternaam in"
@@ -59,8 +60,8 @@ const Contact = () => {
                             name="phone"
                             id="phone-details"
                             placeholder="Uw telefoonnummer"
-                            ref={register(
-                                {
+                            {...register(
+                                "phone",{
                                     required: {
                                         value: true,
                                         message: "Verplicht veld."
@@ -83,8 +84,8 @@ const Contact = () => {
                             name="address"
                             id="address-details"
                             placeholder="Straat + huisnummer, postcode en plaats"
-                            ref={register(
-                                {
+                            {...register(
+                                "address",{
                                     required: "Voer uw straat, huisnummer, postcode en plaats in.",
                                     validate: validateZipCode,
                                 }
@@ -99,8 +100,8 @@ const Contact = () => {
                             name="mail"
                             id="mail-details"
                             placeholder="Uw email adres"
-                            ref={register(
-                                {
+                            {...register(
+                                "mail", {
                                     required: "Voer uw email adres in",
                                     validate: validateEmail
                                 }
@@ -117,8 +118,8 @@ const Contact = () => {
                     rows="10"
                     cols="50"
                     placeholder="Uw bericht"
-                    ref={register(
-                        {
+                    {...register(
+                        "text",{
                             required: {
                                 value: true,
                                 message: "Verplicht veld"

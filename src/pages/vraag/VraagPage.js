@@ -7,7 +7,7 @@ const VraagPage = () => {
         <>
             <PictureHeader />
 
-            <Register/>
+            <div>HIER KOMEN DE VRAAG COMPONENTEN</div>
         </>
     )
 }

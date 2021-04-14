@@ -19,7 +19,7 @@ const Login = () => {
                                name="username"
                                id="username"
                                placeholder="voer gebruikersnaam in"
-                               {...register("username", { required: true })}
+                               {...register("username", {required: true})}
                                aria-invalid={errors.username ? "true" : "false"}
                         />
                     {errors.username && <p role="alert">Verplicht veld</p>}
@@ -35,9 +35,6 @@ const Login = () => {
                     />
                     {errors.passWordInput && <p role="alert">Verplicht veld</p>}
                 </div>
-
-                <button type="submit">TEST BTN......</button>
-
                 <div className="btn-login">
                     <BtnLogin loginHandler={loginHandler} />
                 </div>
