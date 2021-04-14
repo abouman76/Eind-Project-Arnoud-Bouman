@@ -1,46 +1,47 @@
-import React, { useState, useForm } from "react";
+import React from "react";
+import { useForm } from "react-hook-form";
 import "./Login.css"
 import BtnLogin from "../Buttons/BtnLogin";
 
-const Login = ({loginPerson, error}) => {
-    const [details, setDetails] = useState({userName: "", password: ""});
-    // console.log("Wat is loginPerson", loginPerson);
-    // const { register, handleSubmit, errors } = useForm();
+const Login = () => {
+    const { handleSubmit, register, formState: {errors} } = useForm();
 
-    const loginHandler = (e) => {
-        e.preventDefault();
-        loginPerson(details);
+    const loginHandler = (data) => {
+        console.log(data);
     }
 
     return (
         <div className="main-login">
-            <form onSubmit={loginHandler} className="form-login">
-                {(error !== "") ? (<span>{error}</span>) : ""}
+            <form onSubmit={handleSubmit(loginHandler)} className="form-login">
                 <div className="form-group">
-                    <label htmlFor="input-name" className="input-fields">uw gebruikersnaam</label>
+                    <label htmlFor="username" className="input-fields">uw gebruikersnaam</label>
                         <input type="text"
                                name="username"
-                               id="input-name"
+                               id="username"
                                placeholder="voer gebruikersnaam in"
-                               onChange={ e => setDetails ({...details, userName: e.target.value})}
-                               value={details.userName}
+                               {...register("username", { required: true })}
+                               aria-invalid={errors.username ? "true" : "false"}
                         />
+                    {errors.username && <p role="alert">Verplicht veld</p>}
                 </div>
                 <div className="form-group">
-                    <label htmlFor="input-password" className="input-fields">uw wachtwoord</label>
-                    <input type="text"
-                           name="password"
-                           id="input-password"
+                    <label htmlFor="passWordInput" className="input-fields">uw wachtwoord</label>
+                    <input type="password"
+                           name="passWordInput"
+                           id="passWordInput"
                            placeholder="voer wachtwoord in"
-                           onChange={ e => setDetails ({...details, password: e.target.value})}
-                           value={details.password}
+                           aria-invalid={errors.passwordInput ? "true" : "false"}
+                           {...register("passWordInput", { required: true })}
                     />
+                    {errors.passWordInput && <p role="alert">Verplicht veld</p>}
                 </div>
+
+                <button type="submit">TEST BTN......</button>
+
                 <div className="btn-login">
                     <BtnLogin loginHandler={loginHandler} />
                 </div>
             </form>
-
         </div>
     )
 }

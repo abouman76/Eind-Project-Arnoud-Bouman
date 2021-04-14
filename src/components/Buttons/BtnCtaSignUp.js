@@ -5,7 +5,7 @@ import "./BtnCtaSignUp.css";
 const BtnCtaSignUp = () => {
     return (
         <Link to="/registreren">
-            <button className="main-cta-signUp" type="button">registreer u hier</button>
+            <button className="main-cta-signUp" type="button">registreer</button>
         </Link>
     )
 }
