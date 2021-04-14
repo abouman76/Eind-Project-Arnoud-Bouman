@@ -1,6 +1,7 @@
 import React from "react";
 import "../HeaderGeneral/Header.css"
 import searchIcon from "../../assets/searchIcon.svg";
+import {NavLink} from "react-router-dom";
 
 const HeaderPersonal = () => {
     return (
@@ -8,14 +9,30 @@ const HeaderPersonal = () => {
             <header className="main-header">
                 <nav className="header-nav">
                     <ul className="header-list">
-                        <li><a href="/">Home</a></li>
-                        <li><a href="/">Aanbod</a></li>
-                        <li><a href="/">Vraag</a></li>
-                        <li><a href="/">contact</a></li>
-                        <li className="current-page"><a href="/">Mijn advertentie</a></li>
-                        {/*<li><a href="/">Registratie</a></li>*/}
-                        <li><a href="/">Profiel</a></li>
-                        <li><a href="/">Uitloggen</a></li>
+                        <li>
+                            <NavLink to="/" exact activeClassName="current-page">home</NavLink>
+                        </li>
+                        <li>
+                            <NavLink to="/aanbod" activeClassName="current-page">aanbod</NavLink>
+                        </li>
+                        <li>
+                            <NavLink to="/vraag" activeClassName="current-page">vraag</NavLink>
+                        </li>
+                        <li>
+                            <NavLink to="/contact" activeClassName="current-page">contact</NavLink>
+                        </li>
+                        <li>
+                            <NavLink to="/mijn-advertentie" activeClassName="current-page">mijn advertentie</NavLink>
+                        </li>
+                        <li>
+                            <NavLink to="/registreren" activeClassName="current-page">registreren</NavLink>
+                        </li>
+                        <li>
+                            <NavLink to="/profiel" activeClassName="current-page">profiel</NavLink>
+                        </li>
+                        <li>
+                            <NavLink to="/inloggen" activeClassName="current-page">inloggen</NavLink>
+                        </li>
                     </ul>
                 </nav>
 

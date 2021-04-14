@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import PictureHeader from "../../components/PictureHeader/PictureHeader";
 import Login from "../../components/Login/Login";
 import "./LoginPage.css";
+import BtnCtaSignUp from "../../components/Buttons/BtnCtaSignUp";
 
 const LoginPage = () => {
     const userLogin = {
@@ -41,7 +42,8 @@ const LoginPage = () => {
 
                 <div className="main-text">
                     <h1>Inloggen</h1>
-                    <p>Nieuw hier? Registreer u hier => hyperlink naar registratiepagina</p>
+                    <p>Heeft u iets aan te bieden en bent u hier nieuw?</p>
+                    <BtnCtaSignUp/>
                 </div>
 
                 <Login loginPerson={loginPerson} />

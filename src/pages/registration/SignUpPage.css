@@ -1,0 +1,25 @@
+/** {*/
+/*    border: 1px solid red;*/
+/*}*/
+
+.main-SignUp-Page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /*flex-wrap: nowrap;*/
+    /*margin: 30px 0 30px 0;*/
+}
+
+.main-SignUp-Page p {
+    margin-top: 20px;
+}
+
+/*.signUp-comp {*/
+/*    display: flex;*/
+/*    justify-content: center;*/
+/*    align-items: center;*/
+/*    flex-direction: column;*/
+/*    min-height: 100vh;*/
+/*    width: 100vw;*/
+/*}*/

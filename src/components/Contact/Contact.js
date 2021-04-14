@@ -111,7 +111,7 @@ const Contact = () => {
                     </div>
                 </div>
                 <div className="input-with-error">
-                <textarea
+                <textarea className="text-contact"
                     name="text"
                     id="text-details"
                     rows="10"

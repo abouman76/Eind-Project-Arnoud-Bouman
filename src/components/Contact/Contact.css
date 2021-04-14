@@ -42,7 +42,7 @@ textarea {
     /*width: 45vw; mobiele versie*/
 }
 
-textarea {
+.text-contact {
     margin: 20px 15px 10px 15px;
     /*padding: 5px;*/
     width: 750px;
