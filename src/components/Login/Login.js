@@ -2,8 +2,10 @@ import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import "./Login.css"
 import BtnLogin from "../Buttons/BtnLogin";
+
+// Firebase Config:
 import app from "../../modules/Firebase";
-// import firebase from "firebase";
+// const db = app.firestore();
 
 const Login = () => {
     const { handleSubmit, register, formState: {errors} } = useForm();
@@ -21,7 +23,10 @@ const Login = () => {
     return (
         <div className="main-login">
             <form onSubmit={handleSubmit(loginHandler)} className="form-login">
-                {appUser && <h4>You are logged in {appUser.email}</h4>}
+                <div className="header-login">
+                    <h1>Inloggen</h1>
+                    {appUser && <h4>Welcome {appUser.email}</h4>}
+                </div>
                 <div className="form-group">
                     <label htmlFor="email-input" className="input-fields">uw e-mail</label>
                         <input type="email"

@@ -10,7 +10,6 @@ const LoginPage = () => {
             <PictureHeader />
             <div className="loginPage-container">
                 <div className="main-text">
-                    <h1>Inloggen</h1>
                     <p>Nieuw hier registreer u dan?</p>
                     <BtnCtaSignUp/>
                 </div>

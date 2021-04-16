@@ -1,11 +1,18 @@
-import React from "react";
+import React, {useState} from "react";
 import {useForm} from "react-hook-form";
+import { useHistory } from "react-router-dom";
 import "./Register.css";
+
+// Firebase Config:
 import app from "../../modules/Firebase";
+const db = app.firestore();
 
 const Register = () => {
 
     const { register, handleSubmit, formState: {errors}, watch } = useForm();
+    const [signUp, setSignUp] = useState("registreer")
+
+    const history = useHistory();
 
     // const passWords = watch(["password", "checkPassword"]);
     // console.log("Wachtwoord", passWords.password === passWords.checkPassword);
@@ -250,7 +257,9 @@ const Register = () => {
                 {/*        {errors.checkPassword && <p>{errors.checkPassword.message}</p>}*/}
                 {/*    </div>*/}
                 {/*</div>*/}
-                <button className="btn-register" type="submit">registreer</button>
+                <button className="btn-register"
+                        type="submit"
+                        onClick={() => setSignUp(signUp && history.push("/inloggen"))}>{signUp}</button>
             </form>
         </div>
 
