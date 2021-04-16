@@ -2,11 +2,11 @@
 import firebase from "firebase"
 
 const app = firebase.initializeApp({
-    apiKey: "AIzaSyDqioo9gvrONY6KZv8u6yfD8GufAUH3hqQ",
+    apiKey: process.env.REACT_APP_API_KEY,
     authDomain: "sociaal-oosterhout.firebaseapp.com",
     projectId: "sociaal-oosterhout",
     storageBucket: "sociaal-oosterhout.appspot.com",
-    messagingSenderId: "110680207398",
-    appId: "1:110680207398:web:da370238464723b36c76e7"
+    messagingSenderId: process.env.REACT_APP_API_MSG,
+    appId: process.env.REACT_APP_API_ID
 });
 export default app;

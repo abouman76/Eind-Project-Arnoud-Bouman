@@ -10,9 +10,10 @@ const db = app.firestore();
 const Register = () => {
 
     const { register, handleSubmit, formState: {errors}, watch } = useForm();
-    const [signUp, setSignUp] = useState("registreer")
+    // const [signUp, setSignUp] = useState("registreer");
+    // const [emailUser, setEmailUser] = useState("");
 
-    const history = useHistory();
+    // const history = useHistory();
 
     // const passWords = watch(["password", "checkPassword"]);
     // console.log("Wachtwoord", passWords.password === passWords.checkPassword);
@@ -49,11 +50,11 @@ const Register = () => {
         }
     }
 
-    const handleClick = (event) => {
-        // console.log("PRESSED Enter", event);
-        if(event.onKeyPress === "enter") {
-        }
-    }
+    // const handleClick = (event) => {
+    //     // console.log("PRESSED Enter", event);
+    //     if(event.onKeyPress === "enter") {
+    //     }
+    // }
 
     return(
         <div className="main-register">
@@ -180,6 +181,8 @@ const Register = () => {
                             type="email"
                             name="email"
                             id="email-details"
+                            // value={emailUser}
+                            // onChange={(e) =>setEmailUser(e.target.value)}
                             placeholder="uw e-mailadres"
                             {...register(
                                 "email",{
@@ -259,7 +262,9 @@ const Register = () => {
                 {/*</div>*/}
                 <button className="btn-register"
                         type="submit"
-                        onClick={() => setSignUp(signUp && history.push("/inloggen"))}>{signUp}</button>
+                        // onClick={() => setSignUp(signUp && history.push("/inloggen"))}
+                >registreer
+                </button>
             </form>
         </div>
 
