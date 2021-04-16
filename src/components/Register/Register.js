@@ -1,25 +1,29 @@
 import React from "react";
 import {useForm} from "react-hook-form";
 import "./Register.css";
+import app from "../../modules/Firebase";
 
 const Register = () => {
 
     const { register, handleSubmit, formState: {errors}, watch } = useForm();
 
-    const passWords = watch(["password", "checkPassword"]);
-    console.log("Wachtwoord", passWords.password === passWords.checkPassword);
+    // const passWords = watch(["password", "checkPassword"]);
+    // console.log("Wachtwoord", passWords.password === passWords.checkPassword);
 
-    const onFormSubmit= (data) => {
-        console.log(data)
+    const onFormSubmit= async (data) => {
+        // console.log("DATA:" , data.email, data.password);
+
+        const response = await app.auth().createUserWithEmailAndPassword(data.email, data.password);
+        console.log("Sign-UP Response", response);
     }
 
-    const validatePassWordMatch = (value) => {
-        if(passWords.password === value) {
-            return true
-        } else {
-            return "Voer hetzelfde wachtwoord in."
-        }
-    }
+    // const validatePassWordMatch = (value) => {
+    //     if(passWords.password === value) {
+    //         return true
+    //     } else {
+    //         return "Voer hetzelfde wachtwoord in."
+    //     }
+    // }
 
     const validateEmail = (value) => {
         if(value.includes("@")) {
@@ -166,7 +170,7 @@ const Register = () => {
                 <div className="input-form">
                     <div className="display-error">
                         <input
-                            type="text"
+                            type="email"
                             name="email"
                             id="email-details"
                             placeholder="uw e-mailadres"
@@ -179,31 +183,6 @@ const Register = () => {
                         />
                         {errors.email && <p>{errors.email.message}</p>}
                     </div>
-                    <div className="display-error">
-                        <input
-                            type="text"
-                            name="username"
-                            id="user-details"
-                            placeholder="uw gebruikersnaam"
-                            {...register(
-                                "username", {
-                                    required: {
-                                        value: true,
-                                        message: "Verplicht veld."
-                                    },
-                                    pattern: {
-                                        value: /^\w[\w.]{2,18}\w$/,
-                                        message: "Gebruikersnaam dient...."
-                                        // uit min 6 letters te bestaan waarvan tenminste 1 hoofdletter
-                                        // GEEFT CHECKT NIET DE HOOFDLETTERS
-                                    }
-                                }
-                            )}
-                        />
-                        {errors.username && <p>{errors.username.message}</p>}
-                    </div>
-                </div>
-                <div className="input-form">
                     <div className="display-error">
                         <input
                             type="password"
@@ -230,23 +209,48 @@ const Register = () => {
                         />
                         {errors.password && <p>{errors.password.message}</p>}
                     </div>
-                    <div className="display-error">
-                        <input
-                            type="password"
-                            name="checkPassword"
-                            id="check-psw-details"
-                            placeholder="herhaal wachtwoord"
-                            {...register(
-                                "checkPassword",{
-                                    required: "Herhaal wachtwoord",
-                                    validate: validatePassWordMatch
-                                }
-                            )}
-                        />
-                        {errors.checkPassword && <p>{errors.checkPassword.message}</p>}
-                    </div>
                 </div>
-                <button className="btn-register" type="submit" onClick={handleClick}>registreer</button>
+                {/*<div className="input-form">*/}
+                {/*    <div className="display-error">*/}
+                {/*        <input*/}
+                {/*            type="text"*/}
+                {/*            name="username"*/}
+                {/*            id="user-details"*/}
+                {/*            placeholder="uw gebruikersnaam"*/}
+                {/*            {...register(*/}
+                {/*                "username", {*/}
+                {/*                    required: {*/}
+                {/*                        value: true,*/}
+                {/*                        message: "Verplicht veld."*/}
+                {/*                    },*/}
+                {/*                    pattern: {*/}
+                {/*                        value: /^\w[\w.]{2,18}\w$/,*/}
+                {/*                        message: "Gebruikersnaam dient...."*/}
+                {/*                        // uit min 6 letters te bestaan waarvan tenminste 1 hoofdletter*/}
+                {/*                        // GEEFT CHECKT NIET DE HOOFDLETTERS*/}
+                {/*                    }*/}
+                {/*                }*/}
+                {/*            )}*/}
+                {/*        />*/}
+                {/*        {errors.username && <p>{errors.username.message}</p>}*/}
+                {/*    </div>*/}
+                {/*    <div className="display-error">*/}
+                {/*        <input*/}
+                {/*            type="password"*/}
+                {/*            name="checkPassword"*/}
+                {/*            id="check-psw-details"*/}
+                {/*            placeholder="herhaal wachtwoord"*/}
+                {/*            {...register(*/}
+                {/*                "checkPassword",{*/}
+                {/*                    required: "Herhaal wachtwoord",*/}
+                {/*                    validate: validatePassWordMatch*/}
+                {/*                }*/}
+                {/*            )}*/}
+                {/*        />*/}
+                {/*        {errors.checkPassword && <p>{errors.checkPassword.message}</p>}*/}
+                {/*    </div>*/}
+                {/*</div>*/}
+                <button className="btn-register" type="submit">registreer</button>
             </form>
         </div>
 
