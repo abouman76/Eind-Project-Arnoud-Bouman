@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import {useForm} from "react-hook-form";
-import { useHistory } from "react-router-dom";
+// import { useHistory } from "react-router-dom";
 import "./Register.css";
 
 // Firebase Config:
@@ -11,7 +11,7 @@ const Register = () => {
 
     const { register, handleSubmit, formState: {errors}, watch } = useForm();
     // const [signUp, setSignUp] = useState("registreer");
-    // const [emailUser, setEmailUser] = useState("");
+    const [emailUser, setEmailUser] = useState("");
 
     // const history = useHistory();
 
@@ -32,6 +32,16 @@ const Register = () => {
     //         return "Voer hetzelfde wachtwoord in."
     //     }
     // }
+
+    const saveEmail = async (event) => {
+        await db
+            .collection("userInformation")
+            .doc(emailUser.email)
+            .set({ clientEmail: emailUser});
+        // address komt van de state
+        alert("email saved!");
+    };
+
 
     const validateEmail = (value) => {
         if(value.includes("@")) {
@@ -262,7 +272,8 @@ const Register = () => {
                 {/*</div>*/}
                 <button className="btn-register"
                         type="submit"
-                        // onClick={() => setSignUp(signUp && history.push("/inloggen"))}
+                        onClick={saveEmail}
+                        // onChange={(event => setEmailUser(event.target.value))}
                 >registreer
                 </button>
             </form>

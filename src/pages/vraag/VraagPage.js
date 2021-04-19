@@ -1,13 +1,28 @@
 import React from "react";
 import PictureHeader from "../../components/PictureHeader/PictureHeader";
-// import Register from "../../components/Register/Register";
+import Request from "../../components/Vraag/Request";
+import "./VraagPage.css";
 
 const VraagPage = () => {
     return (
         <>
             <PictureHeader />
-
-            <div>HIER KOMEN DE VRAAG COMPONENTEN</div>
+            <div className="request-wrapper">
+                <section className='request-component'>
+                    <Request />
+                </section>
+                <section className='request-component'>
+                    <Request />
+                </section>
+            </div>
+            <div className="request-wrapper">
+                <section className='request-component'>
+                    <Request />
+                </section>
+                <section className='request-component'>
+                    <Request />
+                </section>
+            </div>
         </>
     )
 }
