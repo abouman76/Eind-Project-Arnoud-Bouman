@@ -3,29 +3,34 @@ import {useForm} from "react-hook-form";
 import "./Contact.css";
 import BtnSendContact from "../Buttons/BtnSendContact";
 
+// Firebase CONFIG
+import app from "../../modules/Firebase";
+import {logDOM} from "@testing-library/react";
+const db = app.firestore();
+
 const Contact = () => {
-    const {handleSubmit, register, formState: {errors}} = useForm();
+    const {handleSubmit, register, formState: {errors}, reset} = useForm();
 
     const onFormSubmit = (data) => {
         console.log(data);
+        reset();
 
+        const contactForm = db.collection("contactForm").add({
+            name: data.name,
+            phone: data.phone,
+            address: data.address,
+            email: data.email,
+            message: data.message
+        });
+        console.log("Contact", contactForm);
+        // alert("message saved!");
     }
-
-    const validateZipCode = (value) => {
-        // console.log("VALUE", value)
-        if(value.includes("6515")) {
-            return true
-        } else{
-            return "Uw woont niet in de juiste postcode";
-        }
-
-        }
 
     const validateEmail = (value) => {
         if(value.includes("@")) {
             return true
         } else {
-            return 'uw emailadres dient een "@" te bevatten';
+            return 'uw email adres dient een "@" te bevatten';
         }
     }
     // console.log("Errors", errors);
@@ -86,8 +91,10 @@ const Contact = () => {
                             placeholder="Straat + huisnummer, postcode en plaats"
                             {...register(
                                 "address",{
-                                    required: "Voer uw straat, huisnummer, postcode en plaats in.",
-                                    validate: validateZipCode,
+                                    required: {
+                                        value: true,
+                                        message: "Verplicht veld"
+                                    },
                                 }
                             )
                             }
@@ -96,30 +103,30 @@ const Contact = () => {
                     </div>
                     <div className="input-with-error">
                         <input
-                            type="text"
-                            name="mail"
+                            type="email"
+                            name="email"
                             id="mail-details"
                             placeholder="Uw email adres"
                             {...register(
-                                "mail", {
+                                "email", {
                                     required: "Voer uw email adres in",
                                     validate: validateEmail
                                 }
                             )
                             }
                         />
-                        {errors.mail && <p>{errors.mail.message}</p>}
+                        {errors.email && <p>{errors.email.message}</p>}
                     </div>
                 </div>
                 <div className="input-with-error">
                 <textarea className="text-contact"
-                    name="text"
+                    name="message"
                     id="text-details"
                     rows="10"
                     cols="50"
                     placeholder="Uw bericht"
                     {...register(
-                        "text",{
+                        "message",{
                             required: {
                                 value: true,
                                 message: "Verplicht veld"
@@ -129,10 +136,10 @@ const Contact = () => {
                     }
                 >
                 </textarea>
-                {errors.text && <p>{errors.text.message}</p>}
+                {errors.message && <p>{errors.message.message}</p>}
                 </div>
                 <div className="btn-send-contactform">
-                    <BtnSendContact/>
+                    <BtnSendContact />
                 </div>
             </form>
         </>

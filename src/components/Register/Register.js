@@ -9,7 +9,7 @@ const db = app.firestore();
 
 const Register = () => {
 
-    const { register, handleSubmit, formState: {errors}, watch } = useForm();
+    const { register, handleSubmit, formState: {errors}, reset, watch } = useForm();
 
     const history = useHistory();
 
@@ -18,6 +18,7 @@ const Register = () => {
 
     const onFormSubmit= async (data) => {
         console.log("DATA:" , data, data.email, data.password);
+        reset();
 
         const response = await app.auth().createUserWithEmailAndPassword(data.email, data.password);
         console.log("Sign-UP Response", response.user.uid);
