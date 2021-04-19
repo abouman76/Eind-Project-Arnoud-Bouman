@@ -11,11 +11,11 @@ const db = app.firestore();
 const Contact = () => {
     const {handleSubmit, register, formState: {errors}, reset} = useForm();
 
-    const onFormSubmit = (data) => {
+    const onFormSubmit = async (data) => {
         console.log(data);
         reset();
 
-        const contactForm = db.collection("contactForm").add({
+        const contactForm = await db.collection("contactForm").add({
             name: data.name,
             phone: data.phone,
             address: data.address,

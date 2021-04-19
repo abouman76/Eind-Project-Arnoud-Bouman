@@ -14,15 +14,21 @@ const Login = () => {
     const history = useHistory();
 
     const [appUser, setAppUser] = useState(undefined);
+    const [fireBaseError, setFireBaseError] = useState("")
 
     const loginHandler = async (data) => {
         // console.log("DATA:" , data.email, data.password);
+        try { const response = await app.auth().signInWithEmailAndPassword(data.email, data.password);
+            console.log("LOGIN Response", response);
+            setAppUser(response.user);
 
-        const response = await app.auth().signInWithEmailAndPassword(data.email, data.password);
-        console.log("LOGIN Response", response);
-        setAppUser(response.user);
+            history.push("/profiel");
 
-        history.push("/profiel");
+        } catch (e) {
+            console.error("ERROR", e.message);
+            setFireBaseError(e.message);
+        }
+
     }
 
     return (
@@ -53,7 +59,11 @@ const Login = () => {
                     />
                     {errors.password && <p role="alert">Verplicht veld</p>}
                 </div>
+                <div className="form-group">
+                    <p>{fireBaseError}</p>
+                </div>
                 <div className="btn-login">
+
                     <BtnLogin />
                 </div>
             </form>

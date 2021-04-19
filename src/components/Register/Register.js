@@ -13,8 +13,9 @@ const Register = () => {
 
     const history = useHistory();
 
-    // const passWords = watch(["password", "checkPassword"]);
-    // console.log("Wachtwoord", passWords.password === passWords.checkPassWord);
+    const passWords = watch(["password", "checkPassword"]);
+    console.log("Wachtwoord", passWords, passWords[0] === passWords[1]);
+
 
     const onFormSubmit= async (data) => {
         console.log("DATA:" , data, data.email, data.password);
@@ -23,7 +24,7 @@ const Register = () => {
         const response = await app.auth().createUserWithEmailAndPassword(data.email, data.password);
         console.log("Sign-UP Response", response.user.uid);
 
-        const userCollection = await db.collection("userInformation").doc(response.user.uid).set({
+        await db.collection("userInformation").doc(response.user.uid).set({
             age: data.age,
             city: data.city,
             firstName: data.firstName,
@@ -36,13 +37,13 @@ const Register = () => {
         // console.log("USER", userCollection);
     }
 
-    // const validatePassWordMatch = (value) => {
-    //     if(passWords.password === value) {
-    //         return true
-    //     } else {
-    //         return "Voer hetzelfde wachtwoord in."
-    //     }
-    // }
+    const validatePassWordMatch = (value) => {
+        if(passWords[0] === value) {
+            return true
+        } else {
+            return "Voer hetzelfde wachtwoord in."
+        }
+    }
 
     const validateEmail = (value) => {
         if(value.includes("@")) {
@@ -250,19 +251,19 @@ const Register = () => {
                         {errors.password && <p>{errors.password.message}</p>}
                     </div>
                     <div className="display-error">
-                        {/*<input*/}
-                        {/*    type="password"*/}
-                        {/*    name="checkPassword"*/}
-                        {/*    id="check-psw-details"*/}
-                        {/*    placeholder="herhaal wachtwoord"*/}
-                        {/*    {...register(*/}
-                        {/*        "checkPassword",{*/}
-                        {/*            required: "Herhaal wachtwoord",*/}
-                        {/*            validate: validatePassWordMatch*/}
-                        {/*        }*/}
-                        {/*    )}*/}
-                        {/*/>*/}
-                        {/*{errors.checkPassword && <p>{errors.checkPassword.message}</p>}*/}
+                        <input
+                            type="password"
+                            name="checkPassword"
+                            id="check-psw-details"
+                            placeholder="herhaal wachtwoord"
+                            {...register(
+                                "checkPassword",{
+                                    required: "Herhaal wachtwoord",
+                                    validate: validatePassWordMatch
+                                }
+                            )}
+                        />
+                        {errors.checkPassword && <p>{errors.checkPassword.message}</p>}
                     </div>
                 </div>
                 <button className="btn-register"
