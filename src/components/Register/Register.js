@@ -1,6 +1,6 @@
-import React, {useState} from "react";
+import React from "react";
 import {useForm} from "react-hook-form";
-// import { useHistory } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 import "./Register.css";
 
 // Firebase Config:
@@ -10,19 +10,29 @@ const db = app.firestore();
 const Register = () => {
 
     const { register, handleSubmit, formState: {errors}, watch } = useForm();
-    // const [signUp, setSignUp] = useState("registreer");
-    const [emailUser, setEmailUser] = useState("");
 
-    // const history = useHistory();
+    const history = useHistory();
 
     // const passWords = watch(["password", "checkPassword"]);
-    // console.log("Wachtwoord", passWords.password === passWords.checkPassword);
+    // console.log("Wachtwoord", passWords.password === passWords.checkPassWord);
 
     const onFormSubmit= async (data) => {
-        // console.log("DATA:" , data.email, data.password);
+        console.log("DATA:" , data, data.email, data.password);
 
         const response = await app.auth().createUserWithEmailAndPassword(data.email, data.password);
-        console.log("Sign-UP Response", response);
+        console.log("Sign-UP Response", response.user.uid);
+
+        const userCollection = await db.collection("userInformation").doc(response.user.uid).set({
+            age: data.age,
+            city: data.city,
+            firstName: data.firstName,
+            lastName: data.lastName,
+            phone: data.phone,
+            street: data.street,
+            username: data.username
+        });
+        history.push("/inloggen")
+        // console.log("USER", userCollection);
     }
 
     // const validatePassWordMatch = (value) => {
@@ -32,16 +42,6 @@ const Register = () => {
     //         return "Voer hetzelfde wachtwoord in."
     //     }
     // }
-
-    const saveEmail = async (event) => {
-        await db
-            .collection("userInformation")
-            .doc(emailUser.email)
-            .set({ clientEmail: emailUser});
-        // address komt van de state
-        alert("email saved!");
-    };
-
 
     const validateEmail = (value) => {
         if(value.includes("@")) {
@@ -59,12 +59,6 @@ const Register = () => {
             return "Uw woont niet in de juiste postcode";
         }
     }
-
-    // const handleClick = (event) => {
-    //     // console.log("PRESSED Enter", event);
-    //     if(event.onKeyPress === "enter") {
-    //     }
-    // }
 
     return(
         <div className="main-register">
@@ -191,8 +185,6 @@ const Register = () => {
                             type="email"
                             name="email"
                             id="email-details"
-                            // value={emailUser}
-                            // onChange={(e) =>setEmailUser(e.target.value)}
                             placeholder="uw e-mailadres"
                             {...register(
                                 "email",{
@@ -203,6 +195,34 @@ const Register = () => {
                         />
                         {errors.email && <p>{errors.email.message}</p>}
                     </div>
+                    <div className="display-error">
+                        <input
+                            type="text"
+                            name="username"
+                            id="user-details"
+                            placeholder="uw gebruikersnaam"
+                            {...register(
+                                "username", {
+                                    required: {
+                                        value: true,
+                                        message: "Verplicht veld."
+                                    },
+                                    minLength: {
+                                        value: 6,
+                                        message: "Dient uit minimaal 6 karakters te bestaan"
+                                    },
+                                    pattern: {
+                                        value: /^(?=.?[A-Z])(?=.?[a-z]).{6,}$/,
+                                        message: "Dient minimaal 1 hoofdletter te bevatten"
+                                    }
+                                }
+                            )}
+                        />
+                        {errors.username && <p>{errors.username.message}</p>}
+                    </div>
+
+                </div>
+                <div className="input-form">
                     <div className="display-error">
                         <input
                             type="password"
@@ -222,58 +242,30 @@ const Register = () => {
                                     pattern: {
                                         value: /^(?=.?[A-Z])(?=.?[a-z])(?=.*?[0-9]).{8,}$/,
                                         message: "Minimaal 1 hoofdletter, kleine letter en cijfer"
-                                        // 1 hoofdletter, 1 kleine letter, 1 cijfer
                                     },
                                 }
                             )}
                         />
                         {errors.password && <p>{errors.password.message}</p>}
                     </div>
+                    <div className="display-error">
+                        {/*<input*/}
+                        {/*    type="password"*/}
+                        {/*    name="checkPassword"*/}
+                        {/*    id="check-psw-details"*/}
+                        {/*    placeholder="herhaal wachtwoord"*/}
+                        {/*    {...register(*/}
+                        {/*        "checkPassword",{*/}
+                        {/*            required: "Herhaal wachtwoord",*/}
+                        {/*            validate: validatePassWordMatch*/}
+                        {/*        }*/}
+                        {/*    )}*/}
+                        {/*/>*/}
+                        {/*{errors.checkPassword && <p>{errors.checkPassword.message}</p>}*/}
+                    </div>
                 </div>
-                {/*<div className="input-form">*/}
-                {/*    <div className="display-error">*/}
-                {/*        <input*/}
-                {/*            type="text"*/}
-                {/*            name="username"*/}
-                {/*            id="user-details"*/}
-                {/*            placeholder="uw gebruikersnaam"*/}
-                {/*            {...register(*/}
-                {/*                "username", {*/}
-                {/*                    required: {*/}
-                {/*                        value: true,*/}
-                {/*                        message: "Verplicht veld."*/}
-                {/*                    },*/}
-                {/*                    pattern: {*/}
-                {/*                        value: /^\w[\w.]{2,18}\w$/,*/}
-                {/*                        message: "Gebruikersnaam dient...."*/}
-                {/*                        // uit min 6 letters te bestaan waarvan tenminste 1 hoofdletter*/}
-                {/*                        // GEEFT CHECKT NIET DE HOOFDLETTERS*/}
-                {/*                    }*/}
-                {/*                }*/}
-                {/*            )}*/}
-                {/*        />*/}
-                {/*        {errors.username && <p>{errors.username.message}</p>}*/}
-                {/*    </div>*/}
-                {/*    <div className="display-error">*/}
-                {/*        <input*/}
-                {/*            type="password"*/}
-                {/*            name="checkPassword"*/}
-                {/*            id="check-psw-details"*/}
-                {/*            placeholder="herhaal wachtwoord"*/}
-                {/*            {...register(*/}
-                {/*                "checkPassword",{*/}
-                {/*                    required: "Herhaal wachtwoord",*/}
-                {/*                    validate: validatePassWordMatch*/}
-                {/*                }*/}
-                {/*            )}*/}
-                {/*        />*/}
-                {/*        {errors.checkPassword && <p>{errors.checkPassword.message}</p>}*/}
-                {/*    </div>*/}
-                {/*</div>*/}
                 <button className="btn-register"
                         type="submit"
-                        onClick={saveEmail}
-                        // onChange={(event => setEmailUser(event.target.value))}
                 >registreer
                 </button>
             </form>

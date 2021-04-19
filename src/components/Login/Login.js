@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
+import {useHistory} from "react-router-dom";
 import "./Login.css"
 import BtnLogin from "../Buttons/BtnLogin";
 
@@ -10,6 +11,8 @@ import app from "../../modules/Firebase";
 const Login = () => {
     const { handleSubmit, register, formState: {errors} } = useForm();
 
+    const history = useHistory();
+
     const [appUser, setAppUser] = useState(undefined);
 
     const loginHandler = async (data) => {
@@ -18,6 +21,8 @@ const Login = () => {
         const response = await app.auth().signInWithEmailAndPassword(data.email, data.password);
         console.log("LOGIN Response", response);
         setAppUser(response.user);
+
+        history.push("/profiel");
     }
 
     return (
@@ -25,7 +30,6 @@ const Login = () => {
             <form onSubmit={handleSubmit(loginHandler)} className="form-login">
                 <div className="header-login">
                     <h1>Inloggen</h1>
-                    {appUser && <h4>Welcome {appUser.email}</h4>}
                 </div>
                 <div className="form-group">
                     <label htmlFor="email-input" className="input-fields">uw e-mail</label>

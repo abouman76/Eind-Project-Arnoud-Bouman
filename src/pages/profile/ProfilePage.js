@@ -5,7 +5,7 @@ const ProfilePage = () => {
     return (
         <>
             <PictureHeader/>
-            <div> </div>
+            <div> PROFIEL PAGINA! </div>
         </>
 
     )
