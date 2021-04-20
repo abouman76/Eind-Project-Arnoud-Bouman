@@ -9,10 +9,7 @@ const db = app.firestore();
 const MyAdComponent = () => {
     const {handleSubmit, register, formState: {errors}, reset} = useForm();
 
-    // const toDate = (dateString) => {
-    //     const [day, month, year] = dateString.split("-");
-    //     return new Date(day, month -1, year);
-    // }
+    const localDate = new Date();
 
     const onSubmitAd = async (data) => {
         console.log("DATA", data);
@@ -20,10 +17,7 @@ const MyAdComponent = () => {
 
         await db.collection("userAdvertisement").add({
             choice: data.choice,
-            // date: data.date,
-            date: new Date(),
-            // date: data.firestore.FieldValue.serverTimestamp(),
-            // date: app.database.ServerValue.TIMESTAMP,
+            date: localDate.toLocaleDateString("nl-NL"),
             title: data.title,
             description: data.description
         });

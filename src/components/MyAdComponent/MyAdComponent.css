@@ -28,6 +28,7 @@
 
 .radio-btn {
     display: flex;
+    justify-content: flex-start;
     flex-direction: row;
     margin-top: 10px;
 }
