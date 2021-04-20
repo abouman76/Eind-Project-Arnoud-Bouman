@@ -1,30 +1,49 @@
 import React from "react";
 import { useForm} from "react-hook-form";
-import "./AdComponent.css";
+import "./MyAdComponent.css";
 
-const AdComponent = () => {
+// Firebase CONFIG
+import app from "../../modules/Firebase";
+const db = app.firestore();
+
+const MyAdComponent = () => {
     const {handleSubmit, register, formState: {errors}, reset} = useForm();
 
-    function onSubmitAd(data) {
+    // const toDate = (dateString) => {
+    //     const [day, month, year] = dateString.split("-");
+    //     return new Date(day, month -1, year);
+    // }
+
+    const onSubmitAd = async (data) => {
         console.log("DATA", data);
         reset();
+
+        await db.collection("userAdvertisement").add({
+            choice: data.choice,
+            // date: data.date,
+            date: new Date(),
+            // date: data.firestore.FieldValue.serverTimestamp(),
+            // date: app.database.ServerValue.TIMESTAMP,
+            title: data.title,
+            description: data.description
+        });
     }
 
     return (
         <div className="main-adComponent">
             <div className="adComponent">
                 <div className="adComp-header">
-                    <h2> Uw advertentie</h2>
+                    <h2>Uw advertentie</h2>
                 </div>
             <form className="adComponent-form" onSubmit={handleSubmit(onSubmitAd)}>
                 <div className="radio-buttons">
                     <label className="radio-btn" htmlFor="offer-ad">
                         <input className="input-radio-btn"
                                type="radio"
-                               name="ad-choice"
+                               name="choice"
                                value="Aanbod"
                                {...register(
-                                   "ad-choice", {
+                                   "choice", {
                                        required: {
                                            value: "Aanbod"
                                        }
@@ -37,10 +56,10 @@ const AdComponent = () => {
                     <label className="radio-btn" htmlFor="request-ad">
                         <input className="input-radio-btn"
                                type="radio"
-                               name="ad-choice"
+                               name="choice"
                                value="Vraag"
                                {...register(
-                                   "ad-choice", {
+                                   "choice", {
                                        required: {
                                            value: "Vraag"
                                        }
@@ -54,7 +73,7 @@ const AdComponent = () => {
                         Datum plaatsing:
                         <input type="text"
                                name="date"
-                               id="inpute-date-ad"
+                               id="input-date-ad"
                                placeholder="datum:"
                                {...register(
                                    "date", {
@@ -67,22 +86,6 @@ const AdComponent = () => {
                         />
                     </label>
                     {errors.date && <p className="errors-ad-comp">{errors.date.message}</p>}
-
-                    {/*<label className="input-date-ad">*/}
-                    {/*    actief - non actief:*/}
-                    {/*    <input type="text"*/}
-                    {/*           name="active"*/}
-                    {/*           id="input-date-ad"*/}
-                    {/*           placeholder="actief - non actief:"*/}
-                    {/*           {...register(*/}
-                    {/*               "active", {*/}
-                    {/*                   required: {*/}
-                    {/*                       value: true*/}
-                    {/*                   }*/}
-                    {/*               }*/}
-                    {/*           )}*/}
-                    {/*    />*/}
-                    {/*</label>*/}
 
                     <label className="title" htmlFor="title-details">
                         Vul een titel in
@@ -131,4 +134,4 @@ const AdComponent = () => {
     )
 }
 
-export default AdComponent;
+export default MyAdComponent;

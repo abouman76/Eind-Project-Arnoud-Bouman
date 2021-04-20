@@ -1,16 +1,19 @@
 import React from "react"
 import PictureHeader from "../../components/PictureHeader/PictureHeader";
-import AdComponent from "../../components/AdComponent/AdComponent";
+import MyAdComponent from "../../components/MyAdComponent/MyAdComponent";
+import "./MyAdd.css";
 
-const AdvertisementPage = () => {
+const MyAdd = () => {
     return (
         <>
             <PictureHeader />
-            <div> Advertentie plaatsen </div>
-            <AdComponent />
+            <div className="my-ad-header">
+                <h3> Heeft u iets aan te bieden of te vragen? Maak dan hieronder uw advertentie</h3>
+            </div>
+            <MyAdComponent />
         </>
 
     )
 }
 
-export default AdvertisementPage;
+export default MyAdd;

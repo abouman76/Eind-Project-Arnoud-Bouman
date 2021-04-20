@@ -9,7 +9,7 @@ import AanbodPage from "../../pages/aanbod/AanbodPage";
 import VraagPage from "../../pages/vraag/VraagPage";
 import ContactPage from "../../pages/contact/ContactPage";
 import LoginPage from "../../pages/login/LoginPage";
-import AdvertisementPage from "../../pages/advertisement/AdvertisementPage"
+import MyAdd from "../../pages/myAdd/MyAdd"
 import ProfilePage from "../../pages/profile/ProfilePage";
 // import Header from "../HeaderGeneral/Header";
 import Footer from "../Footer/Footer";
@@ -37,7 +37,7 @@ function App() {
                         <ContactPage />
                     </Route>
                     <Route path="/plaats">
-                        <AdvertisementPage />
+                        <MyAdd />
                     </Route>
                     <Route path="/registreren">
                         <SignUpPage />
