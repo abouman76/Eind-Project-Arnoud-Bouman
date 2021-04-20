@@ -13,7 +13,7 @@ const Request = () => {
                 <div className="input-request">
                 <textarea
                     name="text"
-                    id="text-details"
+                    id="details-request"
                     rows="10"
                     cols="40"
                 >Wat is uw vraag?

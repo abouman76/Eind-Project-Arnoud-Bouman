@@ -36,7 +36,7 @@ function App() {
                     <Route path="/contact">
                         <ContactPage />
                     </Route>
-                    <Route path="/mijn-advertentie">
+                    <Route path="/plaats">
                         <AdvertisementPage />
                     </Route>
                     <Route path="/registreren">

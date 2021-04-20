@@ -1,11 +1,13 @@
 import React from "react"
 import PictureHeader from "../../components/PictureHeader/PictureHeader";
+import AdComponent from "../../components/AdComponent/AdComponent";
 
 const AdvertisementPage = () => {
     return (
         <>
             <PictureHeader />
-            <div> HIER KOMT DE INPUT VOOR VRAAG - AANBOD </div>
+            <div> Advertentie plaatsen </div>
+            <AdComponent />
         </>
 
     )

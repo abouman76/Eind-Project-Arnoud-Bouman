@@ -13,7 +13,7 @@ const OfferComp = () => {
                 <div className="input-offer">
                 <textarea
                     name="text"
-                    id="text-details"
+                    // id="offer"
                     rows="10"
                     cols="40"
                 >Wat is uw aanbod?

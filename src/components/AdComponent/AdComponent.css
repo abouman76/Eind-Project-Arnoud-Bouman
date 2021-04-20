@@ -1,0 +1,92 @@
+/** {*/
+/*    border: 1px solid red;*/
+/*}*/
+
+.main-adComponent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100vw;
+}
+
+.adComp-header {
+    margin: 10px;
+}
+
+.adComponent {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 2rem 5rem 2rem 5rem;
+    margin: 10px;
+    border: 3px solid gray;
+    background-color: #A7C957;
+}
+
+.radio-btn {
+    display: flex;
+    flex-direction: row;
+}
+
+.input-radio-btn {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+}
+
+.adComp-btn {
+    background-color: #5F5F5F;
+    color: white;
+    font-weight: bold;
+    padding: 15px;
+    border: none;
+    text-align: center;
+    display: inline-block;
+    width: 300px;
+    outline: none;
+}
+
+.adComp-title {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 5px;
+    width: 300px;
+
+}
+
+.adComp-description {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 5px;
+}
+
+.title,
+.description {
+    font-weight: bold;
+}
+
+.person-ad,
+.input-date-ad {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    font-weight: bold;
+}
+
+.person-ad input,
+.input-date-ad input {
+    width: 300px;
+    padding: 5px;
+}
+
+.errors-ad-comp {
+    color: red;
+    font-size: 12px;
+}

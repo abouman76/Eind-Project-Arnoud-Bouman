@@ -22,7 +22,7 @@ const HeaderPersonal = () => {
                             <NavLink to="/contact" activeClassName="current-page">contact</NavLink>
                         </li>
                         <li>
-                            <NavLink to="/mijn-advertentie" activeClassName="current-page">mijn advertentie</NavLink>
+                            <NavLink to="/plaats" activeClassName="current-page">plaats advertentie</NavLink>
                         </li>
                         <li>
                             <NavLink to="/registreren" activeClassName="current-page">registreren</NavLink>
