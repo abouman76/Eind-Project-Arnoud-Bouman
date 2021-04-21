@@ -1,40 +1,28 @@
-import React, { useState } from "react";
+import React, {useEffect, useState} from "react";
 import { useForm } from "react-hook-form";
 import {useHistory} from "react-router-dom";
 import "./Login.css"
 import BtnLogin from "../Buttons/BtnLogin";
 import {useAuth} from "../../helper/LoginContext";
 
-// Firebase Config:
-import app from "../../modules/Firebase";
-// const db = app.firestore();
+
+
 
 const Login = () => {
     const { handleSubmit, register, formState: {errors} } = useForm();
 
-    const {setIsAuthenticated, setToken} = useAuth();
+    const {setIsAuthenticated, fireBaseError, login} = useAuth();
 
     const history = useHistory();
 
     const [appUser, setAppUser] = useState(undefined);
-    const [fireBaseError, setFireBaseError] = useState("")
 
     const loginHandler = async (data) => {
-        // console.log("DATA:" , data.email, data.password);
-        try { const response = await app.auth().signInWithEmailAndPassword(data.email, data.password);
-            // console.log("TOKEN", response.user.za);
-            // console.log("LOGIN Response", response);
-            setToken(response.user.za)
-            setIsAuthenticated(true);
-            setAppUser(response.user);
 
-            history.push("/profiel");
-
-        } catch (e) {
-            console.error("ERROR", e.message);
-            setFireBaseError(e.message);
-        }
-
+        const response = await login(data);
+        setAppUser(response.user);
+        history.push("/profiel");
+        console.log("Login Response", response.user)
     }
 
     return (

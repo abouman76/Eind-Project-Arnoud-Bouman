@@ -1,13 +1,11 @@
-import React, {useContext} from "react";
+import React from "react";
 // import { Link} from "react-router-dom";
 import TextBubble from "../../components/TextBubble/TextBubble";
 import BtnCtaHome from "../../components/Buttons/BtnCtaHome";
 import "./HomePage.css";
 import PictureHeader from "../../components/PictureHeader/PictureHeader";
-import {LoginAuth} from "../../helper/LoginContext";
 
 const HomePage = () => {
-    // const {isAuthenticated, setIsAuthenticated} = useContext(LoginAuth)
     return (
         <>
         <PictureHeader />

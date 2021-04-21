@@ -14,12 +14,12 @@ import ProfilePage from "../../pages/profile/ProfilePage";
 import Footer from "../Footer/Footer";
 import './App.css';
 import SignUpPage from "../../pages/registration/SignUpPage";
-import HeaderPersonal from "../HeaderPersonal/HeaderPersonal";
+import Header from "../Header/Header";
 
 function App() {
   return (
     <Router>
-        <HeaderPersonal/>
+        <Header/>
             <main className="main-content">
                 <Switch>
                     <Route exact path="/">

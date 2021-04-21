@@ -1,12 +1,12 @@
 import React from "react";
-import "../HeaderGeneral/Header.css"
+import ".//Header.css"
 import searchIcon from "../../assets/searchIcon.svg";
 import {NavLink} from "react-router-dom";
 import {useAuth} from "../../helper/LoginContext";
 import {useHistory} from "react-router-dom"
 
 
-const HeaderPersonal = () => {
+const Header = () => {
     const {isAuthenticated, setIsAuthenticated} = useAuth();
 
     const history = useHistory();
@@ -56,7 +56,7 @@ const HeaderPersonal = () => {
                         </li>
                         }
                         {isAuthenticated === true &&
-                            <button onClick={handleLogout}>uitloggen</button>
+                            <button className="btn-out" onClick={handleLogout}>uitloggen</button>
                         }
                     </ul>
                 </nav>
@@ -71,4 +71,4 @@ const HeaderPersonal = () => {
     )
 }
 
-export default HeaderPersonal;
+export default Header;
