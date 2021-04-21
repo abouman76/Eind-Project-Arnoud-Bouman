@@ -34,11 +34,11 @@ function App() {
                     <Route path="/contact">
                         <ContactPage />
                     </Route>
-                    <Route path="/plaats">
-                        <MyAdd />
-                    </Route>
                     <Route path="/registreren">
                         <SignUpPage />
+                    </Route>
+                    <Route path="/plaats">
+                        <MyAdd />
                     </Route>
                     <Route path="/profiel">
                         <ProfilePage />

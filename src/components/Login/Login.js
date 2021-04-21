@@ -3,6 +3,7 @@ import { useForm } from "react-hook-form";
 import {useHistory} from "react-router-dom";
 import "./Login.css"
 import BtnLogin from "../Buttons/BtnLogin";
+import {useAuth} from "../../helper/LoginContext";
 
 // Firebase Config:
 import app from "../../modules/Firebase";
@@ -10,6 +11,8 @@ import app from "../../modules/Firebase";
 
 const Login = () => {
     const { handleSubmit, register, formState: {errors} } = useForm();
+
+    const {setIsAuthenticated, setToken} = useAuth();
 
     const history = useHistory();
 
@@ -19,7 +22,10 @@ const Login = () => {
     const loginHandler = async (data) => {
         // console.log("DATA:" , data.email, data.password);
         try { const response = await app.auth().signInWithEmailAndPassword(data.email, data.password);
-            console.log("LOGIN Response", response);
+            // console.log("TOKEN", response.user.za);
+            // console.log("LOGIN Response", response);
+            setToken(response.user.za)
+            setIsAuthenticated(true);
             setAppUser(response.user);
 
             history.push("/profiel");
