@@ -11,7 +11,6 @@ import ContactPage from "../../pages/contact/ContactPage";
 import LoginPage from "../../pages/login/LoginPage";
 import MyAdd from "../../pages/myAdd/MyAdd"
 import ProfilePage from "../../pages/profile/ProfilePage";
-// import Header from "../HeaderGeneral/Header";
 import Footer from "../Footer/Footer";
 import './App.css';
 import SignUpPage from "../../pages/registration/SignUpPage";
@@ -20,7 +19,6 @@ import HeaderPersonal from "../HeaderPersonal/HeaderPersonal";
 function App() {
   return (
     <Router>
-        {/*<Header />*/}
         <HeaderPersonal/>
             <main className="main-content">
                 <Switch>

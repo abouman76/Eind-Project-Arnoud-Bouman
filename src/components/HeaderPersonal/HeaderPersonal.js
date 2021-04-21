@@ -4,6 +4,7 @@ import searchIcon from "../../assets/searchIcon.svg";
 import {NavLink} from "react-router-dom";
 
 const HeaderPersonal = () => {
+    console.log("header")
     return (
         <>
             <header className="main-header">
@@ -22,11 +23,12 @@ const HeaderPersonal = () => {
                             <NavLink to="/contact" activeClassName="current-page">contact</NavLink>
                         </li>
                         <li>
-                            <NavLink to="/plaats" activeClassName="current-page">plaats advertentie</NavLink>
-                        </li>
-                        <li>
                             <NavLink to="/registreren" activeClassName="current-page">registreren</NavLink>
                         </li>
+                        <li>
+                            <NavLink to="/plaats" activeClassName="current-page">plaats advertentie</NavLink>
+                        </li>
+
                         <li>
                             <NavLink to="/profiel" activeClassName="current-page">profiel</NavLink>
                         </li>
