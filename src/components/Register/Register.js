@@ -31,7 +31,8 @@ const Register = () => {
             lastName: data.lastName,
             phone: data.phone,
             street: data.street,
-            username: data.username
+            username: data.username,
+            email: data.email
         });
         history.push("/inloggen")
         // console.log("USER", userCollection);

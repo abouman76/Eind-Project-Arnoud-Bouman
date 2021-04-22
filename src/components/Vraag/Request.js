@@ -1,13 +1,17 @@
-import React from "react";
+import React, {useEffect} from "react";
 import "./Request.css";
 
-const Request = () => {
+const Request = (props) => {
+
     return (
         <div className="main-request">
             <form className="request-form">
-                <div className="header-request">"Welke vraag - Onderwerp"</div>
+                <div className="header-request">{props.title}</div>
                 <div className="input-request">
-                    <input type="text" placeholder="datum:"/>
+                    <input type="text"
+                           value={props.date}
+                           // placeholder="datum:"
+                    />
                     <input type="text" placeholder="actief - non actief"/>
                 </div>
                 <div className="input-request">
@@ -16,7 +20,7 @@ const Request = () => {
                     id="details-request"
                     rows="10"
                     cols="40"
-                >Wat is uw vraag?
+                >{props.description}
                 </textarea>
                 </div>
                 <div className="input-person">
@@ -24,7 +28,7 @@ const Request = () => {
                 </div>
                 <div className="buttons">
                     <button className="btn-request" type="button">stuur bericht</button>
-                    <button className="btn-request" type="button">toon nummer</button>
+                    <button className="btn-request" title={props.phone} type="button">toon nummer</button>
                 </div>
 
             </form>

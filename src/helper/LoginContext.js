@@ -1,4 +1,4 @@
-import {createContext, useContext, useState} from "react";
+import {createContext, useContext, useEffect, useState} from "react";
 
 // Firebase Config:
 import app from "../modules/Firebase";
@@ -6,21 +6,29 @@ import app from "../modules/Firebase";
 export const LoginAuth = createContext({});
 
 const LoginContext = (props) => {
-    // const [token, setToken] = useState(null);
-    const [isAuthenticated, setIsAuthenticated] = useState(false);
+    // const [token, setToken] = useState("token", token);
+    const [authUser, setAuthUser] = useState(null);
     const [fireBaseError, setFireBaseError] = useState("")
 
-    // if(token) {
-    //     // localStorage.setItem("token", token)
-    //     setIsAuthenticated(true);
-    // }
+    useEffect(()=> {
+       const getUser = async () => {
+           const userApp  =  await app.auth().onAuthStateChanged((user) => {
+               if(user) {
+                   setAuthUser(user);
+               } else {
+                   setAuthUser(null);
+               }
+               console.log("USER APP", user);
+           })
 
+       }
+       getUser();
+
+    }, [])
     const login = async (data) => {
         try {
             const response = await app.auth().signInWithEmailAndPassword(data.email, data.password);
-            // console.log("TOKEN", response.user.za);
-            // setToken(response.user.za)
-            setIsAuthenticated(true);
+            // setAuthUser(true);
             return response;
 
         } catch (e) {
@@ -29,7 +37,7 @@ const LoginContext = (props) => {
         }
     }
 
-    return <LoginAuth.Provider value={{isAuthenticated, setIsAuthenticated, fireBaseError, login}}>
+    return <LoginAuth.Provider value={{authUser, setAuthUser, fireBaseError, login}}>
             {props.children}
             </LoginAuth.Provider>
 }

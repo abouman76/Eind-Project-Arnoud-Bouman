@@ -11,7 +11,7 @@ import {useAuth} from "../../helper/LoginContext";
 const Login = () => {
     const { handleSubmit, register, formState: {errors} } = useForm();
 
-    const {setIsAuthenticated, fireBaseError, login} = useAuth();
+    const {setAuthUser, fireBaseError, login} = useAuth();
 
     const history = useHistory();
 

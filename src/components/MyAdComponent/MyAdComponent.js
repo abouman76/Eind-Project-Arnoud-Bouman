@@ -4,22 +4,28 @@ import "./MyAdComponent.css";
 
 // Firebase CONFIG
 import app from "../../modules/Firebase";
+import {useAuth} from "../../helper/LoginContext";
 const db = app.firestore();
 
 const MyAdComponent = () => {
     const {handleSubmit, register, formState: {errors}, reset} = useForm();
 
-    const localDate = new Date();
+    const {authUser} = useAuth()
+    console.log("AuthUser", authUser);
+
 
     const onSubmitAd = async (data) => {
         console.log("DATA", data);
         reset();
 
+        const localDate = new Date();
+
         await db.collection("userAdvertisement").add({
             choice: data.choice,
             date: localDate.toLocaleDateString("nl-NL"),
             title: data.title,
-            description: data.description
+            description: data.description,
+            uid: authUser.uid
         });
     }
 
@@ -63,23 +69,6 @@ const MyAdComponent = () => {
                         />
                         Ik heb een vraag
                     </label>
-                    <label className="input-date-ad">
-                        Datum plaatsing:
-                        <input type="text"
-                               name="date"
-                               id="input-date-ad"
-                               placeholder="datum:"
-                               {...register(
-                                   "date", {
-                                       required: {
-                                           value: true,
-                                           message: "Voer datum in"
-                                       }
-                                   }
-                               )}
-                        />
-                    </label>
-                    {errors.date && <p className="errors-ad-comp">{errors.date.message}</p>}
 
                     <label className="title" htmlFor="title-details">
                         Vul een titel in

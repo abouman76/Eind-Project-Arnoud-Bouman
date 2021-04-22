@@ -60,9 +60,26 @@
     margin: 5px;
 }
 
-.btn-offer {
+.btn-offer-message,
+.btn-offer-phone {
     background-color: #5F5F5F;
     color: white;
     outline: none;
     padding: 5px 30px 5px 30px;
+    cursor: pointer;
 }
+
+/*Hover changes* make span element/
+/*.btn-offer-phone:hover span {*/
+/*    display: none;*/
+/*}*/
+
+/*.btn-offer-phone:hover:before {*/
+/*    background-color: #5F5F5F;*/
+/*    color: white;*/
+/*    outline: none;*/
+/*    padding: 5px 30px 5px 30px;*/
+/*    content: "0123456789"*/
+/*}*/
+
+

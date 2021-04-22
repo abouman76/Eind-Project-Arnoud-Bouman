@@ -7,13 +7,13 @@ import {useHistory} from "react-router-dom"
 
 
 const Header = () => {
-    const {isAuthenticated, setIsAuthenticated} = useAuth();
+    const {authUser, setAuthUser} = useAuth();
 
     const history = useHistory();
 
     const handleLogout = () => {
         // console.log("uitloggen svp");
-        setIsAuthenticated(false);
+        setAuthUser(false);
         history.push("/");
     }
 
@@ -35,32 +35,31 @@ const Header = () => {
                         <li>
                             <NavLink to="/contact" activeClassName="current-page">contact</NavLink>
                         </li>
-                        {isAuthenticated === false &&
+                        {authUser === false &&
                         <li>
                             <NavLink to="/registreren" activeClassName="current-page">registreren</NavLink>
                         </li>
                         }
-                        {isAuthenticated === true &&
+                        {authUser &&
                         <li>
                             <NavLink to="/plaats" activeClassName="current-page">plaats advertentie</NavLink>
                         </li>
                         }
-                        {isAuthenticated === true &&
+                        {authUser &&
                         <li>
                             <NavLink to="/profiel" activeClassName="current-page">profiel</NavLink>
                         </li>
                         }
-                        {isAuthenticated === false &&
+                        {authUser === false &&
                         <li>
                             <NavLink to="/inloggen" activeClassName="current-page">inloggen</NavLink>
                         </li>
                         }
-                        {isAuthenticated === true &&
+                        {authUser &&
                             <button className="btn-out" onClick={handleLogout}>uitloggen</button>
                         }
                     </ul>
                 </nav>
-
                 <div className="search">
                     <img className="searchIcon" src={searchIcon} alt="Zoek icon" />
                     <input className="input-search" type="text" placeholder="zoek" />
