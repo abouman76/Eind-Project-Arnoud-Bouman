@@ -1,8 +1,8 @@
 import React from "react";
 
-import "./Request.css";
+import "./RequestComp.css";
 
-const Request = (props) => {
+const RequestComp = (props) => {
 
     return (
         <div className="main-request">
@@ -41,4 +41,4 @@ const Request = (props) => {
     )
 }
 
-export default Request;
+export default RequestComp;

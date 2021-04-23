@@ -1,10 +1,10 @@
 import React, {useEffect, useState} from "react";
 import PictureHeader from "../../components/PictureHeader/PictureHeader";
-import Request from "../../components/Vraag/Request";
-import "./VraagPage.css";
+import RequestComp from "../../components/Vraag/RequestComp";
+import "./RequestPage.css";
 import app from "../../modules/Firebase";
 
-const VraagPage = () => {
+const RequestPage = () => {
 
     const [requests, setRequests] = useState([]);
     const [userRequests, setUserRequests] = useState({});
@@ -43,7 +43,7 @@ const VraagPage = () => {
             <div className="request-wrapper">
                 {requests.filter(request => request.choice === "Vraag").map((request) => {
                     return  <section className='request-component' key={request.uid}>
-                                <Request
+                                <RequestComp
                                     title={request.title}
                                     date={request.date}
                                     description={request.description}
@@ -58,4 +58,4 @@ const VraagPage = () => {
         </>
     )
 }
-export default VraagPage;
+export default RequestPage;

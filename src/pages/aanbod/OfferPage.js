@@ -1,10 +1,10 @@
 import React, {useEffect, useState} from "react";
 import PictureHeader from "../../components/PictureHeader/PictureHeader";
 import OfferComp from "../../components/Aanbod/OfferComp";
-import "./AanbodPage.css";
+import "./OfferPage.css";
 import app from "../../modules/Firebase";
 
-const AanbodPage = () => {
+const OfferPage = () => {
 
     const [offers, setOffers] = useState([]);
     const [users, setUsers] = useState({});
@@ -64,4 +64,4 @@ const AanbodPage = () => {
     )
 }
 
-export default AanbodPage;
+export default OfferPage;

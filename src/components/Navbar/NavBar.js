@@ -1,12 +1,12 @@
 import React from "react";
-import ".//Header.css"
+import "./NavBar.css";
 import searchIcon from "../../assets/searchIcon.svg";
 import {NavLink} from "react-router-dom";
 import {useAuth} from "../../helper/LoginContext";
 import {useHistory} from "react-router-dom"
 
 
-const Header = () => {
+const NavBar = () => {
     const {authUser, setAuthUser, logOut} = useAuth();
 
     const history = useHistory();
@@ -20,9 +20,9 @@ const Header = () => {
     console.log("logOUT Auth", authUser);
     return (
         <>
-            <header className="main-header">
+            <header className="main-nav">
                 <nav className="header-nav">
-                    <ul className="header-list">
+                    <ul className="nav-list">
                         <li>
                             <NavLink to="/" exact activeClassName="current-page">home</NavLink>
                         </li>
@@ -71,4 +71,4 @@ const Header = () => {
     )
 }
 
-export default Header;
+export default NavBar;

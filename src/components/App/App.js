@@ -5,8 +5,8 @@ import {
     Route,
 } from 'react-router-dom';
 import HomePage from "../../pages/home/HomePage";
-import AanbodPage from "../../pages/aanbod/AanbodPage";
-import VraagPage from "../../pages/vraag/VraagPage";
+import OfferPage from "../../pages/aanbod/OfferPage";
+import RequestPage from "../../pages/vraag/RequestPage";
 import ContactPage from "../../pages/contact/ContactPage";
 import LoginPage from "../../pages/login/LoginPage";
 import MyAdd from "../../pages/myAdd/MyAdd"
@@ -14,22 +14,22 @@ import ProfilePage from "../../pages/profile/ProfilePage";
 import Footer from "../Footer/Footer";
 import './App.css';
 import SignUpPage from "../../pages/registration/SignUpPage";
-import Header from "../Header/Header";
+import NavBar from "../Navbar/NavBar";
 
 function App() {
   return (
     <Router>
-        <Header/>
+        <NavBar/>
             <main className="main-content">
                 <Switch>
                     <Route exact path="/">
                         <HomePage />
                     </Route>
                     <Route path="/aanbod">
-                        <AanbodPage />
+                        <OfferPage />
                     </Route>
                     <Route path="/vraag">
-                        <VraagPage />
+                        <RequestPage />
                     </Route>
                     <Route path="/contact">
                         <ContactPage />
