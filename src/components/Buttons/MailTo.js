@@ -1,17 +1,13 @@
 import React from "react";
-import {Link} from "react-router-dom";
 import "./MailTo.css";
 
-const MailTo = ({mailto, label}) => {
+const MailTo = ({mailto, title}) => {
     return (
-        <Link className="btn-mail"
-            onClick={(e) => {
-                window.location = mailto;
-                e.preventDefault();
-            }}
+        <a className="btn-mail"
+           href={`${mailto}?subject=${title}`}
             >
-            {label}
-        </Link>
+            stuur bericht
+        </a>
     );
 };
 

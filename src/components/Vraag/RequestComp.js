@@ -1,6 +1,8 @@
 import React from "react";
 
 import "./RequestComp.css";
+import MailTo from "../Buttons/MailTo";
+import ShowPhone from "../Buttons/ShowPhone";
 
 const RequestComp = (props) => {
 
@@ -11,6 +13,7 @@ const RequestComp = (props) => {
                 <div className="input-request">
                     <input type="text"
                            value={props.date}
+                           readOnly={true}
                            // placeholder="datum:"
                     />
                     <input type="text" placeholder="actief - non actief"/>
@@ -21,6 +24,7 @@ const RequestComp = (props) => {
                     id="details-request"
                     rows="10"
                     cols="40"
+                    readOnly={true}
                 >{props.description}
                 </textarea>
                 </div>
@@ -28,12 +32,15 @@ const RequestComp = (props) => {
                     <input
                         type="text"
                         value={props.name}
+                        readOnly={true}
                         // placeholder="gevraagd door:"
                     />
                 </div>
                 <div className="buttons">
-                    <button className="btn-request"  type="button">stuur bericht</button>
-                    <button className="btn-request" title={props.phone} type="button">toon nummer</button>
+                    <MailTo
+                        mailto={`mailto:${props.email}`}
+                    />
+                    <ShowPhone />
                 </div>
 
             </form>

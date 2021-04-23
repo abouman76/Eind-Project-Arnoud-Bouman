@@ -36,12 +36,12 @@
 .input-person {
     margin: 5px;
     display: inline-block;
-    outline: none;
 }
 
 .input-person input {
     width: 330px;
     padding: 5px 8px 5px 8px;
+    outline: none;
 }
 
 .input-request textarea {

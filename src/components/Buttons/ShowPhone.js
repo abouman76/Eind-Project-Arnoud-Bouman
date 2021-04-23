@@ -3,14 +3,21 @@ import "./ShowPhone.css";
 
 const ShowPhone = (props) => {
 
-    const [phoneNumber, setPhoneNumber] = useState(false);
+    const [showPhoneNumber, setShowPhoneNumber] = useState(false);
 
     const onClickPhoneHandler = () => {
-        setPhoneNumber(props.phone)
+        setShowPhoneNumber(!showPhoneNumber);
+
     }
 
     return (
-        <button className="btn-phone" type="button" onClick={onClickPhoneHandler}>toon nummer</button>
+        <button
+            className="btn-phone"
+            type="button"
+            onClick={onClickPhoneHandler}
+        >
+            {showPhoneNumber? props.phone : "toon nummer"}
+        </button>
     )
-}
+};
 export default ShowPhone;

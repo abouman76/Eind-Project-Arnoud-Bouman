@@ -12,6 +12,7 @@ const OfferComp = (props) => {
                 <div className="input-offer">
                     <input type="text"
                            value={props.date}
+                           readOnly={true}
                         // placeholder="datum:"
                     />
                     <input type="text" placeholder="actief - non actief"/>
@@ -22,6 +23,7 @@ const OfferComp = (props) => {
                     id="offer"
                     rows="10"
                     cols="40"
+                    readOnly={true}
                 >{props.description}
                 </textarea>
                 </div>
@@ -29,20 +31,19 @@ const OfferComp = (props) => {
                     <input
                         type="text"
                         value={props.name}
+                        readOnly={true}
                         // placeholder="Aangeboden door:"
                     />
                 </div>
 
                 <div className="buttons">
                     <MailTo
-                        label="Stuur Bericht"
                         mailto={`mailto:${props.email}`}
+                        title={props.title}
                     />
-                    <ShowPhone />
-                    {/*<button className="btn-offer-message" type="button">stuur bericht</button>*/}
-                    {/*<button className="btn-offer-phone" type="button">toon nummer*/}
-                    {/*    <span className="tooltip-text">{props.phone}</span>*/}
-                    {/*</button>*/}
+                    <ShowPhone
+                        phone={props.phone}
+                    />
                 </div>
 
             </form>
