@@ -1,24 +1,41 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 import PictureHeader from "../../components/PictureHeader/PictureHeader";
 import "./ProfilePage.css";
 import Profile from "../../components/Profile/Profile";
 
 // Firebase Config:
 import app from "../../modules/Firebase";
-const db = app.firestore();
 
 
 const ProfilePage = () => {
 
-    // const docRef = db.collection("userInformation").doc(test);
-    // docRef.get().then((doc) => {
-    //     if(doc.exists) {
-    //         console.log("DOC Data", doc.data());
+    // const [register, setRegister] = useState([]);
+    // const [profile, setProfile] = useState({});
     //
-    //     } else {
-    //         console.log("No doc found");
+    // useEffect(() => {
+    //
+    //     async function fetchData() {
+    //
+    //         const profileRegistration = await app.firestore().collection("userInformation-new").get()
+    //         let userData = {
+    //
+    //         }
+    //
+    //         profileRegistration.docs.forEach(doc => {
+    //             userData[doc.id] = doc.data();
+    //             console.log("DOC 1", doc.data())
+    //         });
+    //
+    //         setProfile(userData);
+
+            // const userRegistration = await app.firestore().collection("userInformation-new").get()
+            // setRegister(userRegistration.docs.map(doc => doc.data()));
+            // console.log("REG", userRegistration.docs.map(doc => doc.data()));
+    //
     //     }
-    // })
+    //     fetchData();
+    //
+    // }, []);
 
     return (
         <>
@@ -28,12 +45,14 @@ const ProfilePage = () => {
                 <p>Op deze pagina kunt u uw gegevens aanpassen</p>
             </main>
             <div className="container-profile-component">
-                <Profile />
+                <Profile
+                    // profile={profile}
+                />
             </div>
 
         </>
 
     )
-}
+};
 
 export default ProfilePage;

@@ -24,7 +24,7 @@ const Register = () => {
         const response = await app.auth().createUserWithEmailAndPassword(data.email, data.password);
         console.log("Sign-UP Response", response.user.uid);
 
-        await db.collection("userInformation").doc(response.user.uid).set({
+        await db.collection("userInformation-new").doc(response.user.uid).set({
             age: data.age,
             city: data.city,
             firstName: data.firstName,

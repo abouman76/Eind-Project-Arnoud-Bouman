@@ -1,4 +1,5 @@
-import React, {useEffect} from "react";
+import React from "react";
+
 import "./Request.css";
 
 const Request = (props) => {
@@ -24,10 +25,14 @@ const Request = (props) => {
                 </textarea>
                 </div>
                 <div className="input-person">
-                    <input type="text" placeholder="gevraagd door:"/>
+                    <input
+                        type="text"
+                        value={props.name}
+                        // placeholder="gevraagd door:"
+                    />
                 </div>
                 <div className="buttons">
-                    <button className="btn-request" type="button">stuur bericht</button>
+                    <button className="btn-request"  type="button">stuur bericht</button>
                     <button className="btn-request" title={props.phone} type="button">toon nummer</button>
                 </div>
 

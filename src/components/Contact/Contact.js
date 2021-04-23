@@ -5,7 +5,6 @@ import BtnSendContact from "../Buttons/BtnSendContact";
 
 // Firebase CONFIG
 import app from "../../modules/Firebase";
-import {logDOM} from "@testing-library/react";
 const db = app.firestore();
 
 const Contact = () => {

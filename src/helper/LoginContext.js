@@ -6,7 +6,6 @@ import app from "../modules/Firebase";
 export const LoginAuth = createContext({});
 
 const LoginContext = (props) => {
-    // const [token, setToken] = useState("token", token);
     const [authUser, setAuthUser] = useState(null);
     const [fireBaseError, setFireBaseError] = useState("")
 
@@ -28,7 +27,6 @@ const LoginContext = (props) => {
     const login = async (data) => {
         try {
             const response = await app.auth().signInWithEmailAndPassword(data.email, data.password);
-            // setAuthUser(true);
             return response;
 
         } catch (e) {
@@ -37,7 +35,11 @@ const LoginContext = (props) => {
         }
     }
 
-    return <LoginAuth.Provider value={{authUser, setAuthUser, fireBaseError, login}}>
+    const logOut = () => {
+        app.auth().signOut()
+    }
+
+    return <LoginAuth.Provider value={{authUser, setAuthUser, fireBaseError, login, logOut}}>
             {props.children}
             </LoginAuth.Provider>
 }

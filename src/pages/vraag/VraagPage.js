@@ -13,7 +13,7 @@ const VraagPage = () => {
 
         async function fetchData() {
 
-            const userInformationRequest = await app.firestore().collection("userInformation").get()
+            const userInformationRequest = await app.firestore().collection("userInformation-new").get()
             let userData = {
 
             }
@@ -47,11 +47,11 @@ const VraagPage = () => {
                                     title={request.title}
                                     date={request.date}
                                     description={request.description}
-                                    phone={userRequests[request.uid].phone}
-                                    email={userRequests[request.uid].email}
+                                    name={`${userRequests[request.uid]?.firstName} ${userRequests[request.uid]?.lastName}`}
+                                    phone={userRequests[request.uid]?.phone}
+                                    email={userRequests[request.uid]?.email}
                                 />
                             </section>
-
                     }
                 )}
             </div>

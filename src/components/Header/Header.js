@@ -7,16 +7,17 @@ import {useHistory} from "react-router-dom"
 
 
 const Header = () => {
-    const {authUser, setAuthUser} = useAuth();
+    const {authUser, setAuthUser, logOut} = useAuth();
 
     const history = useHistory();
 
     const handleLogout = () => {
         // console.log("uitloggen svp");
-        setAuthUser(false);
+        setAuthUser(null);
+        logOut();
         history.push("/");
     }
-
+    console.log("logOUT Auth", authUser);
     return (
         <>
             <header className="main-header">
@@ -35,7 +36,7 @@ const Header = () => {
                         <li>
                             <NavLink to="/contact" activeClassName="current-page">contact</NavLink>
                         </li>
-                        {authUser === false &&
+                        {!authUser  &&
                         <li>
                             <NavLink to="/registreren" activeClassName="current-page">registreren</NavLink>
                         </li>
@@ -50,7 +51,7 @@ const Header = () => {
                             <NavLink to="/profiel" activeClassName="current-page">profiel</NavLink>
                         </li>
                         }
-                        {authUser === false &&
+                        {!authUser  &&
                         <li>
                             <NavLink to="/inloggen" activeClassName="current-page">inloggen</NavLink>
                         </li>

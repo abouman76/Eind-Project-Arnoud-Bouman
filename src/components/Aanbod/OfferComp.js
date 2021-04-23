@@ -24,7 +24,11 @@ const OfferComp = (props) => {
                 </textarea>
                 </div>
                 <div className="input-person">
-                    <input type="text" placeholder="Aangeboden door:"/>
+                    <input
+                        type="text"
+                        value={props.name}
+                        // placeholder="Aangeboden door:"
+                    />
                 </div>
                 <div className="buttons">
                     <button className="btn-offer-message" title={props.email} type="button">stuur bericht</button>

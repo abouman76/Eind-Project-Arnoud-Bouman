@@ -12,7 +12,7 @@ const AanbodPage = () => {
     useEffect(() => {
         async function fetchData() {
 
-            const userInformationOffer = await app.firestore().collection("userInformation").get()
+            const userInformationOffer = await app.firestore().collection("userInformation-new").get()
 
             let userData = {
 
@@ -27,6 +27,7 @@ const AanbodPage = () => {
             console.log("UData", userData);
 
             const advertisements = await app.firestore().collection("userAdvertisement").get()
+            console.log("ADS", advertisements.docs);
             setOffers(advertisements.docs.map(doc => doc.data()));
             console.log("AD", advertisements.docs.map(doc => doc.data()));
         }
@@ -36,6 +37,7 @@ const AanbodPage = () => {
     }, []);
 
     console.log("OFFER ad", offers);
+
     return (
         <>
             <PictureHeader />
@@ -50,12 +52,13 @@ const AanbodPage = () => {
                                     title={offer.title}
                                     date={offer.date}
                                     description={offer.description}
-                                    phone={users[offer.uid].phone}
-                                    email={users[offer.uid].email}
+                                    name={`${users[offer.uid]?.firstName} ${users[offer.uid]?.lastName}`}
+                                    phone={users[offer.uid]?.phone}
+                                    email={users[offer.uid]?.email}
                                 />
                             </section>
                         }
-                )};
+                )}
             </div>
         </>
     )
