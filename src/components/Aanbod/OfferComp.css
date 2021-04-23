@@ -69,17 +69,27 @@
     cursor: pointer;
 }
 
-/*Hover changes* make span element/
-/*.btn-offer-phone:hover span {*/
-/*    display: none;*/
-/*}*/
+.btn-offer-phone .tooltip-text {
+    visibility: hidden;
+    width: 120px;
+    background-color: gray;
+    color: white;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+}
 
-/*.btn-offer-phone:hover:before {*/
-/*    background-color: #5F5F5F;*/
-/*    color: white;*/
-/*    outline: none;*/
-/*    padding: 5px 30px 5px 30px;*/
-/*    content: "0123456789"*/
-/*}*/
+.btn-offer-phone .tooltip-text::after {
+    content: "";
+    position: absolute;
+}
+
+.btn-offer-phone:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+}
+
 
 

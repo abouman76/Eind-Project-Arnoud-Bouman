@@ -1,5 +1,7 @@
 import React from "react";
 import "./OfferComp.css";
+import MailTo from "../Buttons/MailTo";
+import ShowPhone from "../Buttons/ShowPhone";
 
 const OfferComp = (props) => {
 
@@ -30,9 +32,17 @@ const OfferComp = (props) => {
                         // placeholder="Aangeboden door:"
                     />
                 </div>
+
                 <div className="buttons">
-                    <button className="btn-offer-message" title={props.email} type="button">stuur bericht</button>
-                    <button className="btn-offer-phone" title={props.phone} type="button">toon nummer</button>
+                    <MailTo
+                        label="Stuur Bericht"
+                        mailto={`mailto:${props.email}`}
+                    />
+                    <ShowPhone />
+                    {/*<button className="btn-offer-message" type="button">stuur bericht</button>*/}
+                    {/*<button className="btn-offer-phone" type="button">toon nummer*/}
+                    {/*    <span className="tooltip-text">{props.phone}</span>*/}
+                    {/*</button>*/}
                 </div>
 
             </form>
