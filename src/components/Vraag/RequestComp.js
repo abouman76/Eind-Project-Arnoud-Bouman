@@ -25,7 +25,8 @@ const RequestComp = (props) => {
                     rows="10"
                     cols="40"
                     readOnly={true}
-                >{props.description}
+                    value={props.description}
+                >
                 </textarea>
                 </div>
                 <div className="input-person">

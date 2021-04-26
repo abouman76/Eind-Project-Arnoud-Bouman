@@ -23,8 +23,9 @@ const OfferComp = (props) => {
                     id="offer"
                     rows="10"
                     cols="40"
+                    value={props.description}
                     readOnly={true}
-                >{props.description}
+                >
                 </textarea>
                 </div>
                 <div className="input-person">

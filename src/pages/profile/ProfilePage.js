@@ -7,7 +7,6 @@ import {useAuth} from "../../helper/LoginContext";
 // Firebase Config:
 import app from "../../modules/Firebase";
 
-
 const ProfilePage = () => {
 
     const {authUser} = useAuth();
@@ -21,7 +20,7 @@ const ProfilePage = () => {
             console.log("UID Fetch", authUser.uid);
 
             const userProfiel = (await app.firestore().collection("userInformation-new").doc(authUser.uid).get()).data()
-            console.log("userProf", userProfiel);
+            // console.log("userProf", userProfiel);
             setProfile(userProfiel);
 
         }
@@ -35,8 +34,8 @@ const ProfilePage = () => {
         <>
             <PictureHeader/>
             <main className="main-profile-page">
-                <h2> Uw gebruikers profiel</h2>
-                <p>Op deze pagina kunt u uw gegevens aanpassen</p>
+                <h2>Welkom {profile.firstName}</h2>
+                <p>Jouw profiel gegevens staan hieronder weergegeven.</p>
             </main>
             <div className="container-profile-component">
                 <Profile

@@ -1,13 +1,7 @@
 import React from "react";
 import "./Profile.css";
 
-// Firebase Config:
-import app from "../../modules/Firebase";
-// const db = app.firestore();
-
 const Profile = (props) => {
-
-    console.log("Profile PROPS", props);
 
     return(
         <div className="main-register">
@@ -20,7 +14,7 @@ const Profile = (props) => {
                             id="first-name"
                             value={props.profile.firstName}
                             readOnly={true}
-                            placeholder="uw voornaam"
+                            // placeholder="uw voornaam"
                         />
                     </div>
                     <div className="display-error">
@@ -28,7 +22,9 @@ const Profile = (props) => {
                             type="text"
                             name="lastName"
                             id="last-name"
-                            placeholder="uw achternaam"
+                            value={props.profile.lastName}
+                            readOnly={true}
+
                         />
                     </div>
                 </div>
@@ -38,7 +34,8 @@ const Profile = (props) => {
                             type="text"
                             name="street"
                             id="street-details"
-                            placeholder="uw straat + huisnummer"
+                            value={props.profile.street}
+                            readOnly={true}
                         />
                     </div>
                     <div className="display-error">
@@ -46,7 +43,8 @@ const Profile = (props) => {
                             type="text"
                             name="city"
                             id="city-details"
-                            placeholder="uw postcode + woonplaats"
+                            value={props.profile.city}
+                            readOnly={true}
                         />
                     </div>
                 </div>
@@ -57,7 +55,8 @@ const Profile = (props) => {
                             type="text"
                             name="age"
                             id="age-details"
-                            placeholder="uw leeftijd"
+                            value={props.profile.age}
+                            readOnly={true}
                         />
                     </div>
                     <div className="display-error">
@@ -65,7 +64,8 @@ const Profile = (props) => {
                             type="text"
                             name="phone"
                             id="phone-details"
-                            placeholder="uw telefoonnummer"
+                            value={props.profile.phone}
+                            readOnly={true}
                         />
                     </div>
                 </div>
@@ -75,7 +75,8 @@ const Profile = (props) => {
                             type="email"
                             name="email"
                             id="email-details"
-                            placeholder="uw e-mailadres"
+                            value={props.profile.email}
+                            readOnly={true}
                         />
                     </div>
                     <div className="display-error">
@@ -83,14 +84,11 @@ const Profile = (props) => {
                             type="text"
                             name="username"
                             id="user-details"
-                            placeholder="uw gebruikersnaam"
+                            value={props.profile.username}
+                            readOnly={true}
                         />
                     </div>
                 </div>
-                <button className="btn-register"
-                        type="submit"
-                >opslaan
-                </button>
             </form>
         </div>
 
