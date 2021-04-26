@@ -2,6 +2,7 @@ import React, {useEffect, useState} from "react";
 import PictureHeader from "../../components/PictureHeader/PictureHeader";
 import "./ProfilePage.css";
 import Profile from "../../components/Profile/Profile";
+import {useAuth} from "../../helper/LoginContext";
 
 // Firebase Config:
 import app from "../../modules/Firebase";
@@ -9,33 +10,26 @@ import app from "../../modules/Firebase";
 
 const ProfilePage = () => {
 
-    // const [register, setRegister] = useState([]);
-    // const [profile, setProfile] = useState({});
-    //
-    // useEffect(() => {
-    //
-    //     async function fetchData() {
-    //
-    //         const profileRegistration = await app.firestore().collection("userInformation-new").get()
-    //         let userData = {
-    //
-    //         }
-    //
-    //         profileRegistration.docs.forEach(doc => {
-    //             userData[doc.id] = doc.data();
-    //             console.log("DOC 1", doc.data())
-    //         });
-    //
-    //         setProfile(userData);
+    const {authUser} = useAuth();
+    console.log("PROF", authUser);
 
-            // const userRegistration = await app.firestore().collection("userInformation-new").get()
-            // setRegister(userRegistration.docs.map(doc => doc.data()));
-            // console.log("REG", userRegistration.docs.map(doc => doc.data()));
-    //
-    //     }
-    //     fetchData();
-    //
-    // }, []);
+    const [profile, setProfile] = useState({});
+
+    useEffect(() => {
+
+        async function fetchData() {
+            console.log("UID Fetch", authUser.uid);
+
+            const userProfiel = (await app.firestore().collection("userInformation-new").doc(authUser.uid).get()).data()
+            console.log("userProf", userProfiel);
+            setProfile(userProfiel);
+
+        }
+        if(authUser) {
+            fetchData();
+        }
+
+    }, [authUser]);
 
     return (
         <>
@@ -46,7 +40,7 @@ const ProfilePage = () => {
             </main>
             <div className="container-profile-component">
                 <Profile
-                    // profile={profile}
+                    profile={profile}
                 />
             </div>
 

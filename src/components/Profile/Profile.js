@@ -5,13 +5,9 @@ import "./Profile.css";
 import app from "../../modules/Firebase";
 // const db = app.firestore();
 
-const Register = (props) => {
+const Profile = (props) => {
 
-    // console.log("Profile PROPS", props);
-    //
-    // // let userId = Object.keys(props.profile)[0]
-    //
-    // console.log("Profile UID");
+    console.log("Profile PROPS", props);
 
     return(
         <div className="main-register">
@@ -22,7 +18,8 @@ const Register = (props) => {
                             type="text"
                             name="firstName"
                             id="first-name"
-                            // value={props.profile["7Dbpg8yEarWQkWTvsZ9hyPZpmrr2"].firstName}
+                            value={props.profile.firstName}
+                            readOnly={true}
                             placeholder="uw voornaam"
                         />
                     </div>
@@ -100,4 +97,4 @@ const Register = (props) => {
     )
 }
 
-export default Register;
+export default Profile;

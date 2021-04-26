@@ -7,6 +7,23 @@ import "./Register.css";
 import app from "../../modules/Firebase";
 const db = app.firestore();
 
+export const validateEmail = (value) => {
+    if(value.includes("@")) {
+        return true
+    } else {
+        return `Uw email dient een "@" te bevatten.`
+    }
+}
+
+export const validateZipCode = (value) => {
+    // console.log("VALUE", value)
+    if(value.includes("6515")) {
+        return true
+    } else{
+        return "Uw woont niet in de juiste postcode";
+    }
+}
+
 const Register = () => {
 
     const { register, handleSubmit, formState: {errors}, reset, watch } = useForm();
@@ -43,23 +60,6 @@ const Register = () => {
             return true
         } else {
             return "Voer hetzelfde wachtwoord in."
-        }
-    }
-
-    const validateEmail = (value) => {
-        if(value.includes("@")) {
-            return true
-        } else {
-            return `Uw email dient een "@" te bevatten.`
-        }
-    }
-
-    const validateZipCode = (value) => {
-        // console.log("VALUE", value)
-        if(value.includes("6515")) {
-            return true
-        } else{
-            return "Uw woont niet in de juiste postcode";
         }
     }
 

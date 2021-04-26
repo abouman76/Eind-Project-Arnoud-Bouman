@@ -39,6 +39,14 @@ const LoginContext = (props) => {
         app.auth().signOut()
     }
 
+    // const value = {
+    //     authUser,
+    //     setAuthUser,
+    //     fireBaseError,
+    //     login,
+    //     logOut
+    // }
+
     return <LoginAuth.Provider value={{authUser, setAuthUser, fireBaseError, login, logOut}}>
             {props.children}
             </LoginAuth.Provider>
