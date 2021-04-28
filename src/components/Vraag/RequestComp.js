@@ -40,8 +40,11 @@ const RequestComp = (props) => {
                 <div className="buttons">
                     <MailTo
                         mailto={`mailto:${props.email}`}
+                        title={props.title}
                     />
-                    <ShowPhone />
+                    <ShowPhone
+                        phone={props.phone}
+                    />
                 </div>
 
             </form>

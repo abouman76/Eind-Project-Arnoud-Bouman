@@ -6,7 +6,7 @@ const MailTo = ({mailto, title}) => {
         <a className="btn-mail"
            href={`${mailto}?subject=${title}`}
             >
-            stuur bericht
+            stuur email
         </a>
     );
 };

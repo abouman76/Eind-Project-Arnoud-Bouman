@@ -41,8 +41,17 @@ const RequestPage = () => {
                 <p>Hier zit u alle advertenties van buurtgenoten met een vraag cq hulp verzoek</p>
             </main>
             <div className="request-wrapper">
-                {requests.filter(request => request.choice === "Vraag").map((request) => {
-                    return  <section className='request-component' key={request.uid}>
+                {requests.filter(request => request.choice === "Vraag").sort((a, b) => {
+                    if(b.date < a.date) {
+                        return -1;
+                    } else if (b.date > a.date) {
+                        return 1;
+                    } else {
+                        return 0;
+                    }
+                    })
+                    .map((request) => {
+                    return  <section className='request-component' key={request.title}>
                                 <RequestComp
                                     title={request.title}
                                     date={request.date}

@@ -17,6 +17,7 @@ const MyAdComponent = () => {
     const onSubmitAd = async (data) => {
         console.log("DATA", data);
         reset();
+        alert("Advertentie wordt geplaatst. Klik op OK");
 
         const localDate = new Date();
 
@@ -71,7 +72,7 @@ const MyAdComponent = () => {
                     </label>
 
                     <label className="title" htmlFor="title-details">
-                        Vul een titel in
+                        Vul een titel - onderwerp in
                         <input className="adComp-title"
                                type="text"
                                name="title"
