@@ -22,7 +22,7 @@ const OfferComp = (props) => {
                     name="text"
                     id="offer"
                     rows="10"
-                    cols="40"
+                    cols="46"
                     value={props.description}
                     readOnly={true}
                 >

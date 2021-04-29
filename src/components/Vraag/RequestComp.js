@@ -23,7 +23,7 @@ const RequestComp = (props) => {
                     name="text"
                     id="details-request"
                     rows="10"
-                    cols="40"
+                    cols="46"
                     readOnly={true}
                     value={props.description}
                 >

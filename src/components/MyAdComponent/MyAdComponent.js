@@ -83,6 +83,10 @@ const MyAdComponent = () => {
                                        required: {
                                            value: true,
                                            message: "Maak een advertentie titel"
+                                       },
+                                       maxLength: {
+                                           value: 30,
+                                           message: "maximaal 30 karakters"
                                        }
                                    }
                                )}

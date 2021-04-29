@@ -45,36 +45,39 @@ const OfferPage = () => {
     return (
         <>
             <PictureHeader />
-            <main className="header-offer-page">
-                <h2>Welkom op de aanbod pagina van Sociaal Oosterhout</h2>
-                <p>Hier ziet u alle advertenties van buurtgenoten die iets aan te bieden hebben</p>
+            <div className="offer-page-wrapper">
+                <main className="header-offer-page">
+                    <h2>Welkom op de aanbod pagina van Sociaal Oosterhout</h2>
+                    <p>Hier ziet u alle advertenties van buurtgenoten die iets aan te bieden hebben</p>
 
-            </main>
-            <div className="offer-wrapper">
-                {offers.filter(offer => offer.choice === "Aanbod").sort((a,  b) => {
-                    console.log("SORT DATE", a.date, b.date);
-                    if(b.date < a.date) {
-                        return -1;
-                    } else if (b.date > a.date) {
-                        return 1;
-                    } else {
-                        return 0;
-                    }
-                    })
-                    .map((offer) => {
-                    return <section className='offer-component' key={offer.title}>
-                                <OfferComp
-                                    title={offer.title}
-                                    date={offer.date}
-                                    description={offer.description}
-                                    name={`${users[offer.uid]?.firstName} ${users[offer.uid]?.lastName}`}
-                                    phone={users[offer.uid]?.phone}
-                                    email={users[offer.uid]?.email}
-                                />
-                            </section>
+                </main>
+                <div className="offer-wrapper">
+                    {offers.filter(offer => offer.choice === "Aanbod").sort((a,  b) => {
+                        console.log("SORT DATE", a.date, b.date);
+                        if(b.date < a.date) {
+                            return -1;
+                        } else if (b.date > a.date) {
+                            return 1;
+                        } else {
+                            return 0;
                         }
-                )}
+                    })
+                        .map((offer) => {
+                                return <section className='offer-component' key={offer.title}>
+                                    <OfferComp
+                                        title={offer.title}
+                                        date={offer.date}
+                                        description={offer.description}
+                                        name={`${users[offer.uid]?.firstName} ${users[offer.uid]?.lastName}`}
+                                        phone={users[offer.uid]?.phone}
+                                        email={users[offer.uid]?.email}
+                                    />
+                                </section>
+                            }
+                        )}
+                </div>
             </div>
+
         </>
     )
 }

@@ -7,13 +7,17 @@ const ContactPage = () => {
     return (
         <>
             <PictureHeader />
-            <main className="main-contactPage">
-                <h1>Neem contact op!</h1>
-                <p>Wilt u vrijwilliger worden, of heeft u gewoon een vraag, neemt u dan gerust contact met ons op via onderstaand contactformulier. </p>
-            </main>
-            <div className="contact-page">
-                <Contact />
+            <div className="contact-wrapper">
+                <main className="main-contactPage">
+                    <h1>Neem contact op!</h1>
+                    <p>Wilt u vrijwilliger worden, of heeft u gewoon een vraag?</p>
+                    <p>Neemt u dan gerust contact met ons op via onderstaand contactformulier.</p>
+                </main>
+                <div className="contact-page">
+                    <Contact />
+                </div>
             </div>
+
         </>
 
 

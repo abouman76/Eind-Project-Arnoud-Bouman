@@ -1,23 +1,43 @@
 /** {*/
 /*    border: 1px solid red;*/
 /*}*/
+.request-page-wrapper {
+    width: 1200px;
+}
 
 .header-request-page {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
-}
-
-.request-wrapper {
-    margin: 10px;
-    display: flex;
-    justify-content: space-evenly;
-    align-content: center;
     flex-direction: row;
-    flex-wrap: wrap;
+    margin: 5px;
 }
 
 .request-component {
-    padding: 10px;
+    margin-bottom: 10px;
 }
+
+@media screen and (min-width: 576px) {
+
+    .header-request-page {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .request-wrapper {
+        margin: 10px;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .request-component {
+        padding: 10px;
+    }
+}
+
+

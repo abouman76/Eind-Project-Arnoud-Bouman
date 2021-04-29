@@ -8,8 +8,8 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    max-width: 900px;
-    /*!*width: 100vw;*! mobiele versie*/
+    width: 100vw;
+    /*mobiele versie*/
 
 }
 
@@ -30,21 +30,24 @@ textarea {
 }
 
 .name-phone input {
-    margin: 30px 5px 15px 5px;
-    /*padding: 5px;*/
-    width: 370px
-    /*width: 45vw; mobiele versie*/
+    margin: 30px 5px 10px 5px;
+    padding: 5px;
+    /*width: 370px*/
+    width: 45vw;
+    /*mobiele versie*/
 }
 .address-email input {
     margin: 15px 5px 10px 5px;
-    width: 370px
-    /*width: 45vw; mobiele versie*/
+    /*width: 370px*/
+    width: 45vw;
+    /*mobiele versie*/
 }
 
 .text-contact {
     margin: 20px 15px 10px 15px;
-    width: 750px;
-    /*width: 90vw; mobiele versie*/
+    /*width: 750px;*/
+    width: 90vw;
+    /*mobiele versie*/
 }
 
 
@@ -53,23 +56,21 @@ textarea {
 }
 
 
-/*@media screen and (*/
-/*    min-width: 576px*/
-/*) {*/
-/*    .form-container {*/
-/*        max-width: 600px;*/
-/*    }*/
+@media screen and (min-width: 576px) {
+    .form-container {
+        max-width: 750px;
+    }
 
-/*    .name-phone input {*/
-/*        max-width: 250px;*/
-/*    }*/
-/*    .address-email input {*/
+    .name-phone input {
+        max-width: 250px;
+    }
+    .address-email input {
 
-/*        max-width: 250px;*/
-/*    }*/
+        max-width: 250px;
+    }
 
-/*    textarea {*/
-/*        max-width: 500px;*/
-/*    }*/
-/*}*/
+    textarea {
+        max-width: 500px;
+    }
+}
 
