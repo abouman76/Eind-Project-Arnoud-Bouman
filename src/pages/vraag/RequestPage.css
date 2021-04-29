@@ -1,16 +1,12 @@
-/** {*/
-/*    border: 1px solid red;*/
-/*}*/
 .request-page-wrapper {
     width: 1200px;
 }
 
 .header-request-page {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-    margin: 5px;
+    width: 370px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 15px 0;
 }
 
 .request-component {
@@ -20,10 +16,9 @@
 @media screen and (min-width: 576px) {
 
     .header-request-page {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
+        padding: 10px;
+        margin-top: 10px;
+        width: 100%;
     }
 
     .request-wrapper {
