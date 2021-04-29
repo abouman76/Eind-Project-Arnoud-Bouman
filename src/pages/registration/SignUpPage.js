@@ -7,13 +7,16 @@ const SignUpPage = () => {
     return (
         <>
             <PictureHeader/>
-            <main className="main-SignUp-Page">
-                <h1>Registratie</h1>
-                <p>Registreer u hier voor "Sociaal Oosterhout"</p>
-            </main>
-            <div className="signUp-comp">
-                <Register />
+            <div className="sign-up-wrapper">
+                <main className="main-SignUp-Page">
+                    <h1>Registratie</h1>
+                    <p>Registreer u hier voor "Sociaal Oosterhout"</p>
+                </main>
+                <div className="signUp-comp">
+                    <Register />
+                </div>
             </div>
+
         </>
 
     )

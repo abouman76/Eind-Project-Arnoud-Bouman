@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from "react";
 import { useForm } from "react-hook-form";
 import {useHistory} from "react-router-dom";
-import "./Login.css"
+import styles from  "./Login.module.css"
 import BtnLogin from "../Buttons/BtnLogin";
 import {useAuth} from "../../helper/LoginContext";
 
@@ -27,12 +27,12 @@ const Login = () => {
 
     return (
         <div className="main-login">
-            <form onSubmit={handleSubmit(loginHandler)} className="form-login">
-                <div className="header-login">
+            <form onSubmit={handleSubmit(loginHandler)} className={styles["form-login"]}>
+                <div className={styles["header-login"]}>
                     <h1>Inloggen</h1>
                 </div>
-                <div className="form-group">
-                    <label htmlFor="email-input" className="input-fields">uw e-mail</label>
+                <div className={styles["form-group"]}>
+                    <label htmlFor="email-input" className={styles["input-fields"]}>uw e-mail</label>
                         <input type="email"
                                name="email"
                                id="email-input"
@@ -42,8 +42,8 @@ const Login = () => {
                         />
                     {errors.email && <p role="alert">Verplicht veld</p>}
                 </div>
-                <div className="form-group">
-                    <label htmlFor="passWordInput" className="input-fields">uw wachtwoord</label>
+                <div className={styles["form-group"]}>
+                    <label htmlFor="passWordInput" className={styles["input-fields"]}>uw wachtwoord</label>
                     <input type="password"
                            name="password"
                            id="passWordInput"
@@ -53,11 +53,10 @@ const Login = () => {
                     />
                     {errors.password && <p role="alert">Verplicht veld</p>}
                 </div>
-                <div className="form-group">
+                <div className={styles["form-group"]}>
                     <p>{fireBaseError}</p>
                 </div>
-                <div className="btn-login">
-
+                <div className={styles["btn-login"]}>
                     <BtnLogin />
                 </div>
             </form>

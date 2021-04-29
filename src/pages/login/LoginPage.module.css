@@ -2,7 +2,7 @@
 /*    border: 1px solid red;*/
 /*}*/
 
-.loginPage-container {
+.login-page-container {
     display: flex;
     flex-direction: column;
     align-items: center;

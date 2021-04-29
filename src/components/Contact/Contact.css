@@ -1,16 +1,11 @@
-/** {*/
-/*    border: 1px solid red;*/
-/*}*/
-
 .form-container {
     background-color: #A7C957;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    width: 100vw;
-    /*mobiele versie*/
-
+    width: 95%;
+    margin-left: 10px
 }
 
 .input-with-error {
@@ -32,33 +27,26 @@ textarea {
 .name-phone input {
     margin: 30px 5px 10px 5px;
     padding: 5px;
-    /*width: 370px*/
-    width: 45vw;
-    /*mobiele versie*/
+    width: 40vw;
 }
 .address-email input {
     margin: 15px 5px 10px 5px;
-    /*width: 370px*/
-    width: 45vw;
-    /*mobiele versie*/
+    width: 40vw;
 }
 
 .text-contact {
     margin: 20px 15px 10px 15px;
-    /*width: 750px;*/
-    width: 90vw;
-    /*mobiele versie*/
+    width: 80vw;
 }
 
-
-.btn-send-contactform {
+.btn-send-contact {
     margin: 15px 0 30px 0;
 }
 
 
 @media screen and (min-width: 576px) {
     .form-container {
-        max-width: 750px;
+        width: 750px;
     }
 
     .name-phone input {

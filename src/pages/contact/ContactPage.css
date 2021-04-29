@@ -1,9 +1,6 @@
 .contact-wrapper {
     max-width: 1200px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+    text-align: center;
 }
 
 .main-contactPage {
@@ -15,10 +12,6 @@
     margin: 10px 0 10px 0;
 }
 
-.main-contactPage p {
-    margin-top: 10px;
-}
-
 .contact-page {
     margin-bottom: 25px;
 }
@@ -26,12 +19,8 @@
 
 @media screen and (min-width: 576px){
     .main-contactPage {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
         flex-wrap: nowrap;
-        margin: 30px 0 30px 0;
+        margin: 30px 0;
     }
 
     .main-contactPage p {

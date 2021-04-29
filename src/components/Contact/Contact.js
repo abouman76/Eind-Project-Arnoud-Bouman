@@ -137,7 +137,7 @@ const Contact = () => {
                 </textarea>
                 {errors.message && <p>{errors.message.message}</p>}
                 </div>
-                <div className="btn-send-contactform">
+                <div className="btn-send-contact">
                     <BtnSendContact />
                 </div>
             </form>
