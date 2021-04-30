@@ -38,21 +38,25 @@ const Register = () => {
         console.log("DATA:" , data, data.email, data.password);
         reset();
 
-        const response = await app.auth().createUserWithEmailAndPassword(data.email, data.password);
-        console.log("Sign-UP Response", response.user.uid);
+        try {
+            const response = await app.auth().createUserWithEmailAndPassword(data.email, data.password);
+            console.log("Sign-UP Response", response.user.uid);
 
-        await db.collection("userInformation-new").doc(response.user.uid).set({
-            age: data.age,
-            city: data.city,
-            firstName: data.firstName,
-            lastName: data.lastName,
-            phone: data.phone,
-            street: data.street,
-            username: data.username,
-            email: data.email
-        });
-        history.push("/inloggen")
-        // console.log("USER", userCollection);
+            await db.collection("userInformation-new").doc(response.user.uid).set({
+                age: data.age,
+                city: data.city,
+                firstName: data.firstName,
+                lastName: data.lastName,
+                phone: data.phone,
+                street: data.street,
+                username: data.username,
+                email: data.email
+            });
+            history.push("/inloggen")
+
+        } catch(error) {
+            console.error(error);
+        }
     }
 
     const validatePassWordMatch = (value) => {

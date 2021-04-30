@@ -11,14 +11,19 @@ const LoginContext = (props) => {
 
     useEffect(()=> {
        const getUser = async () => {
-           const userApp  =  await app.auth().onAuthStateChanged((user) => {
-               if(user) {
-                   setAuthUser(user);
-               } else {
-                   setAuthUser(null);
-               }
-               console.log("USER APP", user);
-           })
+
+           try {
+               const userApp  =  await app.auth().onAuthStateChanged((user) => {
+                   if(user) {
+                       setAuthUser(user);
+                   } else {
+                       setAuthUser(null);
+                   }
+                   console.log("USER APP", user);
+               })
+           } catch (error) {
+               console.error(error);
+           }
 
        }
        getUser();
@@ -39,15 +44,15 @@ const LoginContext = (props) => {
         app.auth().signOut()
     }
 
-    // const value = {
-    //     authUser,
-    //     setAuthUser,
-    //     fireBaseError,
-    //     login,
-    //     logOut
-    // }
+    const valueProvider = {
+        authUser,
+        setAuthUser,
+        fireBaseError,
+        login,
+        logOut
+    }
 
-    return <LoginAuth.Provider value={{authUser, setAuthUser, fireBaseError, login, logOut}}>
+    return <LoginAuth.Provider value={valueProvider}>
             {props.children}
             </LoginAuth.Provider>
 }

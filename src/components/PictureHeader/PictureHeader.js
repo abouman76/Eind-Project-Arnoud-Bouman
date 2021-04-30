@@ -5,9 +5,9 @@ import styles from "./PictureHeader.module.css";
 
 const PictureHeader = () => {
     return (
-        <div className={styles["top-image"]}>
+        <header className={styles["top-image"]}>
             <img src={waalbrug} alt="Waalbrug"/>
-        </div>
+        </header>
     )
 }
 

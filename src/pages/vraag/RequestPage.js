@@ -13,21 +13,24 @@ const RequestPage = () => {
 
         async function fetchData() {
 
-            const userInformationRequest = await app.firestore().collection("userInformation-new").get()
-            let userData = {
+            try {
+                const userInformationRequest = await app.firestore().collection("userInformation-new").get()
+                let userData = {
 
+                }
+
+                userInformationRequest.docs.forEach(doc => {
+                    userData[doc.id] = doc.data();
+                });
+
+                setUserRequests(userData);
+
+                const advertisements = await app.firestore().collection("userAdvertisement").get()
+                setRequests(advertisements.docs.map(doc => doc.data()));
+                // console.log("AD", advertisements.docs.map(doc => doc.data()));
+            } catch (error) {
+                console.error(error);
             }
-
-            userInformationRequest.docs.forEach(doc => {
-                userData[doc.id] = doc.data();
-            });
-
-            setUserRequests(userData);
-
-            const advertisements = await app.firestore().collection("userAdvertisement").get()
-            setRequests(advertisements.docs.map(doc => doc.data()));
-            // console.log("AD", advertisements.docs.map(doc => doc.data()));
-
         }
         fetchData();
 

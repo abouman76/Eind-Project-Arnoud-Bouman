@@ -21,13 +21,17 @@ const MyAdComponent = () => {
 
         const localDate = new Date();
 
-        await db.collection("userAdvertisement").add({
-            choice: data.choice,
-            date: localDate.toLocaleDateString("nl-NL"),
-            title: data.title,
-            description: data.description,
-            uid: authUser.uid
-        });
+        try {
+            await db.collection("userAdvertisement").add({
+                choice: data.choice,
+                date: localDate.toLocaleDateString("nl-NL"),
+                title: data.title,
+                description: data.description,
+                uid: authUser.uid
+            });
+        } catch (error) {
+            console.error(error);
+        }
     }
 
     return (

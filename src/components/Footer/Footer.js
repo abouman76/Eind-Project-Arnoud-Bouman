@@ -4,7 +4,7 @@ import styles from "./Footer.module.css";
 
 const Footer = () => {
     return (
-        <div className={styles["footer-container"]}>
+        <footer className={styles["footer-container"]}>
             <div className={styles.footer}>
                 <div className={styles["footer-links"]}>
                     <Link to="/contact">Contact</Link>
@@ -15,7 +15,7 @@ const Footer = () => {
                     <p>Designed by: Your Friendly Neightbourhood Developer</p>
                 </div>
             </div>
-        </div>
+        </footer>
     )
 }
 export default Footer;

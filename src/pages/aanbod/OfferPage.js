@@ -13,24 +13,29 @@ const OfferPage = () => {
     useEffect(() => {
         async function fetchData() {
 
-            const userInformationOffer = await app.firestore().collection("userInformation-new").get()
+            try {
+                const userInformationOffer = await app.firestore().collection("userInformation-new").get()
 
-            let userData = {
+                let userData = {
 
+                }
+
+                userInformationOffer.docs.forEach(doc => {
+                    console.log("doc", doc.id);
+                    userData[doc.id] = doc.data()
+                });
+
+                setUsers(userData);
+                console.log("UData", userData);
+
+                const advertisements = await app.firestore().collection("userAdvertisement").get()
+                // console.log("ADS", advertisements.docs);
+                setOffers(advertisements.docs.map(doc => doc.data()));
+                console.log("AD", advertisements.docs.map(doc => doc.data()));
+
+            } catch (error) {
+                console.error(error);
             }
-
-            userInformationOffer.docs.forEach(doc => {
-                console.log("doc", doc.id);
-                userData[doc.id] = doc.data()
-            });
-
-            setUsers(userData);
-            console.log("UData", userData);
-
-            const advertisements = await app.firestore().collection("userAdvertisement").get()
-            // console.log("ADS", advertisements.docs);
-            setOffers(advertisements.docs.map(doc => doc.data()));
-            console.log("AD", advertisements.docs.map(doc => doc.data()));
         }
 
         fetchData();

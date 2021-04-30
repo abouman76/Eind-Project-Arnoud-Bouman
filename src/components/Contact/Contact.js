@@ -13,16 +13,18 @@ const Contact = () => {
     const onFormSubmit = async (data) => {
         console.log(data);
         reset();
-
-        const contactForm = await db.collection("contactForm").add({
-            name: data.name,
-            phone: data.phone,
-            address: data.address,
-            email: data.email,
-            message: data.message
-        });
-        console.log("Contact", contactForm);
-        // alert("message saved!");
+        try {
+            const contactForm = await db.collection("contactForm").add({
+                name: data.name,
+                phone: data.phone,
+                address: data.address,
+                email: data.email,
+                message: data.message
+            });
+            // console.log("Contact", contactForm);
+        } catch (error) {
+            console.error(errors)
+        }
     }
 
     const validateEmail = (value) => {
@@ -32,7 +34,6 @@ const Contact = () => {
             return 'uw email adres dient een "@" te bevatten';
         }
     }
-    // console.log("Errors", errors);
 
     return (
         <>

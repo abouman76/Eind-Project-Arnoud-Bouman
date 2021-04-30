@@ -4,7 +4,6 @@ import styles from "./TextBubble.module.css";
 const TextBubble = () => {
     return (
         <div className={styles["main-container"]}>
-
             <div className={styles["text-bubble"]}>
                 <div className={styles["header-review"]}>
                     <h2>Ervaring Buurtbewoner</h2>
@@ -15,7 +14,7 @@ const TextBubble = () => {
             </div>
             <span className={styles["name-reviewer"]}>
         <p>Naam buurtbewoner</p>
-    </span>
+            </span>
 
         </div>
     )
