@@ -28,7 +28,6 @@
 
 }
 
-
 @media screen and (max-width: 576px){
     .home-wrapper {
         margin: 10px;
@@ -50,7 +49,7 @@
         background-color: #A7C957;
         display: flex;
         justify-content: space-evenly;
-        flex-wrap: nowrap;
+        flex-wrap: wrap;
         flex-direction: row;
         margin-bottom: 10px;
     }
@@ -61,7 +60,7 @@
         align-content: center;
         padding: 10px 0 10px 0;
         margin-right: 10px;
-        font-size: 10px;
+        font-size: 12px;
         font-weight: bold;
 
     }

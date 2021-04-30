@@ -3,7 +3,6 @@ import PictureHeader from "../../components/PictureHeader/PictureHeader";
 import OfferComp from "../../components/Aanbod/OfferComp";
 import styles from "./OfferPage.module.css";
 import app from "../../modules/Firebase";
-// const db = app.firestore();
 
 const OfferPage = () => {
 
@@ -42,7 +41,7 @@ const OfferPage = () => {
 
     }, []);
 
-    console.log("OFFER ad", offers);
+    // console.log("OFFER ad", offers);
 
     return (
         <>
