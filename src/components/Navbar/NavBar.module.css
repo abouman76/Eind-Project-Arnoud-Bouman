@@ -2,7 +2,6 @@
 /*    border: 1px solid red;*/
 /*}*/
 
-
 .main-nav {
     display: flex;
     justify-content: flex-end;
@@ -55,7 +54,7 @@
     justify-content: flex-end;
 }
 
-.searchIcon {
+.search-icon {
     width: 20px;
     height: 20px;
     /*margin-right: 10px;*/

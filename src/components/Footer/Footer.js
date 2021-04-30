@@ -1,16 +1,16 @@
 import React from "react";
 import {Link} from "react-router-dom";
-import "./Footer.css";
+import styles from "./Footer.module.css";
 
 const Footer = () => {
     return (
-        <div className="footer-container">
-            <div className="footer">
-                <div className="footer-links">
+        <div className={styles["footer-container"]}>
+            <div className={styles.footer}>
+                <div className={styles["footer-links"]}>
                     <Link to="/contact">Contact</Link>
-                    <a href="/">Gegevens</a>
+                    <Link to="/">Gegevens</Link>
                 </div>
-                <div className="footer-text">
+                <div className={styles["footer-text"]}>
                     <h4>Copyright 2021 - sociaaloosterhout.nl</h4>
                     <p>Designed by: Your Friendly Neightbourhood Developer</p>
                 </div>

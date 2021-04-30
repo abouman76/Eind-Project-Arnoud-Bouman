@@ -1,9 +1,9 @@
 import React, {useEffect, useState} from "react";
 import PictureHeader from "../../components/PictureHeader/PictureHeader";
 import OfferComp from "../../components/Aanbod/OfferComp";
-import "./OfferPage.css";
+import styles from "./OfferPage.module.css";
 import app from "../../modules/Firebase";
-const db = app.firestore();
+// const db = app.firestore();
 
 const OfferPage = () => {
 
@@ -31,9 +31,6 @@ const OfferPage = () => {
             // console.log("ADS", advertisements.docs);
             setOffers(advertisements.docs.map(doc => doc.data()));
             console.log("AD", advertisements.docs.map(doc => doc.data()));
-
-            // await db.collection("userAdvertisement").orderBy("date");
-
         }
 
         fetchData();
@@ -45,13 +42,13 @@ const OfferPage = () => {
     return (
         <>
             <PictureHeader />
-            <div className="offer-page-wrapper">
-                <main className="header-offer-page">
+            <div className={styles["offer-page-wrapper"]}>
+                <main className={styles["header-offer-page"]}>
                     <h2>Welkom op de aanbod pagina van Sociaal Oosterhout</h2>
                     <p>Hier ziet u alle advertenties van buurtgenoten die iets aan te bieden hebben</p>
 
                 </main>
-                <div className="offer-wrapper">
+                <div className={styles["offer-wrapper"]}>
                     {offers.filter(offer => offer.choice === "Aanbod").sort((a,  b) => {
                         console.log("SORT DATE", a.date, b.date);
                         if(b.date < a.date) {
@@ -63,7 +60,7 @@ const OfferPage = () => {
                         }
                     })
                         .map((offer) => {
-                                return <section className='offer-component' key={offer.title}>
+                                return <section className={styles['offer-component']} key={offer.title}>
                                     <OfferComp
                                         title={offer.title}
                                         date={offer.date}

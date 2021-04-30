@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from "react";
 import PictureHeader from "../../components/PictureHeader/PictureHeader";
 import RequestComp from "../../components/Vraag/RequestComp";
-import "./RequestPage.css";
+import styles from "./RequestPage.module.css";
 import app from "../../modules/Firebase";
 
 const RequestPage = () => {
@@ -36,12 +36,12 @@ const RequestPage = () => {
     return (
         <>
             <PictureHeader />
-            <div className="request-page-wrapper">
-                <main className="header-request-page">
+            <div className={styles["request-page-wrapper"]}>
+                <main className={styles["header-request-page"]}>
                     <h2>Welkom op de vraag pagina van Sociaal Oosterhout</h2>
                     <p>Hier zit u alle advertenties van buurtgenoten met een vraag cq hulp verzoek</p>
                 </main>
-                <div className="request-wrapper">
+                <div className={styles["request-wrapper"]}>
                     {requests.filter(request => request.choice === "Vraag").sort((a, b) => {
                         if(b.date < a.date) {
                             return -1;
@@ -52,7 +52,7 @@ const RequestPage = () => {
                         }
                     })
                         .map((request) => {
-                                return  <section className='request-component' key={request.title}>
+                                return  <section className={styles['request-component']} key={request.title}>
                                     <RequestComp
                                         title={request.title}
                                         date={request.date}

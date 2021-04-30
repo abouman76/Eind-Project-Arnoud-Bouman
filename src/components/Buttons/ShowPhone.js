@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import "./ShowPhone.css";
+import styles from "./ShowPhone.module.css";
 
 const ShowPhone = (props) => {
 
@@ -12,7 +12,7 @@ const ShowPhone = (props) => {
 
     return (
         <button
-            className="btn-phone"
+            className={styles["btn-phone"]}
             type="button"
             onClick={onClickPhoneHandler}
         >

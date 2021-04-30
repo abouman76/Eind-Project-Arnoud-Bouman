@@ -1,6 +1,6 @@
 import React from "react";
 import { useForm} from "react-hook-form";
-import "./MyAdComponent.css";
+import styles from "./MyAdComponent.module.css";
 
 // Firebase CONFIG
 import app from "../../modules/Firebase";
@@ -31,15 +31,15 @@ const MyAdComponent = () => {
     }
 
     return (
-        <div className="main-adComponent">
-            <div className="adComponent">
-                <div className="adComp-header">
+        <div className={styles["main-adComponent"]}>
+            <div className={styles["ad-component"]}>
+                <div className={styles["ad-comp-header"]}>
                     <h2>Uw advertentie</h2>
                 </div>
-            <form className="adComponent-form" onSubmit={handleSubmit(onSubmitAd)}>
-                <div className="radio-buttons">
-                    <label className="radio-btn" htmlFor="offer-ad">
-                        <input className="input-radio-btn"
+            <form className={styles["ad-component-form"]} onSubmit={handleSubmit(onSubmitAd)}>
+                <div className={styles["radio-buttons"]}>
+                    <label className={styles["radio-btn"]} htmlFor="offer-ad">
+                        <input className={styles["input-radio-btn"]}
                                type="radio"
                                name="choice"
                                value="Aanbod"
@@ -54,8 +54,8 @@ const MyAdComponent = () => {
                         />
                         Ik heb iets aan te bieden
                     </label>
-                    <label className="radio-btn" htmlFor="request-ad">
-                        <input className="input-radio-btn"
+                    <label className={styles["radio-btn"]} htmlFor="request-ad">
+                        <input className={styles["input-radio-btn"]}
                                type="radio"
                                name="choice"
                                value="Vraag"
@@ -71,9 +71,9 @@ const MyAdComponent = () => {
                         Ik heb een vraag
                     </label>
 
-                    <label className="title" htmlFor="title-details">
+                    <label className={styles.title} htmlFor="title-details">
                         Vul een titel - onderwerp in
-                        <input className="adComp-title"
+                        <input className={styles["ad-comp-title"]}
                                type="text"
                                name="title"
                                id="title-details"
@@ -92,11 +92,11 @@ const MyAdComponent = () => {
                                )}
                         />
                     </label>
-                    {errors.title && <p className="errors-ad-comp">{errors.title.message}</p>}
+                    {errors.title && <p className={styles["errors-ad-comp"]}>{errors.title.message}</p>}
 
-                    <label className="description" htmlFor="description-details">
+                    <label className={styles.description} htmlFor="description-details">
                         Omschrijf uw advertentie
-                        <textarea className="adComp-description"
+                        <textarea className={styles["ad-comp-description"]}
                                name="description"
                                id="description-details"
                                   rows="10"
@@ -113,9 +113,9 @@ const MyAdComponent = () => {
                             >
                         </textarea>
                     </label>
-                    {errors.description && <p className="errors-ad-comp">{errors.description.message}</p>}
+                    {errors.description && <p className={styles["errors-ad-comp"]}>{errors.description.message}</p>}
                 </div>
-                <button className="adComp-btn" type="submit">plaats</button>
+                <button className={styles["ad-comp-btn"]} type="submit">plaats</button>
             </form>
             </div>
         </div>

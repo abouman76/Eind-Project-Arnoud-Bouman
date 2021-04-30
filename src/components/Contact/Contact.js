@@ -1,6 +1,6 @@
 import React from "react";
 import {useForm} from "react-hook-form";
-import "./Contact.css";
+import styles from "./Contact.module.css";
 import BtnSendContact from "../Buttons/BtnSendContact";
 
 // Firebase CONFIG
@@ -36,9 +36,9 @@ const Contact = () => {
 
     return (
         <>
-            <form className="form-container" onSubmit={handleSubmit(onFormSubmit)}>
-                <div className="name-phone">
-                    <div className="input-with-error">
+            <form className={styles["form-container"]} onSubmit={handleSubmit(onFormSubmit)}>
+                <div className={styles["name-phone"]}>
+                    <div className={styles["input-with-error"]}>
                         <input
                             type="text"
                             name="name"
@@ -55,10 +55,10 @@ const Contact = () => {
                             )
                             }
                         />
-                        {errors.name && <p>{errors.name.message}</p>}
+                        {errors.name && <p className={styles.error}>{errors.name.message}</p>}
                     </div>
 
-                    <div className="input-with-error">
+                    <div className={styles["input-with-error"]}>
                         <input
                             type="text"
                             name="phone"
@@ -77,17 +77,17 @@ const Contact = () => {
                                 }
                             )}
                         />
-                        {errors.phone && <p>{errors.phone.message}</p>}
+                        {errors.phone && <p className={styles.error}>{errors.phone.message}</p>}
                     </div>
                 </div>
 
-                <div className="address-email">
-                    <div className="input-with-error">
+                <div className={styles["address-email"]}>
+                    <div className={styles["input-with-error"]}>
                         <input
                             type="text"
                             name="address"
                             id="address-details"
-                            placeholder="Straat + huisnummer, postcode en plaats"
+                            placeholder="uw volledige adres"
                             {...register(
                                 "address",{
                                     required: {
@@ -98,9 +98,9 @@ const Contact = () => {
                             )
                             }
                         />
-                        {errors.address && <p>{errors.address.message}</p>}
+                        {errors.address && <p className={styles.error}>{errors.address.message}</p>}
                     </div>
-                    <div className="input-with-error">
+                    <div className={styles["input-with-error"]}>
                         <input
                             type="email"
                             name="email"
@@ -114,11 +114,11 @@ const Contact = () => {
                             )
                             }
                         />
-                        {errors.email && <p>{errors.email.message}</p>}
+                        {errors.email && <p className={styles.error}>{errors.email.message}</p>}
                     </div>
                 </div>
-                <div className="input-with-error">
-                <textarea className="text-contact"
+                <div className={styles["input-with-error"]}>
+                <textarea className={styles["text-contact"]}
                     name="message"
                     id="text-details"
                     rows="10"
@@ -137,7 +137,7 @@ const Contact = () => {
                 </textarea>
                 {errors.message && <p>{errors.message.message}</p>}
                 </div>
-                <div className="btn-send-contact">
+                <div className={styles["btn-send-contact"]}>
                     <BtnSendContact />
                 </div>
             </form>

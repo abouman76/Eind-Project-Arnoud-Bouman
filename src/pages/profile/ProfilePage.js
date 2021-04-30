@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from "react";
 import PictureHeader from "../../components/PictureHeader/PictureHeader";
-import "./ProfilePage.css";
+import styles from "./ProfilePage.module.css";
 import Profile from "../../components/Profile/Profile";
 import {useAuth} from "../../helper/LoginContext";
 
@@ -33,11 +33,11 @@ const ProfilePage = () => {
     return (
         <>
             <PictureHeader/>
-            <main className="main-profile-page">
+            <main className={styles["main-profile-page"]}>
                 <h2>Welkom {profile.firstName}</h2>
                 <p>Jouw profiel gegevens staan hieronder weergegeven.</p>
             </main>
-            <div className="container-profile-component">
+            <div className={styles["container-profile-component"]}>
                 <Profile
                     profile={profile}
                 />

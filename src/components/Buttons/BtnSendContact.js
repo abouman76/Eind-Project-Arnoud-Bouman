@@ -1,18 +1,11 @@
 import React from "react";
-import "./BtnSendContact.css"
+import styles from "./BtnSendContact.module.css"
 
 const BtnSendContact = () => {
 
-    // const handleOnKeyPress = (event) => {
-    //     //console.log("PRESSED Enter", event);
-    //     if(event.onKeyPress === "enter") {
-    //
-    //     }
-    // }
     return (
-        <div className="send-button-cta">
-            <button className="send-cta" type="submit">Verzenden</button>
-            {/*<button className="send-cta" type="submit" onClick={() => alert("You clicked me!")}>Verzenden</button>*/}
+        <div className={styles["send-button-cta"]}>
+            <button className={styles["send-cta"]} type="submit">Verzenden</button>
         </div>
     )
 }

@@ -1,13 +1,13 @@
 import React from "react";
-import "./Profile.css";
+import styles from "./Profile.module.css";
 
 const Profile = (props) => {
 
     return(
-        <div className="main-register">
-            <form className="register-form" >
-                <div className="input-form">
-                    <div className="display-error">
+        <div className={styles["main-register"]}>
+            <form className={styles["register-form"]}>
+                <div className={styles["input-form"]}>
+                    <div className={styles["display-error"]}>
                         <input
                             type="text"
                             name="firstName"
@@ -17,7 +17,7 @@ const Profile = (props) => {
                             // placeholder="uw voornaam"
                         />
                     </div>
-                    <div className="display-error">
+                    <div className={styles["display-error"]}>
                         <input
                             type="text"
                             name="lastName"
@@ -28,8 +28,8 @@ const Profile = (props) => {
                         />
                     </div>
                 </div>
-                <div className="input-form">
-                    <div className="display-error">
+                <div className={styles["input-form"]}>
+                    <div className={styles["display-error"]}>
                         <input
                             type="text"
                             name="street"
@@ -38,7 +38,7 @@ const Profile = (props) => {
                             readOnly={true}
                         />
                     </div>
-                    <div className="display-error">
+                    <div className={styles["display-error"]}>
                         <input
                             type="text"
                             name="city"
@@ -49,8 +49,8 @@ const Profile = (props) => {
                     </div>
                 </div>
 
-                <div className="input-form">
-                    <div className="display-error">
+                <div className={styles["input-form"]}>
+                    <div className={styles["display-error"]}>
                         <input
                             type="text"
                             name="age"
@@ -59,7 +59,7 @@ const Profile = (props) => {
                             readOnly={true}
                         />
                     </div>
-                    <div className="display-error">
+                    <div className={styles["display-error"]}>
                         <input
                             type="text"
                             name="phone"
@@ -69,8 +69,8 @@ const Profile = (props) => {
                         />
                     </div>
                 </div>
-                <div className="input-form">
-                    <div className="display-error">
+                <div className={styles["input-form"]}>
+                    <div className={styles["display-error"]}>
                         <input
                             type="email"
                             name="email"
@@ -79,7 +79,7 @@ const Profile = (props) => {
                             readOnly={true}
                         />
                     </div>
-                    <div className="display-error">
+                    <div className={styles["display-error"]}>
                         <input
                             type="text"
                             name="username"

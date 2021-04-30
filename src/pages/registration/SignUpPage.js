@@ -1,18 +1,18 @@
 import React from "react";
 import Register from "../../components/Register/Register";
-import "./SignUpPage.css";
+import styles from "./SignUpPage.module.css";
 import PictureHeader from "../../components/PictureHeader/PictureHeader";
 
 const SignUpPage = () => {
     return (
         <>
             <PictureHeader/>
-            <div className="sign-up-wrapper">
-                <main className="main-SignUp-Page">
+            <div className={styles["sign-up-wrapper"]}>
+                <main className={styles["main-SignUp-Page"]}>
                     <h1>Registratie</h1>
                     <p>Registreer u hier voor "Sociaal Oosterhout"</p>
                 </main>
-                <div className="signUp-comp">
+                <div className={styles["signUp-comp"]}>
                     <Register />
                 </div>
             </div>

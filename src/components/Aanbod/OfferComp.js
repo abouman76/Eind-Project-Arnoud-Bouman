@@ -1,15 +1,15 @@
 import React from "react";
-import "./OfferComp.css";
+import styles from "./OfferComp.module.css";
 import MailTo from "../Buttons/MailTo";
 import ShowPhone from "../Buttons/ShowPhone";
 
 const OfferComp = (props) => {
 
     return (
-        <div className="main-offer">
-            <form className="offer-form">
-                <div className="header-offer">{props.title}</div>
-                <div className="input-offer">
+        <div className={styles["main-offer"]}>
+            <form className={styles["offer-form"]}>
+                <div className={styles["header-offer"]}>{props.title}</div>
+                <div className={styles["input-offer"]}>
                     <input type="text"
                            value={props.date}
                            readOnly={true}
@@ -17,7 +17,7 @@ const OfferComp = (props) => {
                     />
                     <input type="text" placeholder="actief - non actief"/>
                 </div>
-                <div className="input-offer">
+                <div className={styles["input-offer"]}>
                 <textarea
                     name="text"
                     id="offer"
@@ -28,7 +28,7 @@ const OfferComp = (props) => {
                 >
                 </textarea>
                 </div>
-                <div className="input-person">
+                <div className={styles["input-person"]}>
                     <input
                         type="text"
                         value={props.name}
@@ -37,7 +37,7 @@ const OfferComp = (props) => {
                     />
                 </div>
 
-                <div className="buttons">
+                <div className={styles["buttons"]}>
                     <MailTo
                         mailto={`mailto:${props.email}`}
                         title={props.title}

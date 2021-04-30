@@ -12,7 +12,7 @@ import LoginPage from "../../pages/login/LoginPage";
 import MyAdd from "../../pages/myAdd/MyAdd"
 import ProfilePage from "../../pages/profile/ProfilePage";
 import Footer from "../Footer/Footer";
-import './App.css';
+import styles from './App.module.css';
 import SignUpPage from "../../pages/registration/SignUpPage";
 import NavBar from "../Navbar/NavBar";
 
@@ -20,7 +20,7 @@ function App() {
   return (
     <Router>
         <NavBar/>
-            <main className="main-content">
+            <main className={styles["main-content"]}>
                 <Switch>
                     <Route exact path="/">
                         <HomePage />

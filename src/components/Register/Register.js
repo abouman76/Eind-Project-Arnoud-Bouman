@@ -1,7 +1,7 @@
 import React from "react";
 import {useForm} from "react-hook-form";
 import { useHistory } from "react-router-dom";
-import "./Register.css";
+import styles from "./Register.module.css";
 
 // Firebase Config:
 import app from "../../modules/Firebase";
@@ -64,10 +64,10 @@ const Register = () => {
     }
 
     return(
-        <div className="main-register">
-            <form className="register-form" onSubmit={handleSubmit(onFormSubmit)}>
-                <div className="input-form">
-                    <div className="display-error">
+        <div className={styles["main-register"]}>
+            <form className={styles["register-form"]} onSubmit={handleSubmit(onFormSubmit)}>
+                <div className={styles["input-form"]}>
+                    <div className={styles["display-error"]}>
                         <input
                             type="text"
                             name="firstName"
@@ -85,7 +85,7 @@ const Register = () => {
                         <p>{errors.firstName?.message}</p>
                         {/*{errors.firstName && <p>{errors.firstName.message}</p>}*/}
                     </div>
-                    <div className="display-error">
+                    <div className={styles["display-error"]}>
                         <input
                             type="text"
                             name="lastName"
@@ -103,8 +103,8 @@ const Register = () => {
                         <p>{errors.lastName?.message}</p>
                     </div>
                 </div>
-                <div className="input-form">
-                    <div className="display-error">
+                <div className={styles["input-form"]}>
+                    <div className={styles["display-error"]}>
                         <input
                             type="text"
                             name="street"
@@ -121,7 +121,7 @@ const Register = () => {
                         />
                         {errors.street && <p>{errors.street.message}</p>}
                     </div>
-                    <div className="display-error">
+                    <div className={styles["display-error"]}>
                         <input
                             type="text"
                             name="city"
@@ -138,8 +138,8 @@ const Register = () => {
                     </div>
                 </div>
 
-                <div className="input-form">
-                    <div className="display-error">
+                <div className={styles["input-form"]}>
+                    <div className={styles["display-error"]}>
                         <input
                             type="text"
                             name="age"
@@ -160,7 +160,7 @@ const Register = () => {
                         />
                         {errors.age && <p>{errors.age.message}</p>}
                     </div>
-                    <div className="display-error">
+                    <div className={styles["display-error"]}>
                         <input
                             type="text"
                             name="phone"
@@ -182,8 +182,8 @@ const Register = () => {
                         {errors.phone && <p>{errors.phone.message}</p>}
                     </div>
                 </div>
-                <div className="input-form">
-                    <div className="display-error">
+                <div className={styles["input-form"]}>
+                    <div className={styles["display-error"]}>
                         <input
                             type="email"
                             name="email"
@@ -198,7 +198,7 @@ const Register = () => {
                         />
                         {errors.email && <p>{errors.email.message}</p>}
                     </div>
-                    <div className="display-error">
+                    <div className={styles["display-error"]}>
                         <input
                             type="text"
                             name="username"
@@ -225,8 +225,8 @@ const Register = () => {
                     </div>
 
                 </div>
-                <div className="input-form">
-                    <div className="display-error">
+                <div className={styles["input-form"]}>
+                    <div className={styles["display-error"]}>
                         <input
                             type="password"
                             name="password"
@@ -251,7 +251,7 @@ const Register = () => {
                         />
                         {errors.password && <p>{errors.password.message}</p>}
                     </div>
-                    <div className="display-error">
+                    <div className={styles["display-error"]}>
                         <input
                             type="password"
                             name="checkPassword"
@@ -267,7 +267,7 @@ const Register = () => {
                         {errors.checkPassword && <p>{errors.checkPassword.message}</p>}
                     </div>
                 </div>
-                <button className="btn-register"
+                <button className={styles["btn-register"]}
                         type="submit"
                 >registreer
                 </button>
