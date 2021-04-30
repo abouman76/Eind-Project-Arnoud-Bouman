@@ -1,4 +1,4 @@
-import {validateEmail, validateZipCode} from "./Register";
+import {validateEmail, validateZipCode} from "../components/Register/Register";
 
 test("validateEmail should return true when the email is valid", function (){
     const validEmail = "abou@abou.com"
