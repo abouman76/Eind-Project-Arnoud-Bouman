@@ -4,6 +4,7 @@ import searchIcon from "../../assets/searchIcon.svg";
 import {NavLink} from "react-router-dom";
 import {useAuth} from "../../helper/LoginContext";
 import {useHistory} from "react-router-dom";
+import Hamburger from "../HamburgerMenu/Hamburger";
 
 const NavBar = () => {
     const {authUser, setAuthUser, logOut} = useAuth();
@@ -59,6 +60,9 @@ const NavBar = () => {
                             <button className={styles["btn-out"]} onClick={handleLogout}>uitloggen</button>
                         }
                     </ul>
+                    <span className={styles["nav-hamburger"]}>
+                        <Hamburger />
+                    </span>
                 </nav>
                 <div className={styles["search"]}>
                     <img className={styles["search-icon"]} src={searchIcon} alt="Zoek icon" />

@@ -3,8 +3,7 @@ import styles from "./Hamburger.module.css";
 
 const Hamburger = () => {
     return (
-        <div> </div>
+        <div className={styles.menu}> </div>
     )
 }
-
 export default Hamburger;
