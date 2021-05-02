@@ -28,7 +28,6 @@ const OfferPage = () => {
                 console.log("UData", userData);
 
                 const advertisements = await app.firestore().collection("userAdvertisement").get()
-                // console.log("ADS", advertisements.docs);
                 setOffers(advertisements.docs.map(doc => doc.data()));
                 console.log("AD", advertisements.docs.map(doc => doc.data()));
 
@@ -40,8 +39,6 @@ const OfferPage = () => {
         fetchData();
 
     }, []);
-
-    // console.log("OFFER ad", offers);
 
     return (
         <>

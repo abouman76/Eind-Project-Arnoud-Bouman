@@ -60,9 +60,7 @@ const NavBar = () => {
                             <button className={styles["btn-out"]} onClick={handleLogout}>uitloggen</button>
                         }
                     </ul>
-                    <span className={styles["nav-hamburger"]}>
                         <Hamburger />
-                    </span>
                 </nav>
                 <div className={styles["search"]}>
                     <img className={styles["search-icon"]} src={searchIcon} alt="Zoek icon" />
