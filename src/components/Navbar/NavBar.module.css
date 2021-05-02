@@ -83,4 +83,8 @@
     color: #5F5F5F;
 }
 
-
+@media screen and (max-width: 576px) {
+    .nav-list {
+        display: none;
+    }
+}

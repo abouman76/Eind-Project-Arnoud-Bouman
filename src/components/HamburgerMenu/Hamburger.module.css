@@ -6,17 +6,18 @@
 
 /* uitgangspunt van het hamburger menu - de middelste balk */
 .menu {
-    margin: 20px;
+    margin: 0 5px 20px 0;
     width: 50px;
     height: 10px;
     border-radius: 5px;
     position: relative;
-    background-color: gray
+    background-color: #5F5F5F;
+
 }
 /* code voor de onder (after) en boven (before) balkjes - er moet altijd content:"" in zitten en een display */
 .menu::before,
 .menu::after {
-    background-color: gray;
+    background-color: #5F5F5F;
     border-radius: 5px;
     content:'';
     position: absolute;
@@ -35,5 +36,9 @@
     top: -20px;
 }
 
-.nav-hamburger {
+@media screen and (min-width: 576px) {
+    .menu {
+        display: none;
+    }
+
 }

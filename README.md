@@ -2,8 +2,10 @@
 Dit document beschrijft het ontwerp van de website voor “Sociaal Oosterhout”.
 Het doel van deze website is om mensen uit de wijk met postcode 6515 in Nijmegen-Noord met elkaar in contact te brengen om een mogelijk sociaal isolement en vereenzaming te voorkomen.
 In deze tijden van corona is het juist belangrijk dat er een sociaal vangnet blijft voor mensen die dit nodig hebben.
-Buurthuizen, haakclubjes, breiclubjes, biljartclub, etcetera moeten sluiten of mogen maar een beperkt aantal mensen ontvangen. Het gevolg is dat mensen thuis zitten en dat het sociaal netwerk kleiner wordt en mensen vereenzamen.
+Buurthuizen, haak clubjes, breiclubjes, biljartclub, etcetera moeten sluiten of mogen maar een beperkt aantal mensen ontvangen. Het gevolg is dat mensen thuis zitten en dat het sociaal netwerk kleiner wordt en mensen vereenzamen.
 Dit project gaat dan ook over een applicatie die gericht is op een woonwijk, waar buurtgenoten de mogelijkheid hebben om met elkaar in contact te komen en elkaar te leren kennen.
+
+**PLAATS HIER EEN SCREENSHOT**
 
 Het project is opgezet met  [Create React App](https://github.com/facebook/create-react-app).
 
@@ -26,5 +28,13 @@ De testen zijn te runnen door het volgende commando in de terminal te runnen.
 
 _npm run test_
 
+### API-keys
+De API-keys zijn in een .env bestand geplaatst en kunnen opgevraagd worden bij de maker van dit project.
+
 # Randvoorwaarden
+
+* Voor deze applicatie is gebruik gemaakt van Firebase en de Firebase Firestore Database. Je hebt geen inlog gegevens of wachtwoord nodig.
+* Via de registratiepagina kan je zelf een profiel aanmaken.
+
+* 
 
