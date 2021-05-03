@@ -8,7 +8,7 @@ const ContactPage = () => {
         <>
             <PictureHeader />
             <div className={styles["contact-wrapper"]}>
-                <main className={styles["main-contactPage"]}>
+                <main className={styles["main-contact-page"]}>
                     <h1>Neem contact op!</h1>
                     <p>Wilt u vrijwilliger worden, of heeft u gewoon een vraag?</p>
                     <p>Neemt u dan gerust contact met ons op via onderstaand contactformulier.</p>

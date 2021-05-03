@@ -3,7 +3,7 @@
     text-align: center;
 }
 
-.main-contactPage {
+.main-contact-page {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -18,12 +18,12 @@
 
 
 @media screen and (min-width: 576px){
-    .main-contactPage {
+    .main-contact-page {
         flex-wrap: nowrap;
         margin: 30px 0;
     }
 
-    .main-contactPage p {
+    .main-contact-page p {
         margin-top: 10px;
     }
 

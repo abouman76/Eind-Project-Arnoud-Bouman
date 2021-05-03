@@ -6,6 +6,10 @@
     width: 1200px;
 }
 
+.header-home{
+
+}
+
 .aside-reviews {
     background-color: #A7C957;
     margin-left: 5px;
@@ -16,7 +20,8 @@
     margin: 0 10px 0 10px;
 }
 
-.text-project p {
+.text-project p,
+.text-project h2 {
     padding: 5px;
 }
 
@@ -41,7 +46,8 @@
         margin: 0 5px 0 5px;
     }
 
-    .text-project p {
+    .text-project p,
+    .text-project h2 {
         padding: 5px;
     }
 
