@@ -11,6 +11,7 @@
 .input-with-error {
     display: inline-block;
 }
+
 .input-with-error p {
     color: red;
     font-size: 10px;
@@ -25,8 +26,7 @@ textarea {
 }
 
 .name-phone input {
-    margin: 30px 5px 10px 5px;
-    padding: 5px;
+    margin: 20px 5px 10px 5px;
     width: 40vw;
 }
 .address-email input {

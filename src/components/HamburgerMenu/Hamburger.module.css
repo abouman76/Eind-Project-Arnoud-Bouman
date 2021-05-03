@@ -1,10 +1,9 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+/** {*/
+/*    margin: 0;*/
+/*    padding: 0;*/
+/*    box-sizing: border-box;*/
+/*}*/
 
-/* uitgangspunt van het hamburger menu - de middelste balk */
 .menu {
     margin: 0 5px 20px 0;
     width: 60px;
@@ -14,7 +13,7 @@
     background-color: #5F5F5F;
 
 }
-/* code voor de onder (after) en boven (before) balkjes - er moet altijd content:"" in zitten en een display */
+
 .menu::before,
 .menu::after {
     background-color: #5F5F5F;
@@ -27,7 +26,6 @@
     right: 0;
 }
 
-/* uitlijnen zowel naar boven en/of onder als links en/of rechts */
 .menu::before {
     top: 20px;
 }
