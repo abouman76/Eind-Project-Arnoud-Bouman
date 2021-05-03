@@ -1,9 +1,16 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 import Register from "../../components/Register/Register";
 import styles from "./SignUpPage.module.css";
 import PictureHeader from "../../components/PictureHeader/PictureHeader";
 
 const SignUpPage = () => {
+
+    // const [loading, setLoading] = useState(true);
+    //
+    // useEffect(() => {
+    //     setTimeout(() => setLoading(false), 2000)
+    // }, [])
+
     return (
         <>
             <PictureHeader/>
@@ -12,14 +19,14 @@ const SignUpPage = () => {
                     <h1>Registratie</h1>
                     <p>Registreer u hier voor "Sociaal Oosterhout"</p>
                 </main>
+
                 <div className={styles["sign-up-comp"]}>
                     <Register />
                 </div>
             </div>
-
         </>
 
     )
-}
+};
 
 export default SignUpPage;

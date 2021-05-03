@@ -1,5 +1,5 @@
 import React from "react";
-import TextBubble from "../../components/TextBubble/TextBubble";
+import TextBubble from "../../components/Review/TextBubble";
 import BtnCtaHome from "../../components/Buttons/BtnCtaHome";
 import styles from "./HomePage.module.css";
 import PictureHeader from "../../components/PictureHeader/PictureHeader";
