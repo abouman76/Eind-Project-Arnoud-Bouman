@@ -14,7 +14,6 @@ const Profile = (props) => {
                             id="first-name"
                             value={props.profile.firstName}
                             readOnly={true}
-                            // placeholder="uw voornaam"
                         />
                     </div>
                     <div className={styles["display-error"]}>

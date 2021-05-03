@@ -29,12 +29,12 @@ De testen zijn te runnen door het volgende commando in de terminal te runnen.
 _npm run test_
 
 ### API-keys
-De API-keys zijn in een .env bestand geplaatst en kunnen opgevraagd worden bij de maker van dit project.
+De API-keys zijn in een .env bestand geplaatst en kunnen opgevraagd worden bij de maker - beheerder van dit project.
 
-# Randvoorwaarden
+# Stappenplan
 
 * Voor deze applicatie is gebruik gemaakt van Firebase en de Firebase Firestore Database. Je hebt geen inlog gegevens of wachtwoord nodig.
 * Via de registratiepagina kan je zelf een profiel aanmaken.
-
-* 
+* Na registratie kan je via de inlog pagina ingelogd worden.
+* Zodra je bent ingelogd kan je advertenties plaatsen.
 
