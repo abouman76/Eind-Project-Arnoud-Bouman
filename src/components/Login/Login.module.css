@@ -4,7 +4,7 @@
 
 .form-login {
     background-color: #A7C957;
-    width: 750px;
+    width: 450px;
     height: 450px;
     display: flex;
     justify-content: flex-start;
@@ -20,10 +20,14 @@
 }
 
 .form-group input {
-    width: 700px;
+    width: 375px;
     padding: 10px 5px 10px 10px;
     margin: 0 10px 0 10px;
     outline: none;
+}
+
+.header-login h1 {
+    padding-top: 20px;
 }
 
 .form-group p {
@@ -35,4 +39,14 @@
 
 .btn-login {
     margin-top: 50px;
+}
+
+@media screen and (min-width: 576px) {
+    .form-login {
+        width: 750px;
+    }
+
+    .form-group input {
+        width: 700px;
+    }
 }
