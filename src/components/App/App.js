@@ -9,7 +9,7 @@ import OfferPage from "../../pages/aanbod/OfferPage";
 import RequestPage from "../../pages/vraag/RequestPage";
 import ContactPage from "../../pages/contact/ContactPage";
 import LoginPage from "../../pages/login/LoginPage";
-import MyAdd from "../../pages/myAdd/MyAdd"
+import MyAds from "../../pages/MyAds/MyAds"
 import ProfilePage from "../../pages/profile/ProfilePage";
 import Footer from "../Footer/Footer";
 import styles from './App.module.css';
@@ -38,7 +38,7 @@ function App() {
                         <SignUpPage />
                     </Route>
                     <Route path="/plaats">
-                        <MyAdd />
+                        <MyAds />
                     </Route>
                     <Route path="/profiel">
                         <ProfilePage />

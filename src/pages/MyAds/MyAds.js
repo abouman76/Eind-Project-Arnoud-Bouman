@@ -1,9 +1,9 @@
 import React from "react"
 import PictureHeader from "../../components/PictureHeader/PictureHeader";
 import MyAdComponent from "../../components/MyAdComponent/MyAdComponent";
-import styles from "./MyAdd.module.css";
+import styles from "./MyAds.module.css";
 
-const MyAdd = () => {
+const MyAds = () => {
     return (
         <>
             <PictureHeader />
@@ -20,4 +20,4 @@ const MyAdd = () => {
     )
 }
 
-export default MyAdd;
+export default MyAds;
