@@ -4,8 +4,8 @@ import styles from "./Profile.module.css";
 const Profile = (props) => {
 
     return(
-        <div className={styles["main-register"]}>
-            <form className={styles["register-form"]}>
+        <div className={styles["main-profile"]}>
+            <form className={styles["profile-form"]}>
                 <div className={styles["input-form"]}>
                     <div className={styles["display-error"]}>
                         <input

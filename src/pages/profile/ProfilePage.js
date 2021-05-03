@@ -33,14 +33,16 @@ const ProfilePage = () => {
     return (
         <>
             <PictureHeader/>
-            <main className={styles["main-profile-page"]}>
-                <h2>Welkom {profile.firstName}</h2>
-                <p>Jouw profiel gegevens staan hieronder weergegeven.</p>
-            </main>
-            <div className={styles["container-profile-component"]}>
-                <Profile
-                    profile={profile}
-                />
+            <div className={styles["profile-wrapper"]}>
+                <main className={styles["main-profile-page"]}>
+                    <h2>Welkom {profile.firstName}</h2>
+                    <p>Jouw profiel gegevens staan hieronder weergegeven.</p>
+                </main>
+                <div className={styles["container-profile-component"]}>
+                    <Profile
+                        profile={profile}
+                    />
+                </div>
             </div>
 
         </>

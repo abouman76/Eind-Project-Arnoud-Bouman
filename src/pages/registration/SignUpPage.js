@@ -8,11 +8,11 @@ const SignUpPage = () => {
         <>
             <PictureHeader/>
             <div className={styles["sign-up-wrapper"]}>
-                <main className={styles["main-SignUp-Page"]}>
+                <main className={styles["main-sign-up-page"]}>
                     <h1>Registratie</h1>
                     <p>Registreer u hier voor "Sociaal Oosterhout"</p>
                 </main>
-                <div className={styles["signUp-comp"]}>
+                <div className={styles["sign-up-comp"]}>
                     <Register />
                 </div>
             </div>

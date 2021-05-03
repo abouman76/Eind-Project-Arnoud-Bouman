@@ -2,11 +2,30 @@
 /*    border: 1px solid red;*/
 /*}*/
 
-.main-profile-page {
+.profile-wrapper {
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 10px;
-    padding: 10px;
+    flex-direction: column;
+    margin: 10px;
 }
+
+.main-profile-Page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.main-SignUp-Page p {
+    margin-top: 10px;
+}
+
+/*.main-profile-page {*/
+/*    display: flex;*/
+/*    flex-direction: column;*/
+/*    justify-content: center;*/
+/*    align-items: center;*/
+/*    margin-top: 10px;*/
+/*    padding: 10px;*/
+/*}*/
