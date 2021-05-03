@@ -29,7 +29,7 @@ npm run test
 De API-keys zijn in een .env bestand geplaatst en kunnen opgevraagd worden bij de maker - beheerder van dit project.
 
 # Stappenplan
-Voor deze applicatie is gebruik gemaakt van Firebase en de Firebase Firestore Database. Je hebt geen inlog gegevens of wachtwoord nodig.
-Via de registratiepagina kan je zelf een profiel aanmaken.
-Na registratie kan je via de inlog pagina ingelogd worden.
-Zodra je bent ingelogd kan je advertenties plaatsen.
+* Voor deze applicatie is gebruik gemaakt van Firebase en de Firebase Firestore Database. Je hebt geen inlog gegevens of wachtwoord nodig.
+* Via de registratiepagina kan je zelf een profiel aanmaken.
+* Na registratie kan je via de inlog pagina ingelogd worden.
+* Zodra je bent ingelogd kan je advertenties plaatsen.
