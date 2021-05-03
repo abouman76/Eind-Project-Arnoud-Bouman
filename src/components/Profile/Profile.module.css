@@ -15,14 +15,14 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding: 30px 60px 30px 60px;
+    padding: 30px;
     background-color: #A7C957;
 }
 
 .profile-form input {
-    padding: 10px;
-    margin: 1rem;
-    width: 250px;
+    padding: 5px;
+    margin: 0.5rem;
+    width: 175px;
     outline: none;
 }
 
@@ -44,7 +44,13 @@
 }
 
 @media screen and (min-width: 576px) {
-    .main-profile {
-        /*width: 100vw;*/
+    .profile-form input{
+        width: 250px;
+        padding: 10px;
+        margin: 1rem;
+    }
+
+    .profile-form {
+        padding: 30px 60px 30px 60px;
     }
 }
