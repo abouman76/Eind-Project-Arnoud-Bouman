@@ -1,5 +1,4 @@
 import React, {useEffect, useState} from "react";
-import PictureHeader from "../../components/PictureHeader/PictureHeader";
 import RequestComp from "../../components/Vraag/RequestComp";
 import styles from "./RequestPage.module.css";
 import app from "../../modules/Firebase";
@@ -38,7 +37,6 @@ const RequestPage = () => {
 
     return (
         <>
-            <PictureHeader />
             <div className={styles["request-page-wrapper"]}>
                 <main className={styles["header-request-page"]}>
                     <h2>Welkom op de vraag pagina van Sociaal Oosterhout</h2>

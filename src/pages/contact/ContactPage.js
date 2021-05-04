@@ -1,12 +1,10 @@
 import React from "react";
 import Contact from "../../components/Contact/Contact";
 import styles from "./ContactPage.module.css"
-import PictureHeader from "../../components/PictureHeader/PictureHeader";
 
 const ContactPage = () => {
     return (
         <>
-            <PictureHeader />
             <div className={styles["contact-wrapper"]}>
                 <main className={styles["main-contact-page"]}>
                     <h1>Neem contact op!</h1>

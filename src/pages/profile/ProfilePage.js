@@ -1,5 +1,4 @@
 import React, {useEffect, useState} from "react";
-import PictureHeader from "../../components/PictureHeader/PictureHeader";
 import styles from "./ProfilePage.module.css";
 import Profile from "../../components/Profile/Profile";
 import {useAuth} from "../../helper/LoginContext";
@@ -32,7 +31,6 @@ const ProfilePage = () => {
 
     return (
         <>
-            <PictureHeader/>
             <div className={styles["profile-wrapper"]}>
                 <main className={styles["main-profile-page"]}>
                     <h2>Welkom {profile.firstName}</h2>

@@ -15,11 +15,13 @@ import Footer from "../Footer/Footer";
 import styles from './App.module.css';
 import SignUpPage from "../../pages/registration/SignUpPage";
 import NavBar from "../Navbar/NavBar";
+import PictureHeader from "../PictureHeader/PictureHeader";
 
 function App() {
   return (
     <Router>
         <NavBar/>
+        <PictureHeader/>
             <main className={styles["main-content"]}>
                 <Switch>
                     <Route exact path="/">

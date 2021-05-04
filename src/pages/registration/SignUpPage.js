@@ -1,7 +1,6 @@
 import React, {useEffect, useState} from "react";
 import Register from "../../components/Register/Register";
 import styles from "./SignUpPage.module.css";
-import PictureHeader from "../../components/PictureHeader/PictureHeader";
 
 const SignUpPage = () => {
 
@@ -13,7 +12,6 @@ const SignUpPage = () => {
 
     return (
         <>
-            <PictureHeader/>
             <div className={styles["sign-up-wrapper"]}>
                 <main className={styles["main-sign-up-page"]}>
                     <h1>Registratie</h1>

@@ -1,12 +1,10 @@
 import React from "react"
-import PictureHeader from "../../components/PictureHeader/PictureHeader";
 import MyAdComponent from "../../components/MyAdComponent/MyAdComponent";
 import styles from "./MyAds.module.css";
 
 const MyAds = () => {
     return (
         <>
-            <PictureHeader />
             <div className={styles["ad-wrapper"]}>
                 <div className={styles["my-ad-header"]}>
                     <h2> Heeft u iets aan te bieden of te vragen?</h2>

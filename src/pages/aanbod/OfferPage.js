@@ -1,5 +1,4 @@
 import React, {useEffect, useState} from "react";
-import PictureHeader from "../../components/PictureHeader/PictureHeader";
 import OfferComp from "../../components/Aanbod/OfferComp";
 import styles from "./OfferPage.module.css";
 import app from "../../modules/Firebase";
@@ -42,7 +41,6 @@ const OfferPage = () => {
 
     return (
         <>
-            <PictureHeader />
             <div className={styles["offer-page-wrapper"]}>
                 <main className={styles["header-offer-page"]}>
                     <h2>Welkom op de aanbod pagina van Sociaal Oosterhout</h2>

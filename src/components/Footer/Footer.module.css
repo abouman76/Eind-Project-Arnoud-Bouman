@@ -3,7 +3,7 @@
 /*}*/
 
 .footer-container {
-    /*position: fixed;*/
+    position: fixed;
     left: 0;
     bottom: 0;
     width: 100%;
@@ -30,4 +30,11 @@
 
 .footer-text p {
     font-size: 12px;
+}
+
+@media screen and (max-width: 576px) {
+    .footer-container {
+        position: static;
+
+    }
 }
