@@ -5,7 +5,7 @@
 .form-login {
     background-color: #A7C957;
     width: 450px;
-    height: 450px;
+    height: 470px;
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -38,7 +38,11 @@
 }
 
 .btn-login {
-    margin-top: 50px;
+    margin-top: 10px;
+}
+
+.error-text {
+    font-size: 12px;
 }
 
 @media screen and (min-width: 576px) {
@@ -48,5 +52,9 @@
 
     .form-group input {
         width: 700px;
+    }
+
+    .btn-login {
+        margin-top: 30px;
     }
 }

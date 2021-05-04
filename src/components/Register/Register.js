@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React from "react";
 import {useForm} from "react-hook-form";
 import { useHistory } from "react-router-dom";
 import styles from "./Register.module.css";
@@ -24,12 +24,6 @@ export const validateZipCode = (value) => {
 }
 
 const Register = () => {
-
-    // const [isLoading, setIsLoading] = useState(true);
-
-    // useEffect(() => {
-    //     setTimeout(() => setLoading(false), 2000)
-    // }, [])
 
     const { register, handleSubmit, formState: {errors}, reset, watch } = useForm();
 
@@ -187,7 +181,7 @@ const Register = () => {
                                             message: "Verplicht veld."
                                         },
                                         pattern: {
-                                            value: /^((\+|00(\s|\s?\s?)?)31(\s|\s?\s?)?(\(0\)[\-\s]?)?|0)[1-9]((\s|\s?\s?)?[0-9])((\s|\s?-\s?)?[0-9])((\s|\s?-\s?)?[0-9])\s?[0-9]\s?[0-9]\s?[0-9]\s?[0-9]\s?[0-9]$/,
+                                            value: /^((\+|00(\s|\s?\s?)?)31(\s|\s?\s?)?(\(0\)[\s]?)?|0)[1-9]((\s|\s?\s?)?[0-9])((\s|\s?-\s?)?[0-9])((\s|\s?-\s?)?[0-9])\s?[0-9]\s?[0-9]\s?[0-9]\s?[0-9]\s?[0-9]$/,
                                             message: "Voer een geldig telefoonnummer in.",
                                         },
                                     }
@@ -288,13 +282,6 @@ const Register = () => {
 
                     <button className={styles["btn-register"]}
                             type="submit"
-                            // onClick={() => {
-                            //     setIsLoading(true);
-                            //     setTimeout(() =>{
-                            //         setIsLoading(false);
-                            //     }, 2000);
-                            // }}
-                            // isLoading={isLoading}
                     >registreer
                     </button>
                 </form>

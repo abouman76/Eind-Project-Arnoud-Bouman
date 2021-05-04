@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from "react";
+import React, { useState} from "react";
 import { useForm } from "react-hook-form";
 import {useHistory} from "react-router-dom";
 import styles from  "./Login.module.css"
@@ -44,7 +44,7 @@ const Login = () => {
                                {...register("email", {required: true})}
                                aria-invalid={errors.email ? "true" : "false"}
                         />
-                    {errors.email && <p role="alert">Verplicht veld</p>}
+                    {errors.email && <p className={styles["error-text"]} role="alert">Verplicht veld</p>}
                 </div>
                 <div className={styles["form-group"]}>
                     <label htmlFor="passWordInput" className={styles["input-fields"]}>uw wachtwoord</label>
@@ -55,7 +55,7 @@ const Login = () => {
                            aria-invalid={errors.password ? "true" : "false"}
                            {...register("password", { required: true })}
                     />
-                    {errors.password && <p role="alert">Verplicht veld</p>}
+                    {errors.password && <p className={styles["error-text"]} role="alert">Verplicht veld</p>}
                 </div>
                 <div className={styles["form-group"]}>
                     <p>{fireBaseError}</p>
