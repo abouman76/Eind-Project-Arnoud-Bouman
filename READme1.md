@@ -4,6 +4,8 @@ Dit document beschrijft het ontwerp van de website voor “Sociaal Oosterhout”
 
 **PLAATS HIER EEN SCREENSHOT**
 
+![home](screen1a.png)
+
 Het project is opgezet met Create React App.
 
 # De applicatie starten
@@ -31,5 +33,5 @@ De API-keys zijn in een .env bestand geplaatst en kunnen opgevraagd worden bij d
 # Stappenplan
 * Voor deze applicatie is gebruik gemaakt van Firebase en de Firebase Firestore Database. Je hebt geen inlog gegevens of wachtwoord nodig.
 * Via de registratiepagina kan je zelf een profiel aanmaken.
-* Na registratie kan je via de inlog pagina ingelogd worden.
-* Zodra je bent ingelogd kan je advertenties plaatsen.
+* Na registratie wordt je automatisch doorgelinkt naar je profiel pagina.
+* Zodra je bent geregistreerd of ingelogd kun je een advertenties plaatsen.

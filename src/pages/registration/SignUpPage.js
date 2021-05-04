@@ -19,10 +19,11 @@ const SignUpPage = () => {
                     <h1>Registratie</h1>
                     <p>Registreer u hier voor "Sociaal Oosterhout"</p>
                 </main>
-
+                {/*{loading === false ? (*/}
                 <div className={styles["sign-up-comp"]}>
                     <Register />
                 </div>
+                {/*) : (<div className={styles.loader}><h3>Loading.....</h3></div>)}*/}
             </div>
         </>
 

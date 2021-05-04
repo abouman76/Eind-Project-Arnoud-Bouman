@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import {useForm} from "react-hook-form";
 import { useHistory } from "react-router-dom";
 import styles from "./Register.module.css";
@@ -24,6 +24,12 @@ export const validateZipCode = (value) => {
 }
 
 const Register = () => {
+
+    // const [isLoading, setIsLoading] = useState(true);
+
+    // useEffect(() => {
+    //     setTimeout(() => setLoading(false), 2000)
+    // }, [])
 
     const { register, handleSubmit, formState: {errors}, reset, watch } = useForm();
 
@@ -51,7 +57,7 @@ const Register = () => {
                 username: data.username,
                 email: data.email
             });
-            history.push("/inloggen")
+            history.push("/profiel");
 
         } catch(error) {
             console.error(error);
@@ -279,8 +285,16 @@ const Register = () => {
                             {errors.checkPassword && <p>{errors.checkPassword.message}</p>}
                         </div>
                     </div>
+
                     <button className={styles["btn-register"]}
                             type="submit"
+                            // onClick={() => {
+                            //     setIsLoading(true);
+                            //     setTimeout(() =>{
+                            //         setIsLoading(false);
+                            //     }, 2000);
+                            // }}
+                            // isLoading={isLoading}
                     >registreer
                     </button>
                 </form>
