@@ -9,7 +9,6 @@ import app from "../../modules/Firebase";
 const ProfilePage = () => {
 
     const {authUser} = useAuth();
-    console.log("PROF", authUser);
 
     const [profile, setProfile] = useState({});
 

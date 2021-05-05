@@ -23,7 +23,6 @@ const Login = () => {
             const response = await login(data);
             setAppUser(response.user);
             history.push("/profiel");
-            console.log("Login Response", response.user)
         } catch (error) {
             console.error(error);
             }

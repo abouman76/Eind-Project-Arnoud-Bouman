@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React from "react";
 import {useForm} from "react-hook-form";
 import { useHistory } from "react-router-dom";
 import styles from "./Register.module.css";
@@ -29,15 +29,12 @@ const Register = () => {
 
     const history = useHistory();
 
-    // const [isLoading, setIsLoading] = useState();
-
     const passWords = watch(["password", "checkPassword"]);
-    console.log("Wachtwoord", passWords, passWords[0] === passWords[1]);
+    // console.log("Wachtwoord", passWords, passWords[0] === passWords[1]);
 
     const onFormSubmit= async (data) => {
-
         reset();
-
+        alert("Uw gegevens worden opgeslagen. Klik op OK!");
 
         try {
             const response = await app.auth().createUserWithEmailAndPassword(data.email, data.password);
@@ -280,7 +277,6 @@ const Register = () => {
                             {errors.checkPassword && <p>{errors.checkPassword.message}</p>}
                         </div>
                     </div>
-
                     <button className={styles["btn-register"]}
                             type="submit"
                     >registreer
@@ -288,6 +284,6 @@ const Register = () => {
                 </form>
         </div>
     )
-};
+}
 
 export default Register;

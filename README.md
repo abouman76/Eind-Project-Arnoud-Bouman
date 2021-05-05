@@ -7,6 +7,8 @@ Dit project gaat dan ook over een applicatie die gericht is op een woonwijk, waa
 
 ![Home](./src/assets/screenshot.png)
 
+![Profiel](./src/assets/screen2.png)
+
 Het project is opgezet met  [Create React App](https://github.com/facebook/create-react-app).
 
 # De applicatie starten
@@ -33,17 +35,18 @@ Na het opstarten van het project moeten de API keys toegevoegd worden. De afgesc
     messagingSenderId: your API MSG key here,
     appId: your API ID key here
 ```
-De benodigde keys zijn meegestuurd als bijlage bij het project.
+De benodigde keys zijn meegestuurd als bijlage bij dit project.
 
 ### Testen
 De unit testen zijn te vinden in de map: Tests/Register.test.js
+
 De testen zijn te uit te voeren door het volgende commando in de terminal te runnen.
 
 _npm run test_
 
 # Stappenplan
 * Voor deze applicatie is gebruik gemaakt van Firebase en de Firebase Firestore Database. Je hebt geen inlog gegevens of wachtwoord nodig.
-* De registratie kan alleen lukken als de postcode **6515** wordt gebruikt. 
+* De registratie kan alleen lukken als de postcode **6515** wordt gebruikt bij het inputveld voor postcode en woonplaats. 
 * Via de registratiepagina kan je zelf een profiel aanmaken.
 * Na registratie wordt je automatisch doorgelinkt naar je profiel pagina.
 * Zodra je bent geregistreerd of ingelogd kun je een advertenties plaatsen.
