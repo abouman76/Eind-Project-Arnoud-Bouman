@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import {useForm} from "react-hook-form";
 import { useHistory } from "react-router-dom";
 import styles from "./Register.module.css";
@@ -29,17 +29,18 @@ const Register = () => {
 
     const history = useHistory();
 
+    // const [isLoading, setIsLoading] = useState();
+
     const passWords = watch(["password", "checkPassword"]);
     console.log("Wachtwoord", passWords, passWords[0] === passWords[1]);
 
     const onFormSubmit= async (data) => {
-        console.log("DATA:" , data, data.email, data.password);
+
         reset();
 
 
         try {
             const response = await app.auth().createUserWithEmailAndPassword(data.email, data.password);
-            console.log("Sign-UP Response", response.user.uid);
 
             await db.collection("userInformation-new").doc(response.user.uid).set({
                 age: data.age,
@@ -285,9 +286,7 @@ const Register = () => {
                     >registreer
                     </button>
                 </form>
-
         </div>
-
     )
 };
 

@@ -69,7 +69,6 @@ const OfferPage = () => {
                         )}
                 </div>
             </div>
-
         </>
     )
 }

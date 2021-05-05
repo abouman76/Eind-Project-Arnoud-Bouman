@@ -15,10 +15,7 @@ const ContactPage = () => {
                     <Contact />
                 </div>
             </div>
-
         </>
-
-
     )
 }
 export default ContactPage;

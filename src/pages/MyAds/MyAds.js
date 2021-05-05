@@ -12,9 +12,7 @@ const MyAds = () => {
                 </div>
                 <MyAdComponent />
             </div>
-
         </>
-
     )
 }
 

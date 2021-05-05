@@ -90,7 +90,6 @@ const Profile = (props) => {
                 </div>
             </form>
         </div>
-
     )
 }
 

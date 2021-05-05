@@ -33,7 +33,6 @@ const RequestComp = (props) => {
                         type="text"
                         value={props.name}
                         readOnly={true}
-                        // placeholder="gevraagd door:"
                     />
                 </div>
                 <div className={styles.buttons}>

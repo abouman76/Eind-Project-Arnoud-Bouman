@@ -12,12 +12,10 @@ const NavBar = () => {
     const history = useHistory();
 
     const handleLogout = () => {
-        // console.log("uitloggen svp");
         setAuthUser(null);
         logOut();
         history.push("/");
     }
-    // console.log("logOUT Auth", authUser);
     return (
         <>
             <header className={styles["main-nav"]}>

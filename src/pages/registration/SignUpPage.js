@@ -16,7 +16,6 @@ const SignUpPage = () => {
                 </div>
             </div>
         </>
-
     )
 };
 

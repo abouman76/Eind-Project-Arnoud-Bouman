@@ -26,7 +26,6 @@ const RequestPage = () => {
 
                 const advertisements = await app.firestore().collection("userAdvertisement").get()
                 setRequests(advertisements.docs.map(doc => doc.data()));
-                // console.log("AD", advertisements.docs.map(doc => doc.data()));
             } catch (error) {
                 console.error(error);
             }
@@ -67,7 +66,6 @@ const RequestPage = () => {
                         )}
                 </div>
             </div>
-
         </>
     )
 }

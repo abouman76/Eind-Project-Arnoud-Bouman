@@ -21,7 +21,6 @@ const Contact = () => {
                 email: data.email,
                 message: data.message
             });
-            // console.log("Contact", contactForm);
         } catch (error) {
             console.error(errors)
         }

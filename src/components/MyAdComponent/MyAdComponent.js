@@ -11,11 +11,8 @@ const MyAdComponent = () => {
     const {handleSubmit, register, formState: {errors}, reset} = useForm();
 
     const {authUser} = useAuth()
-    // console.log("AuthUser", authUser);
-
 
     const onSubmitAd = async (data) => {
-        // console.log("DATA", data);
         reset();
         alert("Advertentie wordt geplaatst. Klik op OK");
 

@@ -16,10 +16,8 @@ const ProfilePage = () => {
     useEffect(() => {
 
         async function fetchData() {
-            console.log("UID Fetch", authUser.uid);
 
             const userProfiel = (await app.firestore().collection("userInformation-new").doc(authUser.uid).get()).data()
-            // console.log("userProf", userProfiel);
             setProfile(userProfiel);
 
         }
@@ -42,9 +40,7 @@ const ProfilePage = () => {
                     />
                 </div>
             </div>
-
         </>
-
     )
 };
 
