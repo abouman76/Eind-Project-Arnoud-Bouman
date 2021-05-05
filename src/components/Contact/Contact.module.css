@@ -19,23 +19,17 @@
 }
 
 .name-phone input,
-.address-email input,
-textarea {
+.address-email input {
+    margin: 10px 5px 10px 5px;
+    width: 40vw;
     padding: 10px;
     outline: none;
 }
 
-.name-phone input {
-    margin: 20px 5px 10px 5px;
-    width: 40vw;
-}
-.address-email input {
-    margin: 15px 5px 10px 5px;
-    width: 40vw;
-}
-
 .text-contact {
-    margin: 20px 15px 10px 15px;
+    margin: 10px 10px 10px 5px;
+    padding: 10px;
+    outline: none;
     width: 80vw;
 }
 
@@ -48,17 +42,24 @@ textarea {
     justify-content: flex-start;
 }
 
+.label-contact {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: row;
+    padding-top: 1rem;
+    margin-left: 0.5rem;
+    font-weight: bold;
+    font-size: 14px;
+}
 
 @media screen and (min-width: 576px) {
     .form-container {
         width: 750px;
     }
 
-    .name-phone input {
-        max-width: 250px;
-    }
+    .name-phone input,
     .address-email input {
-
         max-width: 250px;
     }
 

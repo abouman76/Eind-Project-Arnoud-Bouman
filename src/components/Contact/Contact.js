@@ -39,6 +39,7 @@ const Contact = () => {
             <form className={styles["form-container"]} onSubmit={handleSubmit(onFormSubmit)}>
                 <div className={styles["name-phone"]}>
                     <div className={styles["input-with-error"]}>
+                        <label htmlFor="name-details" className={styles["label-contact"]}>voor- en achternaam</label>
                         <input
                             type="text"
                             name="name"
@@ -59,6 +60,7 @@ const Contact = () => {
                     </div>
 
                     <div className={styles["input-with-error"]}>
+                        <label htmlFor="phone-details" className={styles["label-contact"]}>telefoonnummer</label>
                         <input
                             type="text"
                             name="phone"
@@ -83,6 +85,7 @@ const Contact = () => {
 
                 <div className={styles["address-email"]}>
                     <div className={styles["input-with-error"]}>
+                        <label htmlFor="address-details" className={styles["label-contact"]}>volledige adres</label>
                         <input
                             type="text"
                             name="address"
@@ -101,6 +104,7 @@ const Contact = () => {
                         {errors.address && <p className={styles.error}>{errors.address.message}</p>}
                     </div>
                     <div className={styles["input-with-error"]}>
+                        <label htmlFor="mail-details" className={styles["label-contact"]}>emailadres</label>
                         <input
                             type="email"
                             name="email"
@@ -118,6 +122,7 @@ const Contact = () => {
                     </div>
                 </div>
                 <div className={styles["input-with-error"]}>
+                    <label htmlFor="text-details" className={styles["label-contact"]}>Uw bericht</label>
                 <textarea className={styles["text-contact"]}
                     name="message"
                     id="text-details"

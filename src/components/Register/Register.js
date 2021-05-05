@@ -69,7 +69,7 @@ const Register = () => {
                 <form className={styles["register-form"]} onSubmit={handleSubmit(onFormSubmit)}>
                     <div className={styles["input-form"]}>
                         <div className={styles["display-error"]}>
-                            <label className={styles["label-reg"]}>voornaam</label>
+                            <label htmlFor="first-name" className={styles["label-reg"]}>voornaam</label>
                             <input
                                 type="text"
                                 name="firstName"
@@ -87,7 +87,7 @@ const Register = () => {
                             <p>{errors.firstName?.message}</p>
                         </div>
                         <div className={styles["display-error"]}>
-                            <label className={styles["label-reg"]}>achternaam</label>
+                            <label htmlFor="last-name" className={styles["label-reg"]}>achternaam</label>
                             <input
                                 type="text"
                                 name="lastName"
@@ -107,7 +107,7 @@ const Register = () => {
                     </div>
                     <div className={styles["input-form"]}>
                         <div className={styles["display-error"]}>
-                            <label className={styles["label-reg"]}>straat en huisnummer</label>
+                            <label htmlFor="street-details" className={styles["label-reg"]}>straat en huisnummer</label>
                             <input
                                 type="text"
                                 name="street"
@@ -125,7 +125,7 @@ const Register = () => {
                             {errors.street && <p>{errors.street.message}</p>}
                         </div>
                         <div className={styles["display-error"]}>
-                            <label className={styles["label-reg"]}>postcode en plaats</label>
+                            <label htmlFor="city-details" className={styles["label-reg"]}>postcode en plaats</label>
                             <input
                                 type="text"
                                 name="city"
@@ -144,7 +144,7 @@ const Register = () => {
 
                     <div className={styles["input-form"]}>
                         <div className={styles["display-error"]}>
-                            <label className={styles["label-reg"]}>leeftijd</label>
+                            <label htmlFor="age-details" className={styles["label-reg"]}>leeftijd</label>
                             <input
                                 type="text"
                                 name="age"
@@ -166,7 +166,7 @@ const Register = () => {
                             {errors.age && <p>{errors.age.message}</p>}
                         </div>
                         <div className={styles["display-error"]}>
-                            <label className={styles["label-reg"]}>telefoonnummer</label>
+                            <label htmlFor="phone-details" className={styles["label-reg"]}>telefoonnummer</label>
                             <input
                                 type="text"
                                 name="phone"
@@ -190,7 +190,7 @@ const Register = () => {
                     </div>
                     <div className={styles["input-form"]}>
                         <div className={styles["display-error"]}>
-                            <label className={styles["label-reg"]}>emailadres</label>
+                            <label htmlFor="email-details" className={styles["label-reg"]}>emailadres</label>
                             <input
                                 type="email"
                                 name="email"
@@ -206,7 +206,7 @@ const Register = () => {
                             {errors.email && <p>{errors.email.message}</p>}
                         </div>
                         <div className={styles["display-error"]}>
-                            <label className={styles["label-reg"]}>gebruikersnaam</label>
+                            <label htmlFor="user-details" className={styles["label-reg"]}>gebruikersnaam</label>
                             <input
                                 type="text"
                                 name="username"
@@ -235,7 +235,7 @@ const Register = () => {
                     </div>
                     <div className={styles["input-form"]}>
                         <div className={styles["display-error"]}>
-                            <label className={styles["label-reg"]}>wachtwoord</label>
+                            <label htmlFor="psw-details" className={styles["label-reg"]}>wachtwoord</label>
                             <input
                                 type="password"
                                 name="password"
@@ -261,7 +261,7 @@ const Register = () => {
                             {errors.password && <p>{errors.password.message}</p>}
                         </div>
                         <div className={styles["display-error"]}>
-                            <label className={styles["label-reg"]}>herhaal wachtwoord</label>
+                            <label htmlFor="check-psw-details" className={styles["label-reg"]}>herhaal wachtwoord</label>
                             <input
                                 type="password"
                                 name="checkPassword"
