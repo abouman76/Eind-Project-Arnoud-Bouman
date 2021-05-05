@@ -29,7 +29,7 @@ Open http://localhost:3000 om de applicatie in de browser te bekijken.
 
 ### API-keys
 De API-keys zijn in een .env bestand geplaatst en dus afgeschermd.
-Na het opstarten van het project moeten de API keys toegevoegd worden. De afgeschermde API-keys staan in de folder: modules/Firebase.js
+Na het opstarten van het project moeten de API keys toegevoegd worden. De **afgeschermde** API-keys staan in de folder: modules/Firebase.js
 ```text
     apiKey: your API KEY here,
     authDomain: "eind-opdracht-novi.firebaseapp.com",
@@ -49,8 +49,8 @@ _npm run test_
 
 # Stappenplan
 * Voor deze applicatie is gebruik gemaakt van Firebase en de Firebase Firestore Database. Je hebt geen inlog gegevens of wachtwoord nodig.
-* De registratie kan alleen lukken als de postcode **6515** wordt gebruikt bij het inputveld voor postcode en woonplaats. 
-* Via de registratiepagina kan je zelf een profiel aanmaken.
+* Via de registratiepagina kan je zelf een profiel aanmaken. Zgn _admin_ gegevens zijn niet nodig.
+* De registratie kan alleen lukken als de postcode **6515** wordt gebruikt bij het inputveld voor postcode en woonplaats.
 * Na registratie wordt je automatisch doorgelinkt naar je profiel pagina.
 * Zodra je bent geregistreerd of ingelogd kun je een advertenties plaatsen.
 
