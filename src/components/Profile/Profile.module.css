@@ -30,7 +30,7 @@
 }
 
 .label-profile {
-    margin-left: 1rem;
+    margin-left: 10px;
     font-weight: bold;
     font-size: 14px;
 }
@@ -44,10 +44,14 @@
     .profile-form input{
         width: 250px;
         padding: 10px;
-        margin: 1rem;
+        margin: 10px 20px 20px 20px;
     }
 
     .profile-form {
         padding: 30px 60px 30px 60px;
+    }
+
+    .label-profile {
+        margin-left: 20px;
     }
 }

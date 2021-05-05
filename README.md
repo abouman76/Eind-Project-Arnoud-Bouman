@@ -9,7 +9,8 @@ Home:
 ![Home](./src/assets/screenshot.png)
 
 Profielpagina:
-![Profiel](./src/assets/screen2.png)
+
+![Profiel](./src/assets/profiel.png)
 
 Het project is opgezet met  [Create React App](https://github.com/facebook/create-react-app).
 

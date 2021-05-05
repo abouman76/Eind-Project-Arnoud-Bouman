@@ -53,7 +53,7 @@
 .display-error p {
     color: red;
     font-size: 10px;
-    margin-left: 15px;
+    margin: 5px 0 15px 10px;
 }
 
 label {
@@ -61,7 +61,7 @@ label {
 }
 
 .label-reg {
-    margin-left: 1rem;
+    margin-left: 10px;
     font-weight: bold;
     font-size: 14px;
 }
@@ -75,5 +75,14 @@ label {
 
     .register-form {
         padding: 30px 60px 30px 60px;
+    }
+
+    .label-reg {
+        margin-left: 20px;
+    }
+
+    .display-error p {
+        margin: 0 0 15px 20px;
+        font-size: 12px;
     }
 }
