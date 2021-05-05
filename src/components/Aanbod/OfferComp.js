@@ -13,7 +13,6 @@ const OfferComp = (props) => {
                     <input type="text"
                            value={props.date}
                            readOnly={true}
-                        // placeholder="datum:"
                     />
                     <input type="text" placeholder="actief - non actief"/>
                 </div>
@@ -33,7 +32,6 @@ const OfferComp = (props) => {
                         type="text"
                         value={props.name}
                         readOnly={true}
-                        // placeholder="Aangeboden door:"
                     />
                 </div>
 

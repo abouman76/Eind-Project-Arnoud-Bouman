@@ -19,16 +19,13 @@ const OfferPage = () => {
                 }
 
                 userInformationOffer.docs.forEach(doc => {
-                    console.log("doc", doc.id);
                     userData[doc.id] = doc.data()
                 });
 
                 setUsers(userData);
-                console.log("UData", userData);
 
                 const advertisements = await app.firestore().collection("userAdvertisement").get()
                 setOffers(advertisements.docs.map(doc => doc.data()));
-                console.log("AD", advertisements.docs.map(doc => doc.data()));
 
             } catch (error) {
                 console.error(error);
@@ -49,7 +46,6 @@ const OfferPage = () => {
                 </main>
                 <div className={styles["offer-wrapper"]}>
                     {offers.filter(offer => offer.choice === "Aanbod").sort((a,  b) => {
-                        console.log("SORT DATE", a.date, b.date);
                         if(b.date < a.date) {
                             return -1;
                         } else if (b.date > a.date) {

@@ -7,7 +7,7 @@ export const LoginAuth = createContext({});
 
 const LoginContext = (props) => {
     const [authUser, setAuthUser] = useState(null);
-    const [fireBaseError, setFireBaseError] = useState("")
+    const [fireBaseError, setFireBaseError] = useState("");
 
     useEffect(()=> {
        const getUser = async () => {
@@ -19,8 +19,7 @@ const LoginContext = (props) => {
                    } else {
                        setAuthUser(null);
                    }
-                   console.log("USER APP", user);
-               })
+               });
            } catch (error) {
                console.error(error);
            }
@@ -28,7 +27,7 @@ const LoginContext = (props) => {
        }
        getUser();
 
-    }, [])
+    }, []);
     const login = async (data) => {
         try {
             const response = await app.auth().signInWithEmailAndPassword(data.email, data.password);
@@ -42,7 +41,7 @@ const LoginContext = (props) => {
 
     const logOut = () => {
         app.auth().signOut()
-    }
+    };
 
     const valueProvider = {
         authUser,
@@ -50,7 +49,7 @@ const LoginContext = (props) => {
         fireBaseError,
         login,
         logOut
-    }
+    };
 
     return <LoginAuth.Provider value={valueProvider}>
             {props.children}

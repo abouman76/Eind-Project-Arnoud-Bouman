@@ -30,14 +30,14 @@ Na het opstarten van het project moeten de API keys toegevoegd worden. De afgesc
     authDomain: "eind-opdracht-novi.firebaseapp.com",
     projectId: "eind-opdracht-novi",
     storageBucket: "eind-opdracht-novi.appspot.com",
-    messagingSenderId: your API MSG here,
-    appId: your API ID here
+    messagingSenderId: your API MSG key here,
+    appId: your API ID key here
 ```
 De benodigde keys zijn meegestuurd als bijlage bij het project.
 
 ### Testen
-De unit testen zijn te vinden in de map: Tests die te vinden is in de src folder.
-De testen zijn te runnen door het volgende commando in de terminal te runnen.
+De unit testen zijn te vinden in de map: Tests/Register.test.js
+De testen zijn te uit te voeren door het volgende commando in de terminal te runnen.
 
 _npm run test_
 

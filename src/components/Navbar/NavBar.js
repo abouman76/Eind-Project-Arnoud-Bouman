@@ -17,7 +17,7 @@ const NavBar = () => {
         logOut();
         history.push("/");
     }
-    console.log("logOUT Auth", authUser);
+    // console.log("logOUT Auth", authUser);
     return (
         <>
             <header className={styles["main-nav"]}>

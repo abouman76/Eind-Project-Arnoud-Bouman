@@ -6,7 +6,7 @@ const TextBubble = () => {
         <div className={styles["main-container"]}>
             <div className={styles["text-bubble"]}>
                 <div className={styles["header-review"]}>
-                    <h2>Ervaring Buurtbewoner</h2>
+                    <h3>Ervaring Buurtbewoner</h3>
                 </div>
                 <span className={styles["review-text"]}>
             <p>Hier kan de buurtbewoner zijn of haar ervaring delen!</p>
