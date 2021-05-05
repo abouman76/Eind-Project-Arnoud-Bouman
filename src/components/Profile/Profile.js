@@ -8,6 +8,7 @@ const Profile = (props) => {
             <form className={styles["profile-form"]}>
                 <div className={styles["input-form"]}>
                     <div className={styles["display-error"]}>
+                        <label className={styles["label-profile"]}>voornaam</label>
                         <input
                             type="text"
                             name="firstName"
@@ -17,6 +18,7 @@ const Profile = (props) => {
                         />
                     </div>
                     <div className={styles["display-error"]}>
+                        <label className={styles["label-profile"]}>achternaam</label>
                         <input
                             type="text"
                             name="lastName"
@@ -29,6 +31,7 @@ const Profile = (props) => {
                 </div>
                 <div className={styles["input-form"]}>
                     <div className={styles["display-error"]}>
+                        <label className={styles["label-profile"]}>straat en huisnummer</label>
                         <input
                             type="text"
                             name="street"
@@ -38,6 +41,7 @@ const Profile = (props) => {
                         />
                     </div>
                     <div className={styles["display-error"]}>
+                        <label className={styles["label-profile"]}>postcode en plaats</label>
                         <input
                             type="text"
                             name="city"
@@ -50,6 +54,7 @@ const Profile = (props) => {
 
                 <div className={styles["input-form"]}>
                     <div className={styles["display-error"]}>
+                        <label className={styles["label-profile"]}>leeftijd</label>
                         <input
                             type="text"
                             name="age"
@@ -59,6 +64,7 @@ const Profile = (props) => {
                         />
                     </div>
                     <div className={styles["display-error"]}>
+                        <label className={styles["label-profile"]}>telefoonnummer</label>
                         <input
                             type="text"
                             name="phone"
@@ -70,6 +76,7 @@ const Profile = (props) => {
                 </div>
                 <div className={styles["input-form"]}>
                     <div className={styles["display-error"]}>
+                        <label className={styles["label-profile"]}>emailadres</label>
                         <input
                             type="email"
                             name="email"
@@ -79,6 +86,7 @@ const Profile = (props) => {
                         />
                     </div>
                     <div className={styles["display-error"]}>
+                        <label className={styles["label-profile"]}>gebruikersnaam</label>
                         <input
                             type="text"
                             name="username"

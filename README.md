@@ -5,8 +5,10 @@ In deze tijden van corona is het juist belangrijk dat er een sociaal vangnet bli
 Buurthuizen, haak clubjes, breiclubjes, biljartclub, etcetera moeten sluiten of mogen maar een beperkt aantal mensen ontvangen. Het gevolg is dat mensen thuis zitten en dat het sociaal netwerk kleiner wordt en mensen vereenzamen.
 Dit project gaat dan ook over een applicatie die gericht is op een woonwijk, waar buurtgenoten de mogelijkheid hebben om met elkaar in contact te komen en elkaar te leren kennen.
 
+Home:
 ![Home](./src/assets/screenshot.png)
 
+Profielpagina:
 ![Profiel](./src/assets/screen2.png)
 
 Het project is opgezet met  [Create React App](https://github.com/facebook/create-react-app).
