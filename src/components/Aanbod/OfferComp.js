@@ -19,7 +19,6 @@ const OfferComp = (props) => {
                 <div className={styles["input-offer"]}>
                 <textarea
                     name="text"
-                    id="offer"
                     rows="10"
                     cols="46"
                     value={props.description}

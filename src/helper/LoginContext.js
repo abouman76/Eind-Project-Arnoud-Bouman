@@ -13,7 +13,7 @@ const LoginContext = (props) => {
        const getUser = async () => {
 
            try {
-               const userApp  =  await app.auth().onAuthStateChanged((user) => {
+               await app.auth().onAuthStateChanged((user) => {
                    if(user) {
                        setAuthUser(user);
                    } else {

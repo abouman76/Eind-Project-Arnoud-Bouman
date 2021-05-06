@@ -15,7 +15,7 @@ const ProfilePage = () => {
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        setTimeout(() => setLoading(false), 2000)
+        setTimeout(() => setLoading(false), 1000)
     }, []);
 
     useEffect(() => {
@@ -45,7 +45,7 @@ const ProfilePage = () => {
                         profile={profile}
                     />
                 </div>
-                ) : (<div className={styles.loader}><h3>Gegevens worden opgehaald...</h3></div>) }
+                ) : (<div className={styles.loader}><h3>Gegevens worden opgehaald...</h3></div>)}
             </div>
         </>
     )

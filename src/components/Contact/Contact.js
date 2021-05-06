@@ -14,7 +14,7 @@ const Contact = () => {
         console.log(data);
         reset();
         try {
-            const contactForm = await db.collection("contactForm").add({
+            await db.collection("contactForm").add({
                 name: data.name,
                 phone: data.phone,
                 address: data.address,

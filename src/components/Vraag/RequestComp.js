@@ -20,7 +20,6 @@ const RequestComp = (props) => {
                 <div className={styles["input-request"]}>
                 <textarea
                     name="text"
-                    id="details-request"
                     rows="10"
                     cols="46"
                     readOnly={true}

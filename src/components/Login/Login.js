@@ -1,4 +1,4 @@
-import React, { useState} from "react";
+import React from "react";
 import { useForm } from "react-hook-form";
 import {useHistory} from "react-router-dom";
 import styles from  "./Login.module.css"
@@ -11,17 +11,14 @@ import {useAuth} from "../../helper/LoginContext";
 const Login = () => {
     const { handleSubmit, register, formState: {errors} } = useForm();
 
-    const {setAuthUser, fireBaseError, login} = useAuth();
+    const {fireBaseError, login} = useAuth();
 
     const history = useHistory();
-
-    const [appUser, setAppUser] = useState(undefined);
 
     const loginHandler = async (data) => {
 
         try {
-            const response = await login(data);
-            setAppUser(response.user);
+            await login(data);
             history.push("/profiel");
         } catch (error) {
             console.error(error);
