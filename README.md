@@ -1,3 +1,11 @@
+# Inhoudsopgave
+1. Inleiding
+2. Lijst met benodigdheden
+3. Installatie handleiding
+4. Testen
+5. Inloggegevens en hoe te registreren
+6. Scripts NPM
+
 # Inleiding
 Dit document beschrijft de website voor “Sociaal Oosterhout”.
 Het doel van deze website is om mensen uit de wijk met **postcode 6515** in Nijmegen-Noord met elkaar in contact te brengen om een mogelijk sociaal isolement en vereenzaming te voorkomen.
@@ -19,7 +27,7 @@ Het project is opgezet met  [Create React App](https://github.com/facebook/creat
 3. Git
 4. Google account
 
-# Installation guide
+# Installatie handleiding
 1. Clone de git repository. 
 2. Installeer de node_modules door het volgende commando in de terminal te runnen:
 
@@ -29,11 +37,13 @@ _npm install_
    De API-keys zijn in een .env bestand geplaatst en dus afgeschermd.
    - Maak een .env bestand aan in de root van het project.
    - Voeg de volgende key-values toe aan het .env bestand.
+    
 ```text
 REACT_APP_API_KEY= your API-key here
 REACT-APP_API-ID= your API-id here
 REACT_APP_API_MSG= your API-msg here
 ```
+
 - De benodigde keys zijn meegestuurd als bijlage _(REPO-and-API-Bouman)_ bij dit project.
   
 
@@ -52,15 +62,14 @@ De testen zijn uit te voeren door het volgende commando in de terminal te runnen
 
 _npm run test_
 
-# Inloggegevens / Hoe te registreren
+# Inloggegevens en hoe te registreren
 * Voor deze applicatie is gebruik gemaakt van Firebase en de Firebase Firestore Database. Je hebt geen inlog gegevens of wachtwoord nodig.
-* Via de registratiepagina kan je zelf een profiel aanmaken. Zgn _admin_ gegevens zijn niet nodig.
+* Via de registratiepagina kun je zelf een profiel aanmaken. Zgn _admin_ gegevens zijn niet nodig.
 * De registratie kan alleen lukken als de postcode **6515** wordt gebruikt bij het inputveld voor postcode en woonplaats.
 * Na registratie wordt je automatisch doorgelinkt naar je profiel pagina.
 * Zodra je bent geregistreerd of ingelogd kun je een advertenties plaatsen.
 
 # Scripts NPM
-
 - "start": Dit start het project in development mode.
 - "build": Maakt een geoptimaliseerd JavaScript, HTML en CSS bestand voor productie.
 - "test": Voert de unit testen uit.
