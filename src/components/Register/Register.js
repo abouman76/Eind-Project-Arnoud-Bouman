@@ -34,7 +34,6 @@ const Register = () => {
 
     const onFormSubmit= async (data) => {
         reset();
-        alert("Uw gegevens worden opgeslagen. Klik op OK!");
 
         try {
             const response = await app.auth().createUserWithEmailAndPassword(data.email, data.password);

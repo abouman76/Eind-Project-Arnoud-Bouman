@@ -20,3 +20,16 @@
 .main-profile-page p {
     margin-top: 10px;
 }
+
+.loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30vh;
+}
+
+@media screen and (min-height: 576px) {
+    .loader {
+        height: 15vh;
+    }
+}

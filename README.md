@@ -38,7 +38,7 @@ Na het opstarten van het project moeten de API keys toegevoegd worden. De **afge
     messagingSenderId: your API MSG key here,
     appId: your API ID key here
 ```
-De benodigde keys zijn meegestuurd als bijlage bij dit project.
+De benodigde keys zijn meegestuurd als bijlage _(REPO-and-API-Bouman)_ bij dit project.
 
 ### Testen
 De unit testen zijn te vinden in de map: Tests/Register.test.js
