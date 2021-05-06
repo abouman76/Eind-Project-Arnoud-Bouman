@@ -9,7 +9,6 @@ Home:
 ![Home](./src/assets/screenshot.png)
 
 Profielpagina:
-
 ![Profiel](./src/assets/profiel.png)
 
 Het project is opgezet met  [Create React App](https://github.com/facebook/create-react-app).
@@ -43,7 +42,7 @@ De benodigde keys zijn meegestuurd als bijlage _(REPO-and-API-Bouman)_ bij dit p
 ### Testen
 De unit testen zijn te vinden in de map: Tests/Register.test.js
 
-De testen zijn te uit te voeren door het volgende commando in de terminal te runnen.
+De testen zijn uit te voeren door het volgende commando in de terminal te runnen.
 
 _npm run test_
 

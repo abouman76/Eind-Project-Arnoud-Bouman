@@ -50,7 +50,7 @@ const Login = () => {
                     <input type="password"
                            name="password"
                            id="passWordInput"
-                           placeholder="voer wachtwoord in"
+                           placeholder="voer uw wachtwoord in"
                            aria-invalid={errors.password ? "true" : "false"}
                            {...register("password", { required: true })}
                     />
