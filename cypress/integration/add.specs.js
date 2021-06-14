@@ -19,7 +19,7 @@ describe("Should add an request", () => {
     cy.on("window:alert", (str) => {
       expect(str).to.equal("Advertentie wordt geplaatst. Klik op OK");
     });
-    // cy.wait(5000);
+    //cy.wait(100);
   });
 });
 
@@ -28,43 +28,28 @@ describe("Should display add with functionalities at request page", () => {
     cy.visit("/vraag");
   });
   it("Should have correct working functionalities", () => {
-    cy.get(".ShowPhone_btn-phone__3LRFD")
-      .eq("2")
-      .then((element) => {
-        cy.get(element)
-          .should("contain.text", "toon nummer")
-          .click()
-          .should("contain.text", "06")
-          .click();
-      });
+    cy.get(".RequestComp_request-form__1i4i7")
+      .contains("Cypress")
+      .parent()
+      .as("ad");
+    cy.get("@ad").contains("toon nummer").click().should("contain.text", "06");
 
-    cy.get(".RequestComp_header-request__3eJtR")
-      .eq("2")
-      .then(function (title) {
-        cy.get(title).invoke("text").as("title");
-        cy.get("@title");
-      });
-
-    cy.get(".MailTo_btn-mail__Nl-dk")
-      .eq("2")
-      .then((element) => {
-        cy.get("@title").then((titleAdd) => {
-          cy.get(element).should(
-            "have.attr",
-            "href",
-            `mailto:mail@mail.com?subject=${titleAdd}`
-          );
-        });
-      });
+    cy.get("@ad")
+      .contains("stuur email")
+      .should("have.attr", "href", `mailto:tester@test.com?subject=Cypress`);
   });
+
   after(() => {
-    cy.callFirestore("get", "userAdvertisement", {
-      where: ["uid", "==", "L6l35k13fpYIYVW6DeouSqxhu4h2"],
-    }).then((response) => {
-      response.map((wat) => {
-        cy.log("wat", wat);
+    // @todo: Query from Firebase or don't hardcode the UID, get it from env instead
+    cy.callFirestore("get", "userAdvertisement", {}).then((response) => {
+      response.forEach((ad) => {
+        if (ad.uid === "L6l35k13fpYIYVW6DeouSqxhu4h2") {
+          // cy.callFirestore("get", `userAdvertisement/${ad.id}`);
+          cy.callFirestore("delete", `userAdvertisement/${ad.id}`);
+          // cy.log("Ad", ad);
+        }
       });
-      cy.log("get add", response);
+      // cy.log("get add", response);
     });
   });
 });
