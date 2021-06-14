@@ -1,0 +1,6 @@
+{
+  "baseUrl": "http://localhost:3000",
+  "env": {
+    "TEST_UID": "L6l35k13fpYIYVW6DeouSqxhu4h2"
+  }
+}
