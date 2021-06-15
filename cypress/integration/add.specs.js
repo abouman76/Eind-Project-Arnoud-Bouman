@@ -19,7 +19,8 @@ describe("Should add an request", () => {
     cy.on("window:alert", (str) => {
       expect(str).to.equal("Advertentie wordt geplaatst. Klik op OK");
     });
-    //cy.wait(100);
+    // @Todo: how to run code without waiting???
+    cy.wait(1000);
   });
 });
 
@@ -51,5 +52,6 @@ describe("Should display add with functionalities at request page", () => {
       });
       // cy.log("get add", response);
     });
+    cy.logout();
   });
 });
