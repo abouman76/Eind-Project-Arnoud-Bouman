@@ -58,7 +58,7 @@ Open http://localhost:3000 om de applicatie in de browser te bekijken.
 ### Testen
 De unit testen zijn te vinden in de map: Tests/Register.test.js
 
-De testen zijn uit te voeren door het volgende commando in de terminal te runnen.
+De JEST testen zijn uit te voeren door het volgende commando in de terminal te runnen.
 
 _npm run test_
 
@@ -67,6 +67,9 @@ _npm run test_
 - library cypress-firebase toegevoegd voor de login, logout en voor de interactie met firestore.
 - Testen geschreven voor routing, login en forms.
 
+De Cypress testen zijn uit te voeren door het volgende commando in de terminal te runnen.
+
+_npx cypress open_
 
 # Inloggegevens en hoe te registreren
 * Voor deze applicatie is gebruik gemaakt van Firebase en de Firebase Firestore Database. Je hebt geen inlog gegevens of wachtwoord nodig.
