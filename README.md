@@ -2,7 +2,7 @@
 1. Inleiding
 2. Lijst met benodigdheden
 3. Installatie handleiding
-4. Testen
+4. Testen (JEST and Cypress)
 5. Inloggegevens en hoe te registreren
 6. Scripts NPM
 
@@ -62,6 +62,12 @@ De testen zijn uit te voeren door het volgende commando in de terminal te runnen
 
 _npm run test_
 
+### Cypress
+- Sets up Cypress End to End test
+- library cypress-firebase toegevoegd voor de login, logout en voor de interactie met firestore.
+- Testen geschreven voor routing, login en forms.
+
+
 # Inloggegevens en hoe te registreren
 * Voor deze applicatie is gebruik gemaakt van Firebase en de Firebase Firestore Database. Je hebt geen inlog gegevens of wachtwoord nodig.
 * Via de registratiepagina kun je zelf een profiel aanmaken. Zgn _admin_ gegevens zijn niet nodig.
@@ -74,4 +80,3 @@ _npm run test_
 - "build": Maakt een geoptimaliseerd JavaScript, HTML en CSS bestand voor productie.
 - "test": Voert de unit testen uit.
 - "eject": Maakt alle configuratie zichtbaar zodat je die zelf kunt aanpassen.
-
