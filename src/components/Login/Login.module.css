@@ -1,68 +1,68 @@
-/** {*/
-/*    border: 1px solid red;*/
-/*}*/
+/* * {
+  border: 1px solid red;
+} */
 
 .form-login {
-    background-color: #A7C957;
-    width: 450px;
-    height: 470px;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    flex-direction: column;
-    margin:25px;
+  background-color: #a7c957;
+  width: 450px;
+  height: 470px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  margin: 25px;
 }
 
 .form-group label {
-    display: block;
-    margin: 50px 10px 10px 10px;
-    font-weight: bolder;
+  display: block;
+  margin: 50px 10px 10px 10px;
+  font-weight: bolder;
 }
 
 .form-group input {
-    width: 375px;
-    padding: 10px 5px 10px 10px;
-    margin: 0 10px 0 10px;
-    outline: none;
+  width: 375px;
+  padding: 10px 5px 10px 10px;
+  margin: 0 10px 0 10px;
+  outline: none;
 }
 
 .header-login h1 {
-    padding-top: 20px;
+  padding-top: 20px;
 }
 
 .form-group p {
-    display: flex;
-    justify-content: center;
-    color: red;
-    padding-top: 5px;
+  display: flex;
+  justify-content: center;
+  color: red;
+  padding-top: 5px;
 }
 
 .input-fields {
-    padding-left: 5px;
+  padding-left: 5px;
 }
 
 .btn-login {
-    margin-top: 10px;
+  margin-top: 10px;
 }
 
 .error-text {
-    font-size: 12px;
+  font-size: 12px;
 }
 
 @media screen and (min-width: 576px) {
-    .form-login {
-        width: 750px;
-    }
+  .form-login {
+    width: 750px;
+  }
 
-    .form-group input {
-        width: 700px;
-    }
+  .form-group input {
+    width: 700px;
+  }
 
-    .btn-login {
-        margin-top: 30px;
-    }
+  .btn-login {
+    margin-top: 30px;
+  }
 
-    .input-fields {
-        padding-left: 5px;
-    }
+  .input-fields {
+    padding-left: 5px;
+  }
 }
