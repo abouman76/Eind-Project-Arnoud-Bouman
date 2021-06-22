@@ -1,6 +1,6 @@
 /// <reference types="Cypress" />
 
-describe.only("Testing login functionality. Happy Path!", () => {
+describe("Testing login functionality. Happy Path!", () => {
   before(() => {
     cy.visit("/inloggen");
   });
