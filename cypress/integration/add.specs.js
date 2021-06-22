@@ -24,7 +24,7 @@ describe("Should add an request", () => {
   });
 });
 
-describe("Should display add with functionalities at request page", () => {
+describe("Should display ad with functionalities at request page", () => {
   it("Should display add on request page", () => {
     cy.visit("/vraag");
   });
